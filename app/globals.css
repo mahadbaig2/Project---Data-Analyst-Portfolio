@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
+@theme {
+  --color-surface-canvas: #F5F7F6;
+  --color-surface-canvas-subtle: #F7F9F8;
+  --color-surface-sidebar: #F8FAF9;
+  --color-surface-card: #FFFFFF;
+  --color-surface-muted: #F3F6F4;
+  --color-border-subtle: #E1E8E4;
+  --color-border-hover: #CAD6CF;
+  --color-highlight-soft: #DDF5DF;
+  --color-highlight-tint: #ECF8EE;
+  --color-text-primary: #18211F;
+  --color-text-secondary: #5D6965;
+  --color-text-muted: #85938F;
+
+  --color-primary: #145C46;
+  --color-primary-hover: #0F4B3A;
+  --color-primary-container: #145C46;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #68C86E;
+  --color-secondary-container: #96F998;
+  --color-tertiary: #024333;
+  --color-tertiary-container: #235B49;
+
+  --color-chart-accent-emerald: #1B7358;
+  --color-chart-accent-mint: #82D387;
+  --color-chart-accent-slate: #7A8C86;
+
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F5F7F6;
+  --foreground: #18211F;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for sidebar and internal panels */
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: var(--color-surface-sidebar);
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border-subtle);
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-hover);
+}
+
+/* Elevation & Shadows from DESIGN.md */
+.card-shadow {
+  box-shadow: 0 4px 18px rgba(20, 50, 40, 0.05);
+}
+
+.card-hover-fx {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-fx:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(20, 50, 40, 0.08);
+}
+
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Skip link styling */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(20, 50, 40, 0.15);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

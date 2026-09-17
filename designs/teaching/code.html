@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Teaching &amp; Mentoring — Mirza Hammad Baig | BI Solutions Architect</title>
+<!-- Material Symbols & Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#b5efd7",
+            "on-tertiary": "#ffffff",
+            "surface-sidebar": "#F8FAF9",
+            "surface-container-high": "#e0eae7",
+            "text-secondary": "#5D6965",
+            "chart-accent-mint": "#82D387",
+            "primary-fixed-dim": "#91d4b8",
+            "secondary-fixed-dim": "#7bdc7f",
+            "background": "#f2fcf8",
+            "on-tertiary-fixed-variant": "#16503f",
+            "tertiary-container": "#235b49",
+            "on-error-container": "#93000a",
+            "surface-dim": "#d2dcd9",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#002105",
+            "surface-bright": "#f2fcf8",
+            "surface-canvas-subtle": "#F7F9F8",
+            "inverse-primary": "#91d4b8",
+            "surface-tint": "#266a53",
+            "chart-accent-emerald": "#1B7358",
+            "secondary-fixed": "#96f998",
+            "surface-container": "#e6f0ec",
+            "tertiary-fixed-dim": "#99d2bb",
+            "inverse-on-surface": "#e9f3ef",
+            "highlight-soft": "#DDF5DF",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#98d1ba",
+            "surface-container-highest": "#dbe5e1",
+            "surface-variant": "#dbe5e1",
+            "on-secondary-container": "#037526",
+            "surface-muted": "#F3F6F4",
+            "on-secondary-fixed-variant": "#005318",
+            "primary-fixed": "#acf1d4",
+            "border-hover": "#CAD6CF",
+            "on-background": "#141d1b",
+            "on-primary-fixed": "#002116",
+            "text-muted": "#85938F",
+            "highlight-tint": "#ECF8EE",
+            "tertiary": "#024333",
+            "on-surface-variant": "#3f4944",
+            "outline-variant": "#bfc9c2",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "secondary-container": "#96f998",
+            "surface-container-low": "#ecf6f2",
+            "primary-container": "#145c46",
+            "surface-canvas": "#F5F7F6",
+            "surface": "#f2fcf8",
+            "on-surface": "#141d1b",
+            "secondary": "#006e23",
+            "on-tertiary-fixed": "#002117",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#00513c",
+            "border-subtle": "#E1E8E4",
+            "surface-card": "#FFFFFF",
+            "inverse-surface": "#293230",
+            "outline": "#707974",
+            "on-primary-container": "#8fd2b6",
+            "chart-accent-slate": "#7A8C86",
+            "primary": "#004331",
+            "text-primary": "#18211F"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1rem",
+            "gutter-mobile": "1rem",
+            "margin-desktop": "2rem",
+            "gutter-desktop": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "space-2xl": "3rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-large": ["Inter"],
+            "headline-page-mobile": ["Inter"],
+            "code-inline": ["Inter"],
+            "body-medium": ["Inter"],
+            "display-kpi": ["Inter"],
+            "headline-card": ["Inter"],
+            "headline-section": ["Inter"],
+            "label-analytics": ["Inter"],
+            "body-regular": ["Inter"],
+            "caption": ["Inter"],
+            "headline-page": ["Inter"],
+            "display-kpi-mobile": ["Inter"]
+          },
+          "fontSize": {
+            "body-large": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-page-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "code-inline": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+            "body-medium": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "display-kpi": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-card": ["16px", {"lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-section": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "label-analytics": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "body-regular": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-page": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+            "display-kpi-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F5F7F6;
+      color: #18211F;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Ambient Diffuse Shadow */
+    .bi-card-shadow {
+      box-shadow: 0 4px 18px rgba(20, 50, 40, 0.04);
+    }
+    .bi-card-hover:hover {
+      box-shadow: 0 8px 24px rgba(20, 50, 40, 0.08);
+      border-color: #CAD6CF;
+      transform: translateY(-1px);
+    }
+    /* Custom clean scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F7F6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CAD6CF;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #85938F;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-surface-canvas text-text-primary antialiased flex flex-col md:flex-row">
+<!-- ========================================================================= -->
+<!-- 1. GLOBAL PERSISTENT LEFT SIDEBAR (Width 270px, Semantic Shell)           -->
+<!-- ========================================================================= -->
+<aside class="w-full md:w-[270px] md:fixed md:top-0 md:left-0 md:h-screen bg-surface-sidebar border-r border-border-subtle flex flex-col justify-between z-30 shrink-0 select-none overflow-y-auto">
+<!-- Top Identity & Monogram Section -->
+<div class="p-space-lg pb-space-sm">
+<div class="flex items-center gap-3 mb-space-sm">
+<div class="w-11 h-11 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-card text-headline-card font-bold tracking-tight shadow-sm ring-2 ring-highlight-soft">
+          MB
+        </div>
+<div>
+<h1 class="font-headline-card text-headline-card text-text-primary leading-snug">Mirza Hammad Baig</h1>
+<p class="font-label-analytics text-label-analytics uppercase text-text-secondary tracking-wider">Data Analyst · BI Solutions Architect</p>
+</div>
+</div>
+<!-- Domain Pipeline Anchor -->
+<div class="py-1 px-2.5 rounded bg-surface-muted border border-border-subtle my-2 text-center">
+<span class="font-label-analytics text-[10px] tracking-widest text-primary-container font-semibold uppercase">DATA • BI • ARCHITECTURE • AI</span>
+</div>
+<!-- Elevator Pitch -->
+<p class="font-caption text-caption text-text-secondary mt-2 leading-relaxed">
+        Turning complex data into reliable systems, clear insights and better business decisions.
+      </p>
+<!-- Social & Professional Credentials -->
+<div class="flex items-center gap-2 mt-3 pt-3 border-t border-border-subtle text-text-secondary">
+<a class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-muted hover:text-primary-container transition-colors" href="https://linkedin.com" target="_blank" title="LinkedIn Profile">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-muted hover:text-primary-container transition-colors" href="https://github.com" target="_blank" title="GitHub Repositories">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+<a class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-muted hover:text-primary-container transition-colors" href="https://medium.com" target="_blank" title="Technical Publications">
+<span class="material-symbols-outlined text-[18px]">article</span>
+</a>
+<a class="w-7 h-7 rounded flex items-center justify-center hover:bg-surface-muted hover:text-primary-container transition-colors" href="mailto:hammad@example.com" title="Direct Email">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+<span class="ml-auto inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-highlight-tint border border-primary-container/20 text-[10px] font-medium text-primary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-mint animate-pulse"></span> Available
+        </span>
+</div>
+</div>
+<!-- Navigation List (Strict Contextual Active Tab: Teaching & Mentoring) -->
+<nav class="px-space-md py-1 space-y-1 flex-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#home">
+<span class="material-symbols-outlined text-[19px] text-text-muted">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#work">
+<span class="material-symbols-outlined text-[19px] text-text-muted">analytics</span>
+<span>Work / Case Studies</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#experience">
+<span class="material-symbols-outlined text-[19px] text-text-muted">timeline</span>
+<span>Experience</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#expertise">
+<span class="material-symbols-outlined text-[19px] text-text-muted">verified</span>
+<span>Expertise</span>
+</a>
+<!-- ACTIVE ITEM: Teaching & Mentoring -->
+<a class="flex items-center justify-between px-3 py-2 rounded-lg bg-surface-card text-primary-container font-body-medium text-body-medium shadow-sm border border-border-subtle group" href="#teaching-mentoring">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-semibold text-text-primary">Teaching &amp; Mentoring</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#writing">
+<span class="material-symbols-outlined text-[19px] text-text-muted">history_edu</span>
+<span>Writing / Insights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#about">
+<span class="material-symbols-outlined text-[19px] text-text-muted">person</span>
+<span>About</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#contact">
+<span class="material-symbols-outlined text-[19px] text-text-muted">chat</span>
+<span>Contact</span>
+</a>
+</nav>
+<!-- Bottom Section: Rapid Skills & Consultation CTA -->
+<div class="p-space-md border-t border-border-subtle bg-surface-sidebar">
+<div class="mb-3">
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block mb-2">Core Tech Stack</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">Power BI</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">SQL</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">Python</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">DAX</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">Data Modeling</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">Fabric</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">Data Eng</span>
+<span class="px-2 py-0.5 rounded-full bg-highlight-tint text-[11px] font-medium text-primary-container border border-primary-container/15">AI Automation</span>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary py-2 px-3 rounded-lg text-body-medium font-body-medium shadow-sm hover:bg-tertiary transition-all duration-150 group" href="#contact">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Schedule Consultation</span>
+</a>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- 2. MAIN ANALYTICS WORKSPACE CANVAS (Responsive Offset for 270px Sidebar)  -->
+<!-- ========================================================================= -->
+<div class="flex-1 md:ml-[270px] min-h-screen flex flex-col justify-between overflow-x-hidden">
+<!-- TOP WORKSPACE UTILITY HEADER (Shared Component Pattern) -->
+<header class="sticky top-0 z-20 h-14 bg-surface-card border-b border-border-subtle px-4 md:px-8 flex items-center justify-between shadow-sm">
+<!-- Breadcrumb & Indicator Badge -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 text-caption font-body-medium text-text-secondary">
+<span class="hover:text-text-primary cursor-pointer transition-colors">Enterprise BI Workspace</span>
+<span class="material-symbols-outlined text-[14px] text-text-muted">chevron_right</span>
+<span class="text-text-primary font-semibold">Teaching &amp; Mentoring</span>
+</div>
+<div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-highlight-tint border border-primary-container/15 text-[11px] text-primary-container font-medium ml-2">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-emerald"></span>
+<span>Power BI Lecturer at Atomcamp</span>
+<span class="text-text-muted">|</span>
+<span class="text-text-secondary">Active Faculty &amp; Enablement</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2.5">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-surface-card border border-border-subtle text-text-primary text-caption font-body-medium hover:bg-surface-muted hover:border-border-hover transition-colors" href="#cv-download">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">download</span>
+<span class="hidden sm:inline">Download CV</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-primary-container text-on-primary text-caption font-body-medium hover:bg-tertiary shadow-sm transition-colors" href="#contact">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Contact</span>
+</a>
+</div>
+</header>
+<!-- WORKSPACE CANVAS BODY -->
+<main class="p-4 md:p-8 max-w-7xl w-full mx-auto space-y-8">
+<!-- HERO / PAGE HEADER -->
+<section class="bg-surface-card rounded-xl p-6 md:p-8 border border-border-subtle bi-card-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-highlight-tint/60 via-transparent to-transparent pointer-events-none rounded-tr-xl"></div>
+<div class="max-w-3xl relative z-10">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-highlight-tint border border-primary-container/15 mb-3">
+<span class="material-symbols-outlined text-[15px] text-primary-container">psychology</span>
+<span class="font-label-analytics text-label-analytics text-primary-container uppercase tracking-wider font-semibold">KNOWLEDGE TRANSFER &amp; TALENT ENABLEMENT</span>
+</div>
+<h1 class="font-headline-page text-headline-page-mobile md:text-headline-page text-text-primary tracking-tight font-bold mb-3">
+            Teaching &amp; Mentoring
+          </h1>
+<p class="font-headline-card text-headline-card text-primary-container font-medium mb-3">
+            "Helping people move from learning tools to solving real data problems."
+          </p>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+            Instruction is treated as a serious engineering and professional capability, not an informal hobby. By bridging analytical rigorousness with real-world enterprise operational constraints, Hammad trains working analysts, university graduates, and corporate teams to build production-grade, decision-ready data products.
+          </p>
+</div>
+</section>
+<!-- ATOMCAMP ACADEMIC APPOINTMENT (Featured Enterprise Panel) -->
+<section class="bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 bi-card-shadow relative overflow-hidden">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-4 pb-5 mb-5 border-b border-border-subtle">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-muted border border-border-subtle flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">domain</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h2 class="font-headline-section text-headline-section text-text-primary">Power BI Lecturer</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary-container text-caption font-semibold border border-primary-container/20">
+                  Atomcamp
+                </span>
+<span class="text-caption font-body-regular text-text-secondary">
+                  Apr 2026 – Present · Part-Time Academic Faculty
+                </span>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                Instructional lead for applied analytics cohorts, career transitioners, and practicing corporate analysts.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-surface-muted text-text-primary text-caption font-body-medium border border-border-subtle">
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald"></span>
+              Active Cohort Instruction
+            </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 space-y-4">
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+              Hammad delivers lecture series emphasizing engineering rigor rather than superficial tool mechanics. Learners avoid synthetic, pristine datasets and instead navigate messy, fragmented commercial sources that mimic live enterprise ERP and CRM architectures.
+            </p>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+              Curriculum focus spans relational dimensional modeling (Kimball star schema), multi-pass DAX optimization, robust error handling in Power Query (M), and executive-ready UX. Hammad conducts structured 1-on-1 portfolio diagnostics, reviewing DAX formula engines, memory consumption via VertiPaq Analyzer, and storytelling coherence.
+            </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">Power BI</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">DAX Optimization</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">Star Schema Modeling</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">SQL Extraction</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">Python EDA</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">Executive Reporting</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas border border-border-subtle text-[12px] font-medium text-text-primary">1-on-1 Portfolio Reviews</span>
+</div>
+</div>
+<!-- Academic Execution Pillars Card -->
+<div class="bg-surface-canvas-subtle p-5 rounded-lg border border-border-subtle flex flex-col justify-between">
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted mb-3 block">Pedagogical Standards</span>
+<ul class="space-y-3 text-caption font-body-regular text-text-primary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container shrink-0">check_circle</span>
+<span><strong>No sanitized demo data:</strong> Students wrangle null-heavy, asymmetric transactional records.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container shrink-0">check_circle</span>
+<span><strong>Architecture first:</strong> Explicit separation between analytical schema and presentation layer.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container shrink-0">check_circle</span>
+<span><strong>DAX comprehension:</strong> Deep dive into filter context, row context, and context transition.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container shrink-0">check_circle</span>
+<span><strong>Portfolio defense:</strong> Capstones must survive simulated VP of Finance &amp; Ops stakeholder reviews.</span>
+</li>
+</ul>
+<div class="mt-4 pt-3 border-t border-border-subtle text-[11px] text-text-secondary flex justify-between items-center">
+<span>Department: Analytics &amp; BI</span>
+<span class="font-semibold text-primary-container">Applied Track</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TEACHING OVERVIEW: 4 MAJOR CURRICULAR DOMAINS -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Curriculum Architecture</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Core Instructional Domains</h2>
+</div>
+<span class="font-caption text-caption text-text-secondary hidden sm:inline">Deliberate focus on end-to-end analytical capability</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Domain 1: Power BI -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint text-primary-container flex items-center justify-center mb-4 border border-primary-container/20">
+<span class="material-symbols-outlined text-[22px]">bar_chart</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary mb-2">Power BI &amp; Semantic Modeling</h3>
+<p class="font-caption text-caption text-text-secondary mb-4 leading-relaxed">
+                Transforming relational and flat business data into governed, blazingly fast enterprise reporting suites.
+              </p>
+<div class="space-y-2 mb-5">
+<span class="font-label-analytics text-[10px] text-text-muted uppercase block">Instructional Modules</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Star Schemas</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">DAX Engines</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Power Query (M)</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Row-Level Security</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">KPI Hierarchy</span>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-[10px] text-primary-container uppercase block font-semibold">Core Competence Target</span>
+<p class="font-caption text-caption text-text-primary font-medium mt-0.5">Building decision-ready executive dashboards from raw transactional enterprise records.</p>
+</div>
+</div>
+<!-- Domain 2: Python for Data Analysis -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint text-primary-container flex items-center justify-center mb-4 border border-primary-container/20">
+<span class="material-symbols-outlined text-[22px]">code</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary mb-2">Python for Data Analysis</h3>
+<p class="font-caption text-caption text-text-secondary mb-4 leading-relaxed">
+                Code-first data munging, systematic cleaning pipelines, and statistical exploration for analytical workflows.
+              </p>
+<div class="space-y-2 mb-5">
+<span class="font-label-analytics text-[10px] text-text-muted uppercase block">Instructional Modules</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Pandas Series/DF</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">NumPy Vectorization</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Data Imputation</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Matplotlib / Seaborn</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Automation Scripts</span>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-[10px] text-primary-container uppercase block font-semibold">Core Competence Target</span>
+<p class="font-caption text-caption text-text-primary font-medium mt-0.5">Structured code-first exploratory analytics and repeatable analytical data pipelines.</p>
+</div>
+</div>
+<!-- Domain 3: SQL & Relational Querying -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint text-primary-container flex items-center justify-center mb-4 border border-primary-container/20">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary mb-2">SQL &amp; Relational Querying</h3>
+<p class="font-caption text-caption text-text-secondary mb-4 leading-relaxed">
+                Extracting deterministic single sources of truth directly from normalized OLTP schemas and data warehouses.
+              </p>
+<div class="space-y-2 mb-5">
+<span class="font-label-analytics text-[10px] text-text-muted uppercase block">Instructional Modules</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Window Functions</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Complex Multi-Joins</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">CTEs &amp; Subqueries</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Index Optimization</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Schema Comprehension</span>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-[10px] text-primary-container uppercase block font-semibold">Core Competence Target</span>
+<p class="font-caption text-caption text-text-primary font-medium mt-0.5">Extracting deterministic truth directly from normalized relational operational databases.</p>
+</div>
+</div>
+<!-- Domain 4: Exploratory Data Analysis (EDA) -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint text-primary-container flex items-center justify-center mb-4 border border-primary-container/20">
+<span class="material-symbols-outlined text-[22px]">troubleshoot</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary mb-2">Exploratory Data Analysis</h3>
+<p class="font-caption text-caption text-text-secondary mb-4 leading-relaxed">
+                Moving beyond cosmetic summary tables to diagnosing anomalies, variance, and genuine commercial root causes.
+              </p>
+<div class="space-y-2 mb-5">
+<span class="font-label-analytics text-[10px] text-text-muted uppercase block">Instructional Modules</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Anomaly Diagnostics</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Distribution Skew</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Bivariate Variance</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Hypothesis Validation</span>
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[11px] text-text-secondary">Insight Framing</span>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-[10px] text-primary-container uppercase block font-semibold">Core Competence Target</span>
+<p class="font-caption text-caption text-text-primary font-medium mt-0.5">Moving beyond vanity summaries to diagnosing root drivers and commercial opportunities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- LEARNING APPROACH & METHODOLOGY FLOW -->
+<section class="bg-surface-card rounded-xl p-6 md:p-8 border border-border-subtle bi-card-shadow">
+<div class="max-w-2xl mb-6">
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted">Pedagogical Framework</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">6-Stage Competency Pipeline</h2>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+            How theoretical understanding systematically graduates into high-assurance production competence.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 relative">
+<!-- Step 1 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-analytics text-[11px] font-bold text-primary-container">01</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">menu_book</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Concept</h4>
+<p class="font-caption text-[12px] text-text-secondary mt-1">First-principles foundation: dimensional modeling, indexing, or algebraic aggregation.</p>
+</div>
+<span class="text-[10px] font-medium text-text-muted mt-3 block border-t border-border-subtle pt-2">Theory &amp; Principles</span>
+</div>
+<!-- Step 2 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-analytics text-[11px] font-bold text-primary-container">02</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">handyman</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Guided Exercise</h4>
+<p class="font-caption text-[12px] text-text-secondary mt-1">Structured walk-through: establishing schemas, writing initial CTEs, and base DAX.</p>
+</div>
+<span class="text-[10px] font-medium text-text-muted mt-3 block border-t border-border-subtle pt-2">Syntax &amp; Mechanics</span>
+</div>
+<!-- Step 3 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-analytics text-[11px] font-bold text-primary-container">03</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">warning_amber</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Business Problem</h4>
+<p class="font-caption text-[12px] text-text-secondary mt-1">Framing ambiguous stakeholder dilemmas: margin bleed, pacing slippage, or inventory churn.</p>
+</div>
+<span class="text-[10px] font-medium text-text-muted mt-3 block border-t border-border-subtle pt-2">Contextual Framing</span>
+</div>
+<!-- Step 4 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-analytics text-[11px] font-bold text-primary-container">04</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">dataset</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Case Study</h4>
+<p class="font-caption text-[12px] text-text-secondary mt-1">Unsanitized multi-table dataset manipulation requiring normalization and end-to-end pipelines.</p>
+</div>
+<span class="text-[10px] font-medium text-text-muted mt-3 block border-t border-border-subtle pt-2">Applied Engineering</span>
+</div>
+<!-- Step 5 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-analytics text-[11px] font-bold text-primary-container">05</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">rate_review</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Feedback &amp; Review</h4>
+<p class="font-caption text-[12px] text-text-secondary mt-1">Code critique, VertiPaq analyzer performance profiling, visual hierarchy audit, and defense.</p>
+</div>
+<span class="text-[10px] font-medium text-text-muted mt-3 block border-t border-border-subtle pt-2">Rigor &amp; Optimization</span>
+</div>
+<!-- Step 6 -->
+<div class="p-4 rounded-lg bg-highlight-tint/40 border border-primary-container/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-analytics text-[11px] font-bold text-primary-container">06</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">rocket_launch</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-primary-container">Independent Application</h4>
+<p class="font-caption text-[12px] text-text-secondary mt-1">Independent stakeholder-facing dashboard, production deployment, and self-directed problem solving.</p>
+</div>
+<span class="text-[10px] font-semibold text-primary-container mt-3 block border-t border-primary-container/20 pt-2">Production Readiness</span>
+</div>
+</div>
+</section>
+<!-- CORPORATE TRAINING & ENTERPRISE CAPABILITY -->
+<section class="bg-surface-card rounded-xl p-6 md:p-8 border border-border-subtle bi-card-shadow">
+<div class="flex flex-col lg:flex-row items-start gap-8">
+<div class="w-full lg:w-2/3 space-y-4">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-surface-muted border border-border-subtle">
+<span class="material-symbols-outlined text-[15px] text-primary-container">corporate_fare</span>
+<span class="font-label-analytics text-label-analytics text-text-primary uppercase tracking-wider font-semibold">Corporate Training &amp; Team Upskilling</span>
+</div>
+<h2 class="font-headline-section text-headline-section text-text-primary">
+              Muller &amp; Phipps: Institutional Enablement
+            </h2>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+              In addition to academic cohorts, Hammad designs and conducts targeted corporate enablement bootcamps for cross-functional staff, operations directors, and analytics teams within enterprise environments like Muller &amp; Phipps.
+            </p>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+              These sessions focused on the strategic transition away from brittle, fragmented desktop spreadsheets toward governed Power BI workspaces. Training programs standardized KPI calculations across logistics and sales operations, codified data refresh schedules, and equipped business personnel to autonomously discover operational efficiencies.
+            </p>
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle flex items-start gap-3 mt-4">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0">verified_user</span>
+<p class="font-caption text-caption text-text-primary">
+<strong>Enterprise Takeaway:</strong> Proves Hammad's proven capability to demystify technical complexity for operational leaders while establishing high-discipline analytical standards directly within large-scale corporate structures.
+              </p>
+</div>
+</div>
+<!-- Corporate Training Metrics / Summary Box -->
+<div class="w-full lg:w-1/3 bg-surface-sidebar p-6 rounded-xl border border-border-subtle space-y-4">
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block">Enablement Focus Areas</span>
+<div class="space-y-3">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary-container">table_view</span>
+<div>
+<h4 class="font-body-medium text-caption font-semibold text-text-primary">Spreadsheet Deprecation</h4>
+<p class="font-caption text-[11px] text-text-secondary">Converting manual VLOOKUP spreadsheets into automated, scheduled Power Query ETL pipelines.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary-container">tune</span>
+<div>
+<h4 class="font-body-medium text-caption font-semibold text-text-primary">KPI Standardization</h4>
+<p class="font-caption text-[11px] text-text-secondary">Harmonizing divergent formulas for revenue pacing, net realized price, and operational fill-rates.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary-container">groups</span>
+<div>
+<h4 class="font-body-medium text-caption font-semibold text-text-primary">Self-Service Governance</h4>
+<p class="font-caption text-[11px] text-text-secondary">Instituting role-based workspaces, certified semantic models, and safe ad-hoc exploration.</p>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-border-subtle">
+<span class="font-label-analytics text-[10px] text-text-muted uppercase block">Format</span>
+<span class="font-caption text-caption text-text-primary font-medium">Cohort Workshops · Live System Debugging · Playbook Delivery</span>
+</div>
+</div>
+</div>
+</section>
+<!-- APPLIED MENTORSHIP PILLARS (5 Focus Cards) -->
+<section class="space-y-4">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Mentorship Philosophy</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">5 Pillars of Applied Mentorship</h2>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+            Individualized 1-on-1 coaching designed to bridge technical knowledge into marketable enterprise value.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Pillar 1 -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-muted text-primary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+</div>
+<h3 class="font-headline-card text-caption font-semibold text-text-primary mb-1.5">1. Technical Guidance</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Teaching VertiPaq engine mechanics, star schema modeling principles, cardinality reduction, and clean Pythonic data wrangling.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle text-[11px] font-medium text-primary-container">
+              Architecture &amp; Engine Depth
+            </div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-muted text-primary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<h3 class="font-headline-card text-caption font-semibold text-text-primary mb-1.5">2. Project Feedback</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Rigorous code and schema reviews focusing on DAX query performance, measure maintainability, and clean layout visual hierarchy.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle text-[11px] font-medium text-primary-container">
+              Production Code Standards
+            </div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-muted text-primary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+</div>
+<h3 class="font-headline-card text-caption font-semibold text-text-primary mb-1.5">3. Case Study Development</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Helping mentees structure portfolio projects as complete consulting engagements (Problem → Architecture → Insight → Impact).
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle text-[11px] font-medium text-primary-container">
+              End-to-End Framing
+            </div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-muted text-primary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<h3 class="font-headline-card text-caption font-semibold text-text-primary mb-1.5">4. Business Thinking</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Instilling commercial acumen—defining the business hypothesis and financial stakes before authoring a measure or notebook script.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle text-[11px] font-medium text-primary-container">
+              Commercial Intent First
+            </div>
+</div>
+<!-- Pillar 5 -->
+<div class="bg-surface-card rounded-xl p-5 border border-border-subtle bi-card-shadow bi-card-hover transition-all flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-muted text-primary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<h3 class="font-headline-card text-caption font-semibold text-text-primary mb-1.5">5. Career Application</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Translating technical fluency into demonstrable enterprise outcomes, boardroom interview presence, and stakeholder communication.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle text-[11px] font-medium text-primary-container">
+              Hireability &amp; Impact
+            </div>
+</div>
+</div>
+</section>
+<!-- TEACHING ARTIFACTS & PRACTICAL CURRICULAR CHALLENGES -->
+<section class="bg-surface-card rounded-xl p-6 md:p-8 border border-border-subtle bi-card-shadow space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-border-subtle pb-4">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Curricular Artifacts</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Realistic Training Materials &amp; Challenges</h2>
+</div>
+<span class="font-caption text-caption text-text-secondary">Simulating the messiness of live corporate data environments</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Artifact 1 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[10px] font-semibold text-text-secondary uppercase">Synthetic Enterprise Datasets</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">dataset</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Multi-Branch Retail &amp; Logistics POS</h4>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+              1.2M row transactional dataset containing skewed returns, missing customer identifiers, mismatched date keys, and fragmented regional currency conversions.
+            </p>
+<div class="font-label-analytics text-[11px] text-text-muted">Challenge: Data profiling, schema normalization &amp; Kimball star design.</div>
+</div>
+<!-- Artifact 2 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[10px] font-semibold text-text-secondary uppercase">Executive Dashboard Challenge</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">dashboard</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Dynamic Store Pacing vs. Prior Year</h4>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+              Authoring complex semi-additive DAX measures to calculate pacing against 53-week retail calendars, non-standard fiscal shifts, and sales rep commission tiers.
+            </p>
+<div class="font-label-analytics text-[11px] text-text-muted">Challenge: Time intelligence without standard calendar built-ins.</div>
+</div>
+<!-- Artifact 3 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[10px] font-semibold text-text-secondary uppercase">SQL Diagnostic Task</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">terminal</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Customer Cohort Retention &amp; Churn</h4>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+              Writing performant window functions (`LEAD`, `LAG`, `DENSE_RANK`) to compute monthly active retention rates and identify 90-day dormant user inflection points.
+            </p>
+<div class="font-label-analytics text-[11px] text-text-muted">Challenge: Multi-step CTE execution without temp tables.</div>
+</div>
+<!-- Artifact 4 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[10px] font-semibold text-text-secondary uppercase">Python EDA Notebook</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">analytics</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Automated Outlier Diagnostics</h4>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+              Configuring IQR and Z-score outlier filters across operational latency feeds, paired with Seaborn distribution plots to assess skewed warehouse fulfilment.
+            </p>
+<div class="font-label-analytics text-[11px] text-text-muted">Challenge: Distinguishing operational anomalies from reporting noise.</div>
+</div>
+<!-- Artifact 5 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[10px] font-semibold text-text-secondary uppercase">Capstone Case Study</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">architecture</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">End-to-End Enterprise BI System</h4>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+              Full lifecycle project: ingest raw CSVs via Power Query, build unified semantic model, design 3-page executive report, and implement secure RLS partitions.
+            </p>
+<div class="font-label-analytics text-[11px] text-text-muted">Challenge: Presenting and defending architecture in live mock defense.</div>
+</div>
+<!-- Artifact 6 -->
+<div class="p-4 rounded-lg bg-surface-canvas border border-border-subtle space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-[10px] font-semibold text-text-secondary uppercase">Evaluation Framework</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">fact_check</span>
+</div>
+<h4 class="font-headline-card text-caption font-semibold text-text-primary">Rubric &amp; Model Scorecards</h4>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+              Standardized assessment across 4 vectors: Schema hygiene, DAX compute efficiency, visual density &amp; readability, and business narrative coherence.
+            </p>
+<div class="font-label-analytics text-[11px] text-text-muted">Challenge: Quantitative scoring applied to mentee portfolios.</div>
+</div>
+</div>
+</section>
+<!-- KNOWLEDGE + INDUSTRY CONNECTION (Editorial Quote Card) -->
+<section class="bg-gradient-to-r from-primary-container via-tertiary-container to-primary-container text-on-primary rounded-xl p-8 bi-card-shadow relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[220px]">format_quote</span>
+</div>
+<div class="max-w-3xl relative z-10 space-y-3">
+<span class="font-label-analytics text-[11px] uppercase tracking-widest text-primary-fixed block">Core Enablement Stance</span>
+<blockquote class="font-headline-section text-headline-section font-semibold leading-snug">
+            “Good analytics training connects tools to business questions. Anyone can learn tool syntax; real capability comes from understanding data architecture, metric integrity, and executive decision needs.”
+          </blockquote>
+<div class="pt-2 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-card text-primary-container flex items-center justify-center font-bold text-xs">
+              MB
+            </div>
+<div>
+<p class="font-body-medium text-caption font-semibold text-on-primary">Mirza Hammad Baig</p>
+<p class="font-caption text-[11px] text-on-primary-container">BI Solutions Architect &amp; Atomcamp Lecturer</p>
+</div>
+</div>
+</div>
+</section>
+<!-- BOTTOM CONVERSION CTA -->
+<section class="bg-surface-card rounded-xl p-8 border border-border-subtle bi-card-shadow text-center max-w-4xl mx-auto space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-highlight-tint text-primary-container text-caption font-medium border border-primary-container/15">
+<span class="material-symbols-outlined text-[16px]">co_present</span>
+<span>Corporate Training · Guest Lectures · Mentorship</span>
+</div>
+<h2 class="font-headline-page text-headline-section md:text-[28px] font-bold text-text-primary tracking-tight">
+          Interested in training, corporate workshops or mentorship?
+        </h2>
+<p class="font-body-regular text-body-regular text-text-secondary max-w-xl mx-auto leading-relaxed">
+          Available for corporate BI upskilling, university guest lecturing, and structured team enablement sessions tailored to enterprise data workflows.
+        </p>
+<div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary font-body-medium text-body-medium hover:bg-tertiary shadow-sm transition-all duration-150" href="#contact">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Contact Hammad</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-surface-card border border-border-subtle text-text-primary font-body-medium text-body-medium hover:bg-surface-muted hover:border-border-hover transition-all duration-150" href="#writing">
+<span>Read His Writing</span>
+<span class="text-primary-container font-bold">→</span>
+</a>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- 3. FOOTER (Strict Source of Truth JSON Integration)                       -->
+<!-- ========================================================================= -->
+<footer class="bg-surface-canvas-subtle border-t border-border-subtle mt-12 py-space-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-space-xl max-w-7xl mx-auto w-full gap-4">
+<div class="text-center md:text-left">
+<p class="font-body-regular text-caption text-text-secondary">
+            © 2025 Mirza Hammad Baig. BI Solutions Architecture &amp; Enterprise Data Strategy.
+          </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4 text-caption font-body-regular text-text-secondary">
+<a class="hover:text-primary-container transition-colors duration-150" href="https://linkedin.com" target="_blank">LinkedIn</a>
+<span class="text-border-subtle">•</span>
+<a class="hover:text-primary-container transition-colors duration-150" href="https://github.com" target="_blank">GitHub</a>
+<span class="text-border-subtle">•</span>
+<a class="hover:text-primary-container transition-colors duration-150" href="https://medium.com" target="_blank">Medium</a>
+<span class="text-border-subtle">•</span>
+<a class="hover:text-primary-container transition-colors duration-150" href="#docs">Architecture System Docs</a>
+<span class="text-border-subtle">•</span>
+<a class="hover:text-primary-container transition-colors duration-150" href="#privacy">Privacy &amp; Governance</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

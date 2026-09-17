@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirza Hammad Baig | Selected Work &amp; Case Studies</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#7bdc7f",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#e0eae7",
+            "surface-container": "#e6f0ec",
+            "tertiary-fixed-dim": "#99d2bb",
+            "text-primary": "#18211F",
+            "on-secondary-fixed-variant": "#005318",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#dbe5e1",
+            "highlight-tint": "#ECF8EE",
+            "primary": "#004331",
+            "on-primary-fixed-variant": "#00513c",
+            "chart-accent-mint": "#82D387",
+            "text-muted": "#85938F",
+            "on-tertiary-fixed-variant": "#16503f",
+            "surface-muted": "#F3F6F4",
+            "on-background": "#141d1b",
+            "on-primary-fixed": "#002116",
+            "on-secondary-fixed": "#002105",
+            "secondary": "#006e23",
+            "surface": "#f2fcf8",
+            "on-tertiary-fixed": "#002117",
+            "surface-bright": "#f2fcf8",
+            "outline-variant": "#bfc9c2",
+            "inverse-primary": "#91d4b8",
+            "text-secondary": "#5D6965",
+            "tertiary-container": "#235b49",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#145c46",
+            "secondary-fixed": "#96f998",
+            "outline": "#707974",
+            "on-primary-container": "#8fd2b6",
+            "on-secondary-container": "#037526",
+            "surface-dim": "#d2dcd9",
+            "chart-accent-slate": "#7A8C86",
+            "on-primary": "#ffffff",
+            "primary-fixed": "#acf1d4",
+            "on-error": "#ffffff",
+            "surface-sidebar": "#F8FAF9",
+            "highlight-soft": "#DDF5DF",
+            "primary-fixed-dim": "#91d4b8",
+            "tertiary-fixed": "#b5efd7",
+            "surface-container-highest": "#dbe5e1",
+            "error": "#ba1a1a",
+            "surface-canvas": "#F5F7F6",
+            "inverse-on-surface": "#e9f3ef",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#293230",
+            "secondary-container": "#96f998",
+            "on-surface-variant": "#3f4944",
+            "on-surface": "#141d1b",
+            "surface-canvas-subtle": "#F7F9F8",
+            "chart-accent-emerald": "#1B7358",
+            "tertiary": "#024333",
+            "surface-card": "#FFFFFF",
+            "border-hover": "#CAD6CF",
+            "error-container": "#ffdad6",
+            "border-subtle": "#E1E8E4",
+            "surface-tint": "#266a53",
+            "surface-container-low": "#ecf6f2",
+            "on-tertiary-container": "#98d1ba",
+            "background": "#f2fcf8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1rem",
+            "margin-desktop": "2rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-2xl": "3rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Inter"],
+            "caption": ["Inter"],
+            "body-regular": ["Inter"],
+            "body-medium": ["Inter"],
+            "headline-page": ["Inter"],
+            "label-analytics": ["Inter"],
+            "display-kpi-mobile": ["Inter"],
+            "headline-card": ["Inter"],
+            "display-kpi": ["Inter"],
+            "code-inline": ["Inter"],
+            "body-large": ["Inter"],
+            "headline-page-mobile": ["Inter"]
+          },
+          "fontSize": {
+            "headline-section": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-regular": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-page": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "label-analytics": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "display-kpi-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-card": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-kpi": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body-large": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-page-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F8FAF9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CAD6CF;
+      border-radius: 9999px;
+    }
+    .soft-card-shadow {
+      box-shadow: 0 4px 18px rgba(20, 50, 40, 0.05);
+    }
+    .hover-card-shadow:hover {
+      box-shadow: 0 8px 24px rgba(20, 50, 40, 0.08);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-surface-canvas text-text-primary antialiased font-body-regular text-body-regular min-h-screen selection:bg-highlight-soft selection:text-primary">
+<div class="flex min-h-screen">
+<!-- ==========================================
+         PERSISTENT LEFT SIDEBAR (Width: ~272px)
+         ========================================== -->
+<aside class="fixed top-0 left-0 h-screen w-64 md:w-72 bg-surface-sidebar border-r border-border-subtle z-30 flex flex-col justify-between overflow-y-auto custom-scrollbar">
+<!-- Top Section: Identity & Bio -->
+<div class="p-space-lg flex flex-col gap-space-md border-b border-border-subtle">
+<div class="flex items-start gap-3">
+<div class="relative w-12 h-12 rounded-xl overflow-hidden border border-border-subtle shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up professional portrait of Mirza Hammad Baig, an analytical male solutions architect in modern corporate attire, looking confidently into the camera with soft cinematic studio lighting. Minimalist off-white and evergreen ambient background reflecting an enterprise analytical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAe8_tLAvMzKG2vYmK5AMQdgoBJxvOc9dZ7vsYuSevIa1Hrcc7Gdw6deyppfAj9Ij_jp0M1M4-gZO89n_2x3-WwjRLhC3s-aA0dgnU8TdoVzt3VbPqFwMJDRnrZEyGHRXvAJovj_gCPBL7UlwRQ7TvY4K-jLbDIC0Ahvw_qMGbDv3IHe3wbrFN3h520_7c4UWe9NnTZJlHK_A6vsaiTSMB3RA5C59x84feZElK1_c4QAPtbgtrfqWw"/>
+<span class="absolute bottom-1 right-1 w-2.5 h-2.5 bg-chart-accent-mint border-2 border-surface-card rounded-full" title="Available for Strategic Roles"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-card text-headline-card font-semibold text-text-primary truncate">Mirza Hammad Baig</span>
+<span class="font-caption text-caption text-text-secondary truncate">Data Analyst · BI Solutions Architect</span>
+<span class="font-label-analytics text-label-analytics text-primary font-semibold tracking-wider mt-0.5">DATA • BI • ARCHITECTURE • AI</span>
+</div>
+</div>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+          Turning complex data into reliable systems, clear insights and better business decisions.
+        </p>
+<!-- Social Channels -->
+<div class="flex items-center gap-2 pt-1">
+<a class="w-7 h-7 rounded-md border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover hover:bg-surface-card transition-all duration-150" href="#linkedin" title="LinkedIn">
+<span class="material-symbols-outlined text-[15px]">work</span>
+</a>
+<a class="w-7 h-7 rounded-md border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover hover:bg-surface-card transition-all duration-150" href="#github" title="GitHub">
+<span class="material-symbols-outlined text-[15px]">code</span>
+</a>
+<a class="w-7 h-7 rounded-md border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover hover:bg-surface-card transition-all duration-150" href="#medium" title="Medium">
+<span class="material-symbols-outlined text-[15px]">menu_book</span>
+</a>
+<a class="w-7 h-7 rounded-md border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover hover:bg-surface-card transition-all duration-150" href="#email" title="Direct Email">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+</a>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="px-space-md py-space-md flex-1 flex flex-col gap-1">
+<span class="px-3 pb-1 font-label-analytics text-label-analytics text-text-muted">SYSTEM NAVIGATION</span>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#home">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Home</span>
+</a>
+<!-- ACTIVE DESTINATION: Work / Case Studies -->
+<a class="flex items-center justify-between px-3 py-2 rounded-lg bg-highlight-tint text-primary font-body-medium text-body-medium shadow-sm border border-highlight-soft transition-all duration-150" href="#work">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span>Work / Case Studies</span>
+</div>
+<span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#experience">
+<span class="material-symbols-outlined">timeline</span>
+<span>Experience</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#expertise">
+<span class="material-symbols-outlined">account_tree</span>
+<span>Expertise</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#mentoring">
+<span class="material-symbols-outlined">school</span>
+<span>Teaching &amp; Mentoring</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#insights">
+<span class="material-symbols-outlined">article</span>
+<span>Writing / Insights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#about">
+<span class="material-symbols-outlined">person</span>
+<span>About</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#contact">
+<span class="material-symbols-outlined">alternate_email</span>
+<span>Contact</span>
+</a>
+</div>
+<!-- Skills & Primary Action CTA -->
+<div class="p-space-lg border-t border-border-subtle flex flex-col gap-3 bg-surface-card">
+<div class="flex items-center justify-between">
+<span class="font-label-analytics text-label-analytics text-text-muted">CORE STACK</span>
+<span class="font-caption text-[11px] text-chart-accent-emerald font-medium">Enterprise Certified</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">Power BI</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">SQL</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">Python</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">DAX</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">Data Modeling</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">Microsoft Fabric</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">Data Engineering</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded-full bg-surface-muted border border-border-subtle text-text-secondary">AI Automation</span>
+</div>
+<button class="mt-2 w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary-container text-on-primary font-body-medium text-body-medium hover:bg-primary transition-all duration-150 shadow-sm active:scale-98">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+<span>Schedule Consultation</span>
+</button>
+</div>
+</aside>
+<!-- ==========================================
+         MAIN ANALYTICS WORKSPACE (Offset by sidebar)
+         ========================================== -->
+<div class="flex-1 ml-64 md:ml-72 flex flex-col min-w-0 bg-surface-canvas">
+<!-- TOP DOCKED APP BAR -->
+<header class="sticky top-0 z-20 h-14 bg-surface-card border-b border-border-subtle px-space-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<!-- Breadcrumb indicator -->
+<div class="flex items-center gap-2 font-body-medium text-body-medium">
+<span class="text-text-muted">Enterprise BI Workspace</span>
+<span class="text-border-hover">/</span>
+<span class="text-primary font-semibold">Selected Work</span>
+</div>
+<!-- Quick Search -->
+<div class="relative hidden lg:block w-72">
+<span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-text-muted">
+<span class="material-symbols-outlined text-[16px]">search</span>
+</span>
+<input class="w-full h-8 pl-8 pr-3 text-[13px] bg-surface-sidebar border border-border-subtle rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-highlight-soft" placeholder="Search projects, datasets, technologies..." type="text"/>
+</div>
+</div>
+<!-- Status & Trailing Actions -->
+<div class="flex items-center gap-3">
+<div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-highlight-tint border border-highlight-soft text-primary font-caption text-caption">
+<span class="w-2 h-2 rounded-full bg-chart-accent-mint animate-pulse"></span>
+<span>Enterprise Systems Ready • Available for Strategic Roles</span>
+</div>
+<div class="h-4 w-px bg-border-subtle hidden xl:block"></div>
+<a class="flex items-center gap-1.5 h-8 px-3 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-[13px] hover:bg-surface-muted hover:border-border-hover transition-colors" href="#download-cv">
+<span class="material-symbols-outlined text-[15px]">description</span>
+<span>Download CV</span>
+</a>
+<a class="flex items-center gap-1.5 h-8 px-3 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-[13px] hover:bg-surface-muted hover:border-border-hover transition-colors" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>View GitHub</span>
+</a>
+</div>
+</header>
+<!-- CANVAS CONTENT WRAPPER -->
+<main class="flex-1 px-space-xl py-space-xl max-w-7xl w-full mx-auto flex flex-col gap-space-xl">
+<!-- 1. PAGE HEADER & FILTER CONTROLS -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center gap-2 font-caption text-caption text-text-muted">
+<a class="hover:text-primary transition-colors" href="#home">Home</a>
+<span>/</span>
+<span class="text-primary font-medium">Work</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-headline-page text-headline-page text-text-primary tracking-tight">Selected Work</h1>
+<p class="font-body-large text-body-large text-text-secondary mt-1">
+                Analytics, BI, data engineering and AI projects built around real business questions.
+              </p>
+</div>
+<!-- In-page Fast Filter Controls -->
+<div class="flex items-center gap-2 self-start md:self-auto">
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-text-muted">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+</span>
+<input class="h-9 pl-8 pr-3 text-[13px] bg-surface-card border border-border-subtle rounded-lg text-text-primary placeholder:text-text-muted focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-highlight-soft" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Category Segmented Filters -->
+<div class="flex flex-wrap items-center gap-2 pt-2 border-b border-border-subtle pb-4">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary font-body-medium text-[13px] shadow-sm">
+              All
+            </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-card border border-border-subtle text-text-secondary font-body-medium text-[13px] hover:border-border-hover hover:text-text-primary transition-colors">
+              Business Intelligence
+            </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-card border border-border-subtle text-text-secondary font-body-medium text-[13px] hover:border-border-hover hover:text-text-primary transition-colors">
+              Data Analytics
+            </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-card border border-border-subtle text-text-secondary font-body-medium text-[13px] hover:border-border-hover hover:text-text-primary transition-colors">
+              Data Engineering
+            </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-card border border-border-subtle text-text-secondary font-body-medium text-[13px] hover:border-border-hover hover:text-text-primary transition-colors">
+              Machine Learning
+            </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-card border border-border-subtle text-text-secondary font-body-medium text-[13px] hover:border-border-hover hover:text-text-primary transition-colors">
+              AI / Automation
+            </button>
+</div>
+</section>
+<!-- 2. PROJECT SUMMARY STRIP / BREADTH PANEL -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+<!-- Core Domains Badge Strip -->
+<div class="lg:col-span-8 bg-surface-card border border-border-subtle rounded-xl p-space-md soft-card-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-text-muted">CORE DELIVERY DOMAINS</span>
+<span class="font-caption text-caption text-text-secondary">End-to-End Enterprise Lifecycle</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 pt-1">
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">dashboard</span>
+<span class="font-body-medium text-[12px] font-semibold">Enterprise BI</span>
+</div>
+<span class="font-caption text-[11px] text-text-secondary leading-tight">Executive Reporting &amp; DAX</span>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">query_stats</span>
+<span class="font-body-medium text-[12px] font-semibold">Data Analytics</span>
+</div>
+<span class="font-caption text-[11px] text-text-secondary leading-tight">Multi-table EDA &amp; Stats</span>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+<span class="font-body-medium text-[12px] font-semibold">Data Eng.</span>
+</div>
+<span class="font-caption text-[11px] text-text-secondary leading-tight">Lakehouse &amp; ETL Pipelines</span>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span class="font-body-medium text-[12px] font-semibold">Machine Learning</span>
+</div>
+<span class="font-caption text-[11px] text-text-secondary leading-tight">Classification &amp; Risk</span>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-sidebar border border-border-subtle col-span-2 sm:col-span-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+<span class="font-body-medium text-[12px] font-semibold">AI / RAG</span>
+</div>
+<span class="font-caption text-[11px] text-text-secondary leading-tight">Multi-Agent Retrieval</span>
+</div>
+</div>
+</div>
+<!-- Editorial Philosophy Card -->
+<div class="lg:col-span-4 bg-highlight-tint border border-highlight-soft rounded-xl p-space-md soft-card-shadow flex flex-col justify-center">
+<div class="flex items-center gap-2 text-primary font-body-medium text-[13px] font-semibold mb-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Architectural Rigor</span>
+</div>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+<strong class="text-text-primary font-medium">Philosophy:</strong> Projects are presented as problems, systems and outcomes — not just screenshots.
+            </p>
+</div>
+</section>
+<!-- 3. FEATURED CASE STUDIES (PRIMARY EVIDENCE GRID - 3 PILLARS) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-sm bg-primary-container"></span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Featured Case Studies</h2>
+</div>
+<span class="font-caption text-caption text-text-muted">Primary Enterprise Architectural Engagements</span>
+</div>
+<!-- Case Study 1: Departmental Stores -->
+<article class="bg-surface-card border border-border-subtle rounded-xl overflow-hidden soft-card-shadow hover-card-shadow transition-all duration-200">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Visual Mockup Canvas Left -->
+<div class="lg:col-span-5 bg-surface-muted p-space-lg border-b lg:border-b-0 lg:border-r border-border-subtle flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-analytics text-label-analytics text-text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">view_quilt</span>
+                    POWER BI REPORT CANVAS
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card border border-border-subtle font-caption text-[11px] text-primary font-medium">Production Release</span>
+</div>
+<!-- Realistic Mockup of the BI Canvas -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-3.5 shadow-sm space-y-3">
+<div class="flex justify-between items-center pb-2 border-b border-border-subtle">
+<div>
+<div class="font-caption text-[10px] text-text-muted uppercase tracking-wider">Weekly Gross Sales</div>
+<div class="text-lg font-bold text-primary font-display-kpi">$1,424,890</div>
+</div>
+<div class="px-2 py-1 rounded bg-highlight-tint text-primary text-[11px] font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> +14.2% YoY
+                    </div>
+</div>
+<!-- Mini Metric Row -->
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2 rounded bg-surface-sidebar border border-border-subtle">
+<div class="text-[10px] text-text-muted">Margin %</div>
+<div class="text-[13px] font-semibold text-text-primary">38.4%</div>
+</div>
+<div class="p-2 rounded bg-surface-sidebar border border-border-subtle">
+<div class="text-[10px] text-text-muted">Branches</div>
+<div class="text-[13px] font-semibold text-text-primary">18 Stores</div>
+</div>
+<div class="p-2 rounded bg-surface-sidebar border border-border-subtle">
+<div class="text-[10px] text-text-muted">YTD Goal</div>
+<div class="text-[13px] font-semibold text-chart-accent-emerald">104.2%</div>
+</div>
+</div>
+<!-- Simulated Bar Visualization -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between text-[10px] text-text-secondary">
+<span>Apparel &amp; Fashion</span>
+<span class="font-medium">$512K</span>
+</div>
+<div class="w-full h-2 bg-surface-sidebar rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-text-secondary pt-1">
+<span>Electronics &amp; Home</span>
+<span class="font-medium">$438K</span>
+</div>
+<div class="w-full h-2 bg-surface-sidebar rounded-full overflow-hidden">
+<div class="h-full bg-chart-accent-emerald rounded-full" style="width: 62%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-text-secondary pt-1">
+<span>Groceries &amp; Fresh</span>
+<span class="font-medium">$314K</span>
+</div>
+<div class="w-full h-2 bg-surface-sidebar rounded-full overflow-hidden">
+<div class="h-full bg-chart-accent-mint rounded-full" style="width: 44%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-caption text-[11px] pt-3">
+<span>Conformable Star Schema</span>
+<span>Automated Refresh: 06:00 UTC</span>
+</div>
+</div>
+<!-- Context, Architecture & Highlights Right -->
+<div class="lg:col-span-7 p-space-lg flex flex-col justify-between gap-space-md">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-highlight-tint border border-highlight-soft text-primary font-caption text-[11px] font-semibold uppercase tracking-wide">
+                      Business Intelligence
+                    </span>
+<span class="font-caption text-caption text-text-muted">Retail Chain Analytics</span>
+</div>
+<h3 class="font-headline-card text-[19px] font-bold text-text-primary">
+                    Weekly Sales Dashboard for Departmental Stores
+                  </h3>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                    Architected a weekly Power BI sales reporting solution for a multi-branch departmental store chain, resolving manual Excel discrepancies and delivering real-time store performance, YoY growth metrics, YTD tracking, and automated departmental manager commission calculations.
+                  </p>
+<!-- Technical Deliverables List -->
+<div class="space-y-2 pt-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">KEY DELIVERABLES &amp; IMPACT</span>
+<ul class="space-y-1.5 font-caption text-caption text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0 mt-0.5">check_circle</span>
+<span>Star-schema data model with conformable calendar &amp; store dimensions for high query performance.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0 mt-0.5">check_circle</span>
+<span>Dynamic DAX measures for YTD, YoY%, and tiered departmental manager commission formulas.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald text-[15px] shrink-0 mt-0.5">bolt</span>
+<span class="text-text-primary font-medium">Scheduled automated data refresh eliminating 40+ manual reporting hours per month.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Footer Pill Stack & Primary Actions -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-border-subtle">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Power BI</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">DAX</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Data Modeling</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Excel / CSV</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">ETL</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-body-medium text-[13px] hover:bg-primary transition-colors flex items-center gap-1.5">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+<a class="w-9 h-9 rounded-lg border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover transition-colors" href="#github-project" title="View Source Architecture">
+<span class="material-symbols-outlined text-[17px]">code</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 2: Global Hospitality Booking Analytics -->
+<article class="bg-surface-card border border-border-subtle rounded-xl overflow-hidden soft-card-shadow hover-card-shadow transition-all duration-200">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Visual Mockup Canvas Left -->
+<div class="lg:col-span-5 bg-surface-muted p-space-lg border-b lg:border-b-0 lg:border-r border-border-subtle flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-analytics text-label-analytics text-text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">insights</span>
+                    MULTIVARIATE EDA &amp; HAZARD MODEL
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card border border-border-subtle font-caption text-[11px] text-chart-accent-emerald font-medium">150K Records</span>
+</div>
+<!-- Realistic Hospitality Analysis Card -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-3.5 shadow-sm space-y-3">
+<div class="flex justify-between items-center pb-2 border-b border-border-subtle">
+<div>
+<div class="font-caption text-[10px] text-text-muted uppercase tracking-wider">Cancellation Hazard Rate</div>
+<div class="text-lg font-bold text-text-primary font-display-kpi">27.6%</div>
+</div>
+<div class="text-right">
+<div class="font-caption text-[10px] text-text-muted uppercase tracking-wider">Portfolio ADR</div>
+<div class="text-sm font-bold text-primary">$182.40 / nt</div>
+</div>
+</div>
+<!-- Scatter / Matrix Distribution preview -->
+<div class="bg-surface-sidebar p-2.5 rounded border border-border-subtle flex flex-col gap-1.5">
+<div class="flex justify-between text-[11px]">
+<span class="text-text-secondary">Lead Time Correlation:</span>
+<span class="font-medium text-text-primary">r = +0.58 (p &lt; 0.001)</span>
+</div>
+<div class="flex justify-between text-[11px]">
+<span class="text-text-secondary">Cities Modeled:</span>
+<span class="font-medium text-text-primary">8 Global Metros</span>
+</div>
+<div class="flex justify-between text-[11px]">
+<span class="text-text-secondary">Properties Benchmarked:</span>
+<span class="font-medium text-text-primary">15 Independent Assets</span>
+</div>
+</div>
+<div class="p-2 rounded bg-highlight-tint text-primary text-[11px] leading-tight font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>Identified $3.2M in preventable revenue leakage from peak window cancel policies.</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-caption text-[11px] pt-3">
+<span>52 Relational Attributes</span>
+<span>Python + Seaborn + Power BI</span>
+</div>
+</div>
+<!-- Context, Architecture & Highlights Right -->
+<div class="lg:col-span-7 p-space-lg flex flex-col justify-between gap-space-md">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-highlight-tint border border-highlight-soft text-primary font-caption text-[11px] font-semibold uppercase tracking-wide">
+                      Data Analytics
+                    </span>
+<span class="font-caption text-caption text-text-muted">Predictive Risk Modeling</span>
+</div>
+<h3 class="font-headline-card text-[19px] font-bold text-text-primary">
+                    Global Hospitality Booking Analytics
+                  </h3>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                    Engineered a comprehensive analytics case study environment modeled on 150,000 international booking records across 52 attributes, 15 properties, and 8 global cities. Designed to diagnose cancellation drivers, evaluate seasonal ADR pacing, and benchmark guest loyalty behaviors.
+                  </p>
+<!-- Technical Deliverables List -->
+<div class="space-y-2 pt-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">KEY DELIVERABLES &amp; IMPACT</span>
+<ul class="space-y-1.5 font-caption text-caption text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0 mt-0.5">check_circle</span>
+<span>Structured and normalized 150K records and 52 relational attributes optimized for BI ingestion.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0 mt-0.5">check_circle</span>
+<span>Cancellation risk segmentation quantifying lead-time sensitivity and corporate vs. leisure leakage.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald text-[15px] shrink-0 mt-0.5">bolt</span>
+<span class="text-text-primary font-medium">Property yield benchmarking across 8 metropolitan markets with dynamic pricing elasticity models.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Footer Pill Stack & Primary Actions -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-border-subtle">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Data Analytics</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Data Modeling</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Power BI</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Python</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">EDA</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-body-medium text-[13px] hover:bg-primary transition-colors flex items-center gap-1.5">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+<a class="w-9 h-9 rounded-lg border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover transition-colors" href="#github-project" title="View Source Architecture">
+<span class="material-symbols-outlined text-[17px]">code</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 3: EDU Assist Multi-Agent -->
+<article class="bg-surface-card border border-border-subtle rounded-xl overflow-hidden soft-card-shadow hover-card-shadow transition-all duration-200">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Visual Mockup Canvas Left -->
+<div class="lg:col-span-5 bg-surface-muted p-space-lg border-b lg:border-b-0 lg:border-r border-border-subtle flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-analytics text-label-analytics text-text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">account_tree</span>
+                    AGENT ROUTING &amp; VECTOR RETRIEVAL
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card border border-border-subtle font-caption text-[11px] text-primary font-medium">FastAPI Backend</span>
+</div>
+<!-- Realistic Multi-Agent Architecture Card -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-3.5 shadow-sm space-y-3 font-mono text-[11px]">
+<div class="flex items-center justify-between border-b border-border-subtle pb-2 text-text-secondary">
+<span>router_node.py</span>
+<span class="text-chart-accent-emerald">status: 200 OK</span>
+</div>
+<div class="space-y-1.5 text-text-secondary font-code-inline text-[12px]">
+<div class="p-1.5 rounded bg-surface-sidebar border border-border-subtle text-text-primary">
+<span class="text-primary font-semibold">[Agent Supervisor]</span> Query classify: "Tuition waiver deadline &amp; syllabus"
+                    </div>
+<div class="pl-3 border-l-2 border-primary space-y-1">
+<div class="text-[11px] text-text-muted">↳ Node A: FAISS Vector Index (Doc RAG: 98.4ms)</div>
+<div class="text-[11px] text-text-muted">↳ Node B: Web Retrieval Tool (Policy DB: 120ms)</div>
+</div>
+<div class="p-1.5 rounded bg-highlight-tint text-primary text-[11px]">
+                      ✔ Consensus Synthesized: Citation metadata attached [Doc #418, Pg 12]
+                    </div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-center font-body-regular text-[11px] pt-1">
+<div class="p-1 rounded bg-surface-sidebar border border-border-subtle">
+<span class="text-text-muted block text-[10px]">P95 LATENCY</span>
+<span class="font-semibold text-text-primary">312 ms</span>
+</div>
+<div class="p-1 rounded bg-surface-sidebar border border-border-subtle">
+<span class="text-text-muted block text-[10px]">CHUNK ACCURACY</span>
+<span class="font-semibold text-chart-accent-emerald">99.1%</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-caption text-[11px] pt-3">
+<span>LangChain + FAISS + MongoDB</span>
+<span>Docker Microservice</span>
+</div>
+</div>
+<!-- Context, Architecture & Highlights Right -->
+<div class="lg:col-span-7 p-space-lg flex flex-col justify-between gap-space-md">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-highlight-tint border border-highlight-soft text-primary font-caption text-[11px] font-semibold uppercase tracking-wide">
+                      AI / Automation
+                    </span>
+<span class="font-caption text-caption text-text-muted">GenAI &amp; Knowledge Retrieval</span>
+</div>
+<h3 class="font-headline-card text-[19px] font-bold text-text-primary">
+                    EDU Assist Multi-Agent
+                  </h3>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                    Engineered an intelligent institutional assistant uniting document RAG, real-time web retrieval, specialized agent routing, and a secure administration interface to streamline student academic inquiries and institutional data exploration.
+                  </p>
+<!-- Technical Deliverables List -->
+<div class="space-y-2 pt-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">KEY DELIVERABLES &amp; IMPACT</span>
+<ul class="space-y-1.5 font-caption text-caption text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0 mt-0.5">check_circle</span>
+<span>Multi-agent orchestration pipeline with dynamic routing between academic catalogs and web endpoints.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[15px] shrink-0 mt-0.5">check_circle</span>
+<span>Vector embeddings retrieval engine leveraging FAISS and MongoDB for rapid semantic search.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald text-[15px] shrink-0 mt-0.5">bolt</span>
+<span class="text-text-primary font-medium">Containerized microservice deployment with Docker, delivering scalable low-latency institutional self-service.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Footer Pill Stack & Primary Actions -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-border-subtle">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Python</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">FastAPI</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">LangChain</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">FAISS</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">MongoDB</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-muted border border-border-subtle text-text-secondary">Docker</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-body-medium text-[13px] hover:bg-primary transition-colors flex items-center gap-1.5">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+<a class="w-9 h-9 rounded-lg border border-border-subtle flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover transition-colors" href="#github-project" title="View Source Architecture">
+<span class="material-symbols-outlined text-[17px]">code</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- 4. SECONDARY PROJECT GRID (TECHNICAL DEPTH & DOMAIN EXPERIMENTS) -->
+<section class="flex flex-col gap-space-md pt-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-section text-headline-section text-text-primary">Technical Depth &amp; Domain Experiments</h2>
+<p class="font-caption text-caption text-text-secondary mt-0.5">
+                Specialized data pipelines, statistical explorations, and machine learning models.
+              </p>
+</div>
+<span class="font-label-analytics text-label-analytics text-text-muted">6 ADDITIONAL INITIATIVES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Secondary 1 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow hover-card-shadow transition-all duration-150 flex flex-col justify-between">
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted border border-border-subtle font-caption text-[11px] text-text-secondary font-medium">Data Analytics</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">query_stats</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Comprehensive Sales Analysis</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  Multi-dimensional sales performance evaluation diagnosing customer cohort LTV, regional margin variance, and product basket associations.
+                </p>
+</div>
+<div class="pt-4 mt-3 border-t border-border-subtle space-y-3">
+<div class="flex flex-wrap gap-1">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Python</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Pandas</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Seaborn</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Statistical EDA</span>
+</div>
+<a class="inline-flex items-center gap-1 font-body-medium text-[13px] text-primary hover:text-chart-accent-emerald transition-colors font-medium" href="#sales-analysis">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary 2 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow hover-card-shadow transition-all duration-150 flex flex-col justify-between">
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted border border-border-subtle font-caption text-[11px] text-text-secondary font-medium">Machine Learning</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">security</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Loan Approval Prediction &amp; Credit Risk</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  Supervised classification model evaluating applicant default probability, feature collinearity, and calibrated decision thresholds for credit underwriting.
+                </p>
+</div>
+<div class="pt-4 mt-3 border-t border-border-subtle space-y-3">
+<div class="flex flex-wrap gap-1">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Python</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Scikit-Learn</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">XGBoost</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Credit Risk</span>
+</div>
+<a class="inline-flex items-center gap-1 font-body-medium text-[13px] text-primary hover:text-chart-accent-emerald transition-colors font-medium" href="#credit-risk">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary 3 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow hover-card-shadow transition-all duration-150 flex flex-col justify-between">
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted border border-border-subtle font-caption text-[11px] text-text-secondary font-medium">Data Analytics</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">location_city</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Zameen Real Estate EDA Project</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  Extensive exploratory market analysis of Pakistani urban property trends, price-per-square-foot dynamics, and geospatial pricing distributions.
+                </p>
+</div>
+<div class="pt-4 mt-3 border-t border-border-subtle space-y-3">
+<div class="flex flex-wrap gap-1">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Python</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Geospatial EDA</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Plotly</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Market Insights</span>
+</div>
+<a class="inline-flex items-center gap-1 font-body-medium text-[13px] text-primary hover:text-chart-accent-emerald transition-colors font-medium" href="#zameen-eda">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary 4 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow hover-card-shadow transition-all duration-150 flex flex-col justify-between">
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted border border-border-subtle font-caption text-[11px] text-text-secondary font-medium">Machine Learning</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">person_off</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Bank Customer Churn Prediction</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  Predictive behavioral churn modeling incorporating class-imbalance techniques (SMOTE) and feature importance analysis for customer retention.
+                </p>
+</div>
+<div class="pt-4 mt-3 border-t border-border-subtle space-y-3">
+<div class="flex flex-wrap gap-1">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Machine Learning</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Random Forest</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">SHAP</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Python</span>
+</div>
+<a class="inline-flex items-center gap-1 font-body-medium text-[13px] text-primary hover:text-chart-accent-emerald transition-colors font-medium" href="#bank-churn">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary 5 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow hover-card-shadow transition-all duration-150 flex flex-col justify-between">
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted border border-border-subtle font-caption text-[11px] text-text-secondary font-medium">AI / Automation</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">sentiment_satisfied</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Restaurant Reviews Sentiment Analysis</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  NLP pipeline leveraging transformer embeddings and token classification to extract operational sentiment polarity and dining pain points.
+                </p>
+</div>
+<div class="pt-4 mt-3 border-t border-border-subtle space-y-3">
+<div class="flex flex-wrap gap-1">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">NLP</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">HuggingFace</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Sentiment Analysis</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Python</span>
+</div>
+<a class="inline-flex items-center gap-1 font-body-medium text-[13px] text-primary hover:text-chart-accent-emerald transition-colors font-medium" href="#sentiment-analysis">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary 6 -->
+<div class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow hover-card-shadow transition-all duration-150 flex flex-col justify-between">
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-muted border border-border-subtle font-caption text-[11px] text-text-secondary font-medium">Machine Learning</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">forest</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Forest Cover Type Classification</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  Multi-class cartographic categorization modeling wilderness soil characteristics, elevation gradients, and hydrological proximity.
+                </p>
+</div>
+<div class="pt-4 mt-3 border-t border-border-subtle space-y-3">
+<div class="flex flex-wrap gap-1">
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Multiclass</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Scikit-Learn</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">EDA</span>
+<span class="font-caption text-[11px] px-2 py-0.5 rounded bg-surface-sidebar border border-border-subtle text-text-secondary">Python</span>
+</div>
+<a class="inline-flex items-center gap-1 font-body-medium text-[13px] text-primary hover:text-chart-accent-emerald transition-colors font-medium" href="#forest-cover">
+<span>View Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. GITHUB REPOSITORY DISCOVERY BANNER -->
+<section class="bg-surface-card border border-border-subtle rounded-xl p-space-lg soft-card-shadow flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-sidebar border border-border-subtle flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">code</span>
+</div>
+<div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-semibold">
+                Looking for code repositories, data pipelines, and technical notebooks?
+              </h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">
+                More experimental models, learning implementations, and open analytical notebooks are documented on GitHub.
+              </p>
+</div>
+</div>
+<a class="shrink-0 flex items-center gap-2 h-10 px-4 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-[13px] hover:bg-surface-muted hover:border-border-hover transition-colors" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined text-[17px]">terminal</span>
+<span>Explore GitHub Repositories</span>
+</a>
+</section>
+<!-- 6. BOTTOM NAVIGATIONAL CALLOUT (EXPERIENCE TEASER) -->
+<section class="bg-surface-sidebar border border-border-subtle rounded-xl p-space-xl soft-card-shadow flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-1.5 max-w-2xl">
+<span class="font-label-analytics text-label-analytics text-primary font-semibold">STRATEGIC CAREER TIMELINE</span>
+<h3 class="font-headline-section text-headline-section text-text-primary font-bold">
+              Want to understand how Hammad works professionally?
+            </h3>
+<p class="font-body-regular text-body-regular text-text-secondary">
+              Review enterprise leadership, end-to-end technical responsibilities, and team enablement across 4+ years of data leadership.
+            </p>
+</div>
+<a class="shrink-0 flex items-center gap-2 h-11 px-5 rounded-lg bg-primary-container text-on-primary font-body-medium text-[14px] hover:bg-primary transition-all duration-150 shadow-sm" href="#experience">
+<span>Explore Experience</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</a>
+</section>
+</main>
+<!-- 7. FOOTER (Strictly Matching Shared Components & Brand Spec) -->
+<footer class="mt-auto bg-surface-canvas-subtle border-t border-border-subtle">
+<div class="flex flex-col md:flex-row justify-between items-center px-space-xl py-space-lg w-full max-w-7xl mx-auto gap-4">
+<p class="font-caption text-caption text-text-secondary text-center md:text-left">
+            © 2025 Mirza Hammad Baig. BI Solutions Architecture &amp; Enterprise Data Strategy.
+          </p>
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-caption text-caption text-text-secondary">
+<a class="hover:text-primary transition-colors duration-150" href="#linkedin">LinkedIn</a>
+<a class="hover:text-primary transition-colors duration-150" href="#github">GitHub</a>
+<a class="hover:text-primary transition-colors duration-150" href="#medium">Medium</a>
+<a class="hover:text-primary transition-colors duration-150" href="#docs">Architecture System Docs</a>
+<a class="hover:text-primary transition-colors duration-150" href="#privacy">Privacy &amp; Governance</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

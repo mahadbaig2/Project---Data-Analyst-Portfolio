@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface-canvas text-text-primary antialiased" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirza Hammad Baig | BI Solutions Architect &amp; Data Analyst</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Container Queries & Forms -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#dbe5e1",
+            "on-error-container": "#93000a",
+            "secondary-container": "#96f998",
+            "on-tertiary-container": "#98d1ba",
+            "on-primary-container": "#8fd2b6",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#002116",
+            "inverse-on-surface": "#e9f3ef",
+            "text-secondary": "#5D6965",
+            "border-subtle": "#E1E8E4",
+            "surface-dim": "#d2dcd9",
+            "background": "#f2fcf8",
+            "surface-canvas": "#F5F7F6",
+            "chart-accent-emerald": "#1B7358",
+            "chart-accent-mint": "#82D387",
+            "surface-canvas-subtle": "#F7F9F8",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#b5efd7",
+            "primary-container": "#145c46",
+            "outline": "#707974",
+            "on-error": "#ffffff",
+            "border-hover": "#CAD6CF",
+            "surface-container-high": "#e0eae7",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#037526",
+            "surface-tint": "#266a53",
+            "text-primary": "#18211F",
+            "secondary-fixed": "#96f998",
+            "on-surface": "#141d1b",
+            "surface-muted": "#F3F6F4",
+            "surface-sidebar": "#F8FAF9",
+            "on-primary-fixed-variant": "#00513c",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#99d2bb",
+            "surface-bright": "#f2fcf8",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#005318",
+            "tertiary": "#024333",
+            "primary-fixed": "#acf1d4",
+            "on-tertiary-fixed-variant": "#16503f",
+            "secondary": "#006e23",
+            "primary": "#004331",
+            "inverse-surface": "#293230",
+            "chart-accent-slate": "#7A8C86",
+            "surface": "#f2fcf8",
+            "on-tertiary": "#ffffff",
+            "highlight-tint": "#ECF8EE",
+            "inverse-primary": "#91d4b8",
+            "surface-card": "#FFFFFF",
+            "primary-fixed-dim": "#91d4b8",
+            "on-surface-variant": "#3f4944",
+            "on-tertiary-fixed": "#002117",
+            "on-background": "#141d1b",
+            "highlight-soft": "#DDF5DF",
+            "surface-container": "#e6f0ec",
+            "on-secondary-fixed": "#002105",
+            "tertiary-container": "#235b49",
+            "outline-variant": "#bfc9c2",
+            "surface-container-highest": "#dbe5e1",
+            "text-muted": "#85938F",
+            "secondary-fixed-dim": "#7bdc7f",
+            "surface-container-low": "#ecf6f2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "3rem",
+            "space-xl": "2rem",
+            "margin-mobile": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "2rem",
+            "margin": "2rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Inter"],
+            "label-analytics": ["Inter"],
+            "headline-page": ["Inter"],
+            "headline-card": ["Inter"],
+            "body-large": ["Inter"],
+            "display-kpi": ["Inter"],
+            "display-kpi-mobile": ["Inter"],
+            "body-regular": ["Inter"],
+            "headline-page-mobile": ["Inter"],
+            "caption": ["Inter"],
+            "body-medium": ["Inter"],
+            "code-inline": ["Inter"]
+          },
+          "fontSize": {
+            "headline-section": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-analytics": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-page": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "headline-card": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-large": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-kpi": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-kpi-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-regular": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-page-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 19px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F8FAF9;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #E1E8E4;
+      border-radius: 4px;
+    }
+    .kpi-shadow {
+      box-shadow: 0 4px 18px rgba(20, 50, 40, 0.04);
+    }
+    .card-hover-fx {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-fx:hover {
+      border-color: #CAD6CF;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(20, 50, 40, 0.07);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-surface-canvas text-text-primary flex flex-col antialiased selection:bg-highlight-soft selection:text-primary">
+<div class="flex min-h-screen w-full relative">
+<!-- 1. PERSISTENT GLOBAL LEFT SIDEBAR -->
+<!-- Matches Shared Component SideNavBar structure and precise Style Guidance tokens -->
+<aside class="fixed top-0 left-0 h-screen w-64 md:w-72 flex flex-col justify-between bg-surface-sidebar border-r border-border-subtle z-50 overflow-y-auto custom-scroll p-space-md">
+<!-- Top Section: Identity & Header -->
+<div class="flex flex-col gap-space-md">
+<!-- Professional Portrait Container -->
+<div class="flex items-center gap-3 pt-1">
+<div class="relative w-12 h-12 rounded-full overflow-hidden border border-border-subtle shadow-sm flex-shrink-0 bg-surface-card">
+<img alt="Mirza Hammad Baig professional portrait" class="w-full h-full object-cover object-top" data-alt="A clean, professional studio headshot portrait of Mirza Hammad Baig against a softly lit neutral corporate background. The subject is dressed in formal business attire with a calm, intellectual, and friendly executive expression. Soft natural key lighting creates crisp edge definition fitting an enterprise data architect persona in a light-mode corporate design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtjul0kq4eZNw9lJPTbQCpFakXFVlOUCKSHYTop9-ykHGLV31TTH358VnR4MM68I6bammX8c0Pve61JWZ9IZBaq_hFjgbgCCLG27emfq8W1j-sdG8zzfRc3H4M_ET_FroJxuX8KP20UwO9_OoNnhCZc8nZLcjPZPBlW64z1O3TVc0nkvdj20WIb7txGEwBy2r4snIV7iRuX1Bdc1s2zDzS90uuqr_LRw50DdFT7BsWP5JN-98PG4iH"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full ring-2 ring-surface-card" title="Active in Workspace"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<h1 class="font-headline-card text-headline-card font-semibold text-text-primary truncate">Mirza Hammad Baig</h1>
+<p class="font-caption text-caption text-text-secondary truncate">Data Analyst · BI Solutions Architect</p>
+</div>
+</div>
+<!-- Elevator Descriptor & Secondary Pitch -->
+<div class="p-3 bg-surface-card rounded-lg border border-border-subtle">
+<div class="flex items-center gap-1.5 mb-1 text-chart-accent-emerald">
+<span class="material-symbols-outlined" data-icon="schema" style="font-size: 15px;">schema</span>
+<span class="font-label-analytics text-label-analytics uppercase tracking-wider font-semibold">Data • BI • Architecture • AI</span>
+</div>
+<p class="font-caption text-caption text-text-secondary leading-snug">
+            Turning complex enterprise data into reliable systems, clear insights, and high-confidence business decisions.
+          </p>
+</div>
+<!-- Minimal Monochrome Social Icons -->
+<div class="flex items-center justify-between px-1 py-0.5 border-b border-border-subtle pb-3">
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted">Direct Channels</span>
+<div class="flex items-center gap-1.5">
+<a class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-muted rounded transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn Profile">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-muted rounded transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub Repositories">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</a>
+<a class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-muted rounded transition-colors" href="https://medium.com" rel="noopener noreferrer" target="_blank" title="Medium Insights">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+</a>
+<a class="p-1.5 text-text-secondary hover:text-primary hover:bg-surface-muted rounded transition-colors" href="mailto:hammad@example.com" title="Email Mirza">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<!-- Main Navigation Menu -->
+<!-- Matches style_active_navigation and exact array intents -->
+<nav class="flex flex-col gap-1">
+<!-- Active: Overview / Home -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface-card text-primary font-body-medium text-body-medium shadow-sm border border-border-subtle border-l-4 border-l-primary transition-all duration-150" href="#overview">
+<span class="material-symbols-outlined text-primary" data-icon="dashboard" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="truncate">Overview</span>
+<span class="ml-auto w-1.5 h-1.5 rounded-full bg-chart-accent-emerald"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#case-studies">
+<span class="material-symbols-outlined text-text-muted" data-icon="analytics">analytics</span>
+<span class="truncate">Case Studies</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#architecture">
+<span class="material-symbols-outlined text-text-muted" data-icon="account_tree">account_tree</span>
+<span class="truncate">Architecture</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#journey">
+<span class="material-symbols-outlined text-text-muted" data-icon="timeline">timeline</span>
+<span class="truncate">Career Journey</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#capabilities">
+<span class="material-symbols-outlined text-text-muted" data-icon="apps">apps</span>
+<span class="truncate">Capabilities</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#thought-leadership">
+<span class="material-symbols-outlined text-text-muted" data-icon="article">article</span>
+<span class="truncate">Thought Leadership</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Skill Pills & CTA Section -->
+<div class="flex flex-col gap-space-sm pt-4 border-t border-border-subtle mt-4">
+<div class="flex items-center justify-between">
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted">Core Technology Stack</span>
+<span class="font-caption text-caption text-chart-accent-emerald font-medium">8 Skills</span>
+</div>
+<!-- Compact Skill Chips Grid -->
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">Power BI</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">SQL</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">Python</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">DAX</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">Data Modeling</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">Microsoft Fabric</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">Data Engineering</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption bg-highlight-tint text-primary font-body-medium border border-chart-accent-emerald/20">AI Automation</span>
+</div>
+<!-- Sidebar Direct CTA Button -->
+<a class="mt-2 w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-medium text-body-medium transition-all shadow-sm" href="#contact">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-size: 16px;">calendar_today</span>
+<span>Schedule Consultation</span>
+</a>
+<!-- Sub-footer links from JSON -->
+<div class="flex items-center justify-between text-caption text-text-muted pt-1 px-1">
+<a class="flex items-center gap-1 hover:text-text-primary transition-colors" href="#docs">
+<span class="material-symbols-outlined" data-icon="description" style="font-size: 14px;">description</span>
+<span>Documentation</span>
+</a>
+<a class="flex items-center gap-1 hover:text-text-primary transition-colors" href="#settings">
+<span class="material-symbols-outlined" data-icon="settings" style="font-size: 14px;">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- MAIN ANALYTICS WORKSPACE CONTAINER -->
+<div class="flex-1 ml-64 md:ml-72 min-w-0 flex flex-col">
+<!-- 2. TOP WORKSPACE UTILITY BAR -->
+<!-- Matches Shared Component TopNavBar specs -->
+<header class="docked full-width top sticky z-40 bg-surface-card border-b border-border-subtle shadow-sm">
+<div class="flex justify-between items-center h-14 px-space-lg w-full max-w-[1600px] mx-auto">
+<!-- Left: Breadcrumb / Scope Context & Fast Search -->
+<div class="flex items-center gap-4 min-w-0">
+<div class="flex items-center gap-2 text-text-secondary font-body-regular text-body-regular">
+<span class="font-headline-card text-headline-card font-semibold text-text-primary tracking-tight hidden sm:inline">Enterprise BI Workspace</span>
+<span class="text-border-subtle hidden sm:inline">/</span>
+<span class="font-body-medium text-body-medium text-text-primary truncate">Mirza Hammad Baig</span>
+<span class="text-border-subtle hidden md:inline">/</span>
+<span class="text-caption text-text-muted bg-surface-muted px-2 py-0.5 rounded hidden md:inline">v4.2 Production</span>
+</div>
+<!-- Dashboard Search Input Placeholder -->
+<div class="relative hidden lg:block w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-text-muted" data-icon="search" style="font-size: 16px;">search</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-sidebar border border-border-subtle rounded-lg text-body-regular text-text-primary placeholder:text-text-muted focus:outline-none focus:border-chart-accent-emerald focus:ring-2 focus:ring-highlight-soft transition-all text-xs" placeholder="Search models, DAX, metrics..." type="text"/>
+</div>
+</div>
+<!-- Center/Right: Live Status & Trailing Actions -->
+<div class="flex items-center gap-3">
+<!-- Operational Status Pill -->
+<div class="hidden xl:flex items-center gap-2 px-2.5 py-1 bg-highlight-tint border border-chart-accent-emerald/20 rounded-full text-caption text-primary font-body-medium">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-chart-accent-mint opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-chart-accent-emerald"></span>
+</span>
+<span>Enterprise Systems Ready • Available for Strategic Roles</span>
+</div>
+<!-- Utility Action Buttons -->
+<div class="flex items-center gap-2">
+<a class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-card border border-border-subtle hover:border-border-hover hover:bg-surface-sidebar rounded-lg text-text-primary font-body-medium text-body-medium transition-all shadow-sm" href="#cv-download">
+<span class="material-symbols-outlined text-text-secondary" data-icon="download" style="font-size: 17px;">download</span>
+<span class="hidden sm:inline">Download CV</span>
+</a>
+<a class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-body-medium text-body-medium transition-all shadow-sm" href="#work">
+<span>View My Work</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+<!-- Trailing quick icons -->
+<div class="flex items-center pl-2 border-l border-border-subtle gap-1">
+<button class="p-1.5 text-text-secondary hover:text-text-primary rounded-lg hover:bg-surface-muted transition-colors" title="System Telemetry" type="button">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-1.5 text-text-secondary hover:text-text-primary rounded-lg hover:bg-surface-muted transition-colors" title="Documentation Help" type="button">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- 3. MAIN WORKSPACE CANVAS -->
+<main class="flex-1 w-full max-w-[1600px] mx-auto p-space-lg md:p-space-xl flex flex-col gap-space-xl">
+<!-- SECTION A: HERO EXECUTIVE PANEL (Span-12 Full Width) -->
+<section class="w-full relative overflow-hidden rounded-xl bg-surface-card border border-border-subtle p-6 md:p-10 kpi-shadow" id="overview">
+<!-- Analytical Watermark SVG Graphic in Background -->
+<div class="absolute right-0 top-0 bottom-0 w-2/5 pointer-events-none opacity-40 hidden md:block">
+<svg class="w-full h-full" fill="none" viewbox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<path d="M 0 240 C 80 230, 140 180, 200 150 C 260 120, 320 60, 400 40" stroke="#1B7358" stroke-dasharray="4 4" stroke-width="2.5"></path>
+<path d="M 0 280 C 70 250, 150 220, 220 180 C 300 140, 340 100, 400 80" stroke="#CAD6CF" stroke-width="1.5"></path>
+<circle cx="200" cy="150" fill="#145C46" r="5"></circle>
+<circle cx="400" cy="40" fill="#82D387" r="6"></circle>
+<!-- Subdued structural grid coordinate marks -->
+<line stroke="#E1E8E4" stroke-width="1" x1="100" x2="100" y1="0" y2="300"></line>
+<line stroke="#E1E8E4" stroke-width="1" x1="200" x2="200" y1="0" y2="300"></line>
+<line stroke="#E1E8E4" stroke-width="1" x1="300" x2="300" y1="0" y2="300"></line>
+<line stroke="#E1E8E4" stroke-width="1" x1="0" x2="400" y1="100" y2="100"></line>
+<line stroke="#E1E8E4" stroke-width="1" x1="0" x2="400" y1="200" y2="200"></line>
+</svg>
+</div>
+<div class="relative z-10 max-w-3xl flex flex-col items-start gap-4">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-highlight-tint border border-chart-accent-emerald/20 text-chart-accent-emerald">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-emerald"></span>
+<span class="font-label-analytics text-label-analytics tracking-wider uppercase font-semibold">DATA • BUSINESS INTELLIGENCE • ARCHITECTURE</span>
+</div>
+<!-- Page Level Headline -->
+<h1 class="font-headline-page text-headline-page text-text-primary tracking-tight">
+              Turning Data Into Systems That Drive Better Decisions
+            </h1>
+<!-- Narrative Copy -->
+<p class="font-body-large text-body-large text-text-secondary leading-relaxed">
+              I architect enterprise BI platforms, robust dimensional data models, automated analytical pipelines, and emerging AI-enabled business intelligence. By uniting technical rigor with executive stakeholder empathy, I bridge raw transactional systems to clear boardroom outcomes.
+            </p>
+<!-- Three Action Group -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-medium text-body-medium transition-all shadow-sm" href="#featured-work">
+<span>View My Work</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="font-size: 16px;">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-card border border-border-subtle hover:border-border-hover hover:bg-surface-sidebar text-text-primary font-body-medium text-body-medium transition-all shadow-sm" href="#cv-download">
+<span class="material-symbols-outlined text-text-secondary" data-icon="file_download" style="font-size: 17px;">file_download</span>
+<span>Download CV</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-2 text-primary hover:text-chart-accent-emerald font-body-medium text-body-medium transition-colors ml-1" href="#journey">
+<span>Explore Experience</span>
+<span class="transition-transform group-hover:translate-x-1 font-bold">→</span>
+</a>
+</div>
+<!-- Micro Metrics Footnote -->
+<div class="flex flex-wrap items-center gap-6 pt-4 border-t border-border-subtle text-caption text-text-secondary w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="verified_user" style="font-size: 16px;">verified_user</span>
+<span>Production Proven in Retail &amp; Logistics</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="speed" style="font-size: 16px;">speed</span>
+<span>Semantic DAX &amp; Performance Tuning</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="group" style="font-size: 16px;">group</span>
+<span>Active Technical Trainer &amp; Mentor</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION B: EXECUTIVE KPI METRIC STRIP (5-Column Balanced Grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- KPI 1 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-5 kpi-shadow card-hover-fx relative overflow-hidden flex flex-col justify-between">
+<div class="w-full h-1 bg-primary-container absolute top-0 left-0"></div>
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block mb-1">Production BI</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-primary">20+</span>
+<span class="px-1.5 py-0.5 rounded text-caption bg-highlight-tint text-primary font-medium">Enterprise</span>
+</div>
+<p class="font-headline-card text-headline-card text-text-primary mt-1">Power BI Dashboards</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-3 pt-2 border-t border-border-subtle">
+              Across retail, logistics, healthcare &amp; corporate operations.
+            </p>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-5 kpi-shadow card-hover-fx relative overflow-hidden flex flex-col justify-between">
+<div class="w-full h-1 bg-chart-accent-emerald absolute top-0 left-0"></div>
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block mb-1">Domain Tenure</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-primary">4+</span>
+<span class="px-1.5 py-0.5 rounded text-caption bg-highlight-tint text-primary font-medium">Years</span>
+</div>
+<p class="font-headline-card text-headline-card text-text-primary mt-1">Across Data &amp; BI</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-3 pt-2 border-t border-border-subtle">
+              Engineering scalable architecture &amp; self-serve reporting.
+            </p>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-5 kpi-shadow card-hover-fx relative overflow-hidden flex flex-col justify-between">
+<div class="w-full h-1 bg-chart-accent-slate absolute top-0 left-0"></div>
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block mb-1">Stakeholder Reach</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-primary">5</span>
+<span class="px-1.5 py-0.5 rounded text-caption bg-surface-muted text-text-secondary font-medium">Units</span>
+</div>
+<p class="font-headline-card text-headline-card text-text-primary mt-1">Departments Supported</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-3 pt-2 border-t border-border-subtle">
+              Executive, Finance, Supply Chain, Operations, HR.
+            </p>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-5 kpi-shadow card-hover-fx relative overflow-hidden flex flex-col justify-between">
+<div class="w-full h-1 bg-secondary absolute top-0 left-0"></div>
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block mb-1">Query Optimization</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-chart-accent-emerald">40%</span>
+<span class="px-1.5 py-0.5 rounded text-caption bg-highlight-tint text-primary font-medium flex items-center">
+<span class="material-symbols-outlined" data-icon="arrow_upward" style="font-size: 11px;">arrow_upward</span> Speed
+                </span>
+</div>
+<p class="font-headline-card text-headline-card text-text-primary mt-1">Load Time Improvement</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-3 pt-2 border-t border-border-subtle">
+              Via semantic data modeling &amp; targeted DAX tuning.
+            </p>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-5 kpi-shadow card-hover-fx relative overflow-hidden flex flex-col justify-between">
+<div class="w-full h-1 bg-chart-accent-mint absolute top-0 left-0"></div>
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-text-muted block mb-1">Process Efficiency</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-kpi text-display-kpi text-chart-accent-emerald">35%</span>
+<span class="px-1.5 py-0.5 rounded text-caption bg-highlight-tint text-primary font-medium">Saved</span>
+</div>
+<p class="font-headline-card text-headline-card text-text-primary mt-1">Manual Reporting Reduced</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-3 pt-2 border-t border-border-subtle">
+              Through pipeline orchestration &amp; refresh automation.
+            </p>
+</div>
+</section>
+<!-- SECTION C: FEATURED WORK (Case Studies Grid) -->
+<section class="flex flex-col gap-5" id="featured-work">
+<!-- Section Header -->
+<div class="flex items-end justify-between border-b border-border-subtle pb-3">
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Flagship Implementations</span>
+<h2 class="font-headline-section text-headline-section text-text-primary mt-0.5">Featured Work &amp; Case Studies</h2>
+</div>
+<a class="flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#all-projects">
+<span>View All Work</span>
+<span class="material-symbols-outlined" data-icon="chevron_right" style="font-size: 18px;">chevron_right</span>
+</a>
+</div>
+<!-- 3-Column Case Study Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Weekly Sales Dashboard -->
+<article class="bg-surface-card rounded-xl border border-border-subtle overflow-hidden kpi-shadow card-hover-fx flex flex-col">
+<!-- Visual Mockup Container -->
+<div class="relative w-full h-48 bg-surface-muted border-b border-border-subtle overflow-hidden">
+<img alt="Weekly Sales Dashboard for Departmental Stores preview" class="w-full h-full object-cover" data-alt="A clean, highly structured Power BI dashboard screenshot showcasing a weekly sales analytics overview for a retail department chain. The user interface features dark slate and forest green metric widgets, a clean bar chart for branch POS sales trends, a heat map for regional inventory distribution, and structured filter ribbons, all styled with elegant modern analytical minimalism in light mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaJ7X5t1uaqH5XZeRcm-aDSNu6jsRLC4uFsRTp0vkxn8ZjsRMw7_dJ5Z1ctGluxNjhWZN7asOENdyG4prlBDnwiBRGNA2a1RB3KFs2c5ZXu-IHBdHgLVqqwGnLoi36hoL04P6AJn6Zz7bP2TxeWA5u79JkvxuzFnhATWtIQTcR94yEPJlROymiFzEmT_XI-qXkRx19_-it4lmx5h0EOhJw5RPqwidOUYrgkxV2v1pnCfa5L-bgTWVI"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-caption bg-surface-card/90 backdrop-blur text-primary font-medium border border-border-subtle">
+                  Retail Analytics &amp; Executive BI
+                </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 flex-1 flex flex-col justify-between gap-4">
+<div>
+<h3 class="font-headline-card text-headline-card text-text-primary leading-tight hover:text-primary transition-colors cursor-pointer">
+                    Weekly Sales Dashboard for Departmental Stores
+                  </h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                    Architected end-to-end POS integration with automated ETL pipelines, star-schema data modeling, and custom DAX metrics delivering real-time store performance visibility.
+                  </p>
+</div>
+<div class="space-y-3">
+<!-- Impact Anchor -->
+<div class="p-2.5 rounded bg-surface-canvas-subtle border border-border-subtle flex items-start gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald mt-0.5" data-icon="insights" style="font-size: 17px;">insights</span>
+<span class="font-caption text-caption text-text-primary font-medium">
+                      Automated 40+ reporting hours/week and eliminated cross-branch margin discrepancies.
+                    </span>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Power BI</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">SQL</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Data Modeling</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">DAX</span>
+</div>
+<!-- Action Link -->
+<a class="pt-2 flex items-center gap-1.5 font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#case-study-1">
+<span>View Case Study</span>
+<span class="font-bold">→</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2: Global Hospitality Booking Analytics -->
+<article class="bg-surface-card rounded-xl border border-border-subtle overflow-hidden kpi-shadow card-hover-fx flex flex-col">
+<!-- Visual Mockup Container -->
+<div class="relative w-full h-48 bg-surface-muted border-b border-border-subtle overflow-hidden">
+<img alt="Global Hospitality Booking Analytics preview" class="w-full h-full object-cover" data-alt="An enterprise business intelligence interface screen displaying global hospitality and hotel booking metrics. The layout includes clean KPI blocks for average daily rate, cancellation probabilities, and revenue per available room. A gentle green and neutral grey palette dominates the charts, with tabular breakdown components and interactive date slicers designed in light mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO7bqu77VJi-KxYORKcoPdt_MxfLTykYnYX0g58vPp6bkg9t3Hj_B3LmZRacv3Dj2uPmOPxI1ZgWqPljtCNxSSx3jYbaukjFEJlExmefnnWv9voissfDIR-ppCBSpXq-2BSXc4vTO_37c6eRPaNlD0EDJx_pp_MRKzJFOXNw2jQDighdPfIzGTykCav8HLCR0pGjG-pyChlP0tXbW0P_Yb2hC-HSf3-VkKC0uAzUJx8TayCVSHcePg"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-caption bg-surface-card/90 backdrop-blur text-primary font-medium border border-border-subtle">
+                  Revenue Insights &amp; Forecasting
+                </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 flex-1 flex flex-col justify-between gap-4">
+<div>
+<h3 class="font-headline-card text-headline-card text-text-primary leading-tight hover:text-primary transition-colors cursor-pointer">
+                    Global Hospitality Booking Analytics
+                  </h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                    Engineered dynamic ADR analysis, cancellation hazard modeling, and pacing dashboards across multi-property hotel portfolios to safeguard room margins.
+                  </p>
+</div>
+<div class="space-y-3">
+<!-- Impact Anchor -->
+<div class="p-2.5 rounded bg-surface-canvas-subtle border border-border-subtle flex items-start gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald mt-0.5" data-icon="trending_up" style="font-size: 17px;">trending_up</span>
+<span class="font-caption text-caption text-text-primary font-medium">
+                      Unlocked 18% higher forecast accuracy for executive yield management meetings.
+                    </span>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Power BI</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Python</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Fabric</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">ETL</span>
+</div>
+<!-- Action Link -->
+<a class="pt-2 flex items-center gap-1.5 font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#case-study-2">
+<span>View Case Study</span>
+<span class="font-bold">→</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3: EDU Assist Multi-Agent AI Assistant -->
+<article class="bg-surface-card rounded-xl border border-border-subtle overflow-hidden kpi-shadow card-hover-fx flex flex-col">
+<!-- Visual Mockup Container -->
+<div class="relative w-full h-48 bg-surface-muted border-b border-border-subtle overflow-hidden">
+<img alt="EDU Assist Multi-Agent AI Assistant architecture preview" class="w-full h-full object-cover" data-alt="A modern analytical dashboard and AI orchestration UI displaying a multi-agent workflow architecture. Graph nodes show semantic retrieval mechanisms, vector database search traces, and telemetry response metrics. Clean forest green connection routes and crisp white card containers illustrate intelligent agent routing in an executive light-theme setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiQBONxvCLhwV_87IrrQum4tlrJBsp2KVPyrK_NZadtqP6Hn4p28usTYWCAy_RQpY_3RtF2tbs6VirSyw3VJKNuWyXGJjxNo3aoyWHqZGojfNkJ_dJmnjS0M1wHi0Qco8N3eXNjDn1Hm9vBB-yrW-TuSRZLaYU97wGGBzj5fRADUlwTnT7sr-BfeuKZ_tyM0mAGLt7p1PCwzYtWNww7s4umxPfdiEburorIdXfuSLJ3zkm_B9VCTGQ"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-caption bg-surface-card/90 backdrop-blur text-primary font-medium border border-border-subtle">
+                  AI Automation &amp; Modern Analytics
+                </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 flex-1 flex flex-col justify-between gap-4">
+<div>
+<h3 class="font-headline-card text-headline-card text-text-primary leading-tight hover:text-primary transition-colors cursor-pointer">
+                    EDU Assist Multi-Agent AI Assistant
+                  </h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                    Designed an LLM-powered RAG pipeline with collaborative multi-agent query routing to analyze student learning trajectories and automate institutional analytics.
+                  </p>
+</div>
+<div class="space-y-3">
+<!-- Impact Anchor -->
+<div class="p-2.5 rounded bg-surface-canvas-subtle border border-border-subtle flex items-start gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald mt-0.5" data-icon="smart_toy" style="font-size: 17px;">smart_toy</span>
+<span class="font-caption text-caption text-text-primary font-medium">
+                      Cut query resolution latency from 4 hours to 30 seconds across 1,200+ users.
+                    </span>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Python</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">RAG</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">LangChain</span>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-body-medium">Multi-Agent</span>
+</div>
+<!-- Action Link -->
+<a class="pt-2 flex items-center gap-1.5 font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#case-study-3">
+<span>View Case Study</span>
+<span class="font-bold">→</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION D: TWO-COLUMN BALANCED SECTION -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Column 1 (Left 6-cols): Professional Journey / Career Timeline -->
+<div class="lg:col-span-6 bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow flex flex-col justify-between" id="journey">
+<div>
+<div class="flex items-center justify-between border-b border-border-subtle pb-3 mb-6">
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Track Record</span>
+<h3 class="font-headline-section text-headline-section text-text-primary">Professional Journey</h3>
+</div>
+<span class="font-caption text-caption text-text-muted bg-surface-muted px-2 py-1 rounded">2023 – Present</span>
+</div>
+<!-- Timeline Rail -->
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-border-subtle">
+<!-- Milestone 1 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-primary ring-4 ring-highlight-soft"></div>
+<div class="flex items-baseline justify-between flex-wrap gap-1">
+<h4 class="font-headline-card text-headline-card text-text-primary">Assistant Manager – Data Analyst</h4>
+<span class="px-2 py-0.5 rounded text-caption bg-highlight-tint text-primary font-medium">2026 – Present</span>
+</div>
+<p class="font-caption text-caption text-chart-accent-emerald font-medium mt-0.5">Ideas by Gul Ahmed</p>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                    Leading enterprise data strategy, cross-functional retail data pipelines, executive KPI governance, and self-service analytics frameworks.
+                  </p>
+</div>
+<!-- Milestone 2 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-chart-accent-emerald"></div>
+<div class="flex items-baseline justify-between flex-wrap gap-1">
+<h4 class="font-headline-card text-headline-card text-text-primary">Power BI Lecturer (Part-time)</h4>
+<span class="px-2 py-0.5 rounded text-caption bg-surface-muted text-text-secondary font-medium">2026 – Present</span>
+</div>
+<p class="font-caption text-caption text-chart-accent-emerald font-medium mt-0.5">Atomcamp</p>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                    Instructing cohorts on production-grade Power BI, DAX modeling, SQL pipeline architecture, and real-world business case execution.
+                  </p>
+</div>
+<!-- Milestone 3 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-chart-accent-slate"></div>
+<div class="flex items-baseline justify-between flex-wrap gap-1">
+<h4 class="font-headline-card text-headline-card text-text-primary">Data Analyst / BI Specialist</h4>
+<span class="px-2 py-0.5 rounded text-caption bg-surface-muted text-text-secondary font-medium">2024 – 2026</span>
+</div>
+<p class="font-caption text-caption text-chart-accent-emerald font-medium mt-0.5">Muller &amp; Phipps Logistics</p>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                    Engineered nationwide supply-chain telemetry dashboards, fleet turnaround metrics, and inventory health reports using SQL and Power BI.
+                  </p>
+</div>
+<!-- Milestone 4 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-border-hover"></div>
+<div class="flex items-baseline justify-between flex-wrap gap-1">
+<h4 class="font-headline-card text-headline-card text-text-primary">BI &amp; Data Consultant</h4>
+<span class="px-2 py-0.5 rounded text-caption bg-surface-muted text-text-secondary font-medium">2023 – Present</span>
+</div>
+<p class="font-caption text-caption text-chart-accent-emerald font-medium mt-0.5">Independent Strategic Practice</p>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                    Delivering end-to-end data pipelines, custom tabular architectures, and executive reporting solutions for international clients.
+                  </p>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-subtle flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Full chronology available in formal CV</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#cv-download">
+                Request Detailed Dossier →
+              </a>
+</div>
+</div>
+<!-- Column 2 (Right 6-cols): Enterprise Impact Telemetry -->
+<div class="lg:col-span-6 bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow flex flex-col justify-between" id="architecture">
+<div>
+<div class="flex items-center justify-between border-b border-border-subtle pb-3 mb-6">
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Telemetry &amp; Outcomes</span>
+<h3 class="font-headline-section text-headline-section text-text-primary">Enterprise Impact</h3>
+</div>
+<span class="font-caption text-caption text-text-muted bg-surface-muted px-2 py-1 rounded">Audited Metrics</span>
+</div>
+<!-- 4 Structured Impact Pillars with Telemetry Bars -->
+<div class="space-y-5">
+<!-- Metric Pillar 1 -->
+<div class="p-3.5 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="bolt">bolt</span>
+<span class="font-headline-card text-headline-card text-text-primary">Faster Reporting</span>
+</div>
+<span class="font-headline-card text-headline-card text-primary font-bold">40% Gain</span>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary text-xs">
+                    Report load latency reduced from 22s to 4.2s via dimensional modeling, relationship pruning, and DAX optimization.
+                  </p>
+<div class="w-full bg-border-subtle h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Metric Pillar 2 -->
+<div class="p-3.5 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="dns">dns</span>
+<span class="font-headline-card text-headline-card text-text-primary">Reliable Data Models</span>
+</div>
+<span class="font-headline-card text-headline-card text-primary font-bold">25% Quicker</span>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary text-xs">
+                    SQL queries accelerated on enterprise data warehouses through indexing, star schemas, and partition alignment.
+                  </p>
+<div class="w-full bg-border-subtle h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-chart-accent-emerald h-full rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Metric Pillar 3 -->
+<div class="p-3.5 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="autorenew">autorenew</span>
+<span class="font-headline-card text-headline-card text-text-primary">Automated Workflows</span>
+</div>
+<span class="font-headline-card text-headline-card text-primary font-bold">35% Reduction</span>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary text-xs">
+                    Eliminated redundant manual Excel extracts and CSV collations using scheduled pipelines and automated gateways.
+                  </p>
+<div class="w-full bg-border-subtle h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-chart-accent-emerald h-full rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+<!-- Metric Pillar 4 -->
+<div class="p-3.5 rounded-lg bg-surface-sidebar border border-border-subtle">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="verified">verified</span>
+<span class="font-headline-card text-headline-card text-text-primary">Decision Velocity</span>
+</div>
+<span class="font-headline-card text-headline-card text-primary font-bold">30% Accuracy</span>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary text-xs">
+                    Standardized core enterprise business definitions, resolving conflicting departmental metrics during board reviews.
+                  </p>
+<div class="w-full bg-border-subtle h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-subtle flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Calculated across 12-month production cycles</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#methodology">
+                View Architectural Methods →
+              </a>
+</div>
+</div>
+</section>
+<!-- SECTION E: CORE CAPABILITIES (6-Card Grid) -->
+<section class="flex flex-col gap-5" id="capabilities">
+<div class="border-b border-border-subtle pb-3">
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Technical Breadth</span>
+<h2 class="font-headline-section text-headline-section text-text-primary mt-0.5">Core Capabilities &amp; Architecture</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Cap 1 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow card-hover-fx flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint flex items-center justify-center text-primary mb-4 border border-chart-accent-emerald/20">
+<span class="material-symbols-outlined" data-icon="query_stats" style="font-size: 22px;">query_stats</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Data Analytics</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                  Translating complex multi-table transactional schemas into coherent business narratives, diagnosing historical variance, and identifying margin leakages.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex flex-wrap gap-1.5">
+<span class="text-caption text-text-secondary font-medium">EDA</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Cohort Analysis</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Forecasting</span>
+</div>
+</div>
+<!-- Cap 2 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow card-hover-fx flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint flex items-center justify-center text-primary mb-4 border border-chart-accent-emerald/20">
+<span class="material-symbols-outlined" data-icon="dashboard_customize" style="font-size: 22px;">dashboard_customize</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Business Intelligence</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                  Designing highly polished, executive-ready Power BI reporting environments. Advanced DAX calculations, row-level security (RLS), and dynamic UX design.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex flex-wrap gap-1.5">
+<span class="text-caption text-text-secondary font-medium">Power BI</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">DAX</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">RLS Governance</span>
+</div>
+</div>
+<!-- Cap 3 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow card-hover-fx flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint flex items-center justify-center text-primary mb-4 border border-chart-accent-emerald/20">
+<span class="material-symbols-outlined" data-icon="account_tree" style="font-size: 22px;">account_tree</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Data Architecture</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                  Building resilient dimensional data models (Kimball methodology), snowflake schemas, conformable dimensions, and governed semantic layers.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex flex-wrap gap-1.5">
+<span class="text-caption text-text-secondary font-medium">Star Schema</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Semantic Layer</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Kimball</span>
+</div>
+</div>
+<!-- Cap 4 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow card-hover-fx flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint flex items-center justify-center text-primary mb-4 border border-chart-accent-emerald/20">
+<span class="material-symbols-outlined" data-icon="memory" style="font-size: 22px;">memory</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Data Engineering</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                  Developing automated ELT/ETL pipelines, orchestrating Lakehouse architectures with Microsoft Fabric, and writing high-performance SQL scripts.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex flex-wrap gap-1.5">
+<span class="text-caption text-text-secondary font-medium">MS Fabric</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">SQL</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Python Pipelines</span>
+</div>
+</div>
+<!-- Cap 5 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow card-hover-fx flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint flex items-center justify-center text-primary mb-4 border border-chart-accent-emerald/20">
+<span class="material-symbols-outlined" data-icon="smart_toy" style="font-size: 22px;">smart_toy</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">AI &amp; Automation</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                  Building agentic AI systems, Retrieval-Augmented Generation (RAG) workflows, and automated analytical bots that simplify executive data discovery.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex flex-wrap gap-1.5">
+<span class="text-caption text-text-secondary font-medium">LangChain</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">RAG Workflows</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Multi-Agent</span>
+</div>
+</div>
+<!-- Cap 6 -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow card-hover-fx flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-highlight-tint flex items-center justify-center text-primary mb-4 border border-chart-accent-emerald/20">
+<span class="material-symbols-outlined" data-icon="school" style="font-size: 22px;">school</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Training &amp; Mentoring</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+                  Empowering professionals and corporate teams to master modern BI. Delivering hands-on workshops on DAX, data modeling, and practical analytical storytelling.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex flex-wrap gap-1.5">
+<span class="text-caption text-text-secondary font-medium">Atomcamp Lecturer</span>
+<span class="text-caption text-text-muted">•</span>
+<span class="text-caption text-text-secondary font-medium">Corporate Upskilling</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION F: TEACHING & MENTORSHIP + THOUGHT LEADERSHIP (Split 7 / 5 Grid) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6" id="thought-leadership">
+<!-- Left Card: Teaching & Mentorship (Col-7) -->
+<div class="lg:col-span-7 bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-border-subtle pb-3 mb-5">
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Knowledge Sharing</span>
+<h3 class="font-headline-section text-headline-section text-text-primary">Teaching &amp; Mentorship</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full text-caption bg-highlight-tint text-primary font-medium border border-chart-accent-emerald/20">
+                  Active Faculty
+                </span>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-sidebar border border-border-subtle flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" data-icon="co_present" style="font-size: 24px;">co_present</span>
+</div>
+<div>
+<h4 class="font-headline-card text-headline-card text-text-primary">Lecturer in Power BI &amp; Analytics</h4>
+<p class="font-caption text-caption text-chart-accent-emerald font-medium">Atomcamp</p>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                      Teaching comprehensive cohorts on Power BI, Python, SQL, and Exploratory Data Analysis. Mentoring aspiring analysts on transforming technical assignments into enterprise case studies.
+                    </p>
+</div>
+</div>
+<div class="flex items-start gap-4 pt-3 border-t border-border-subtle">
+<div class="w-12 h-12 rounded-lg bg-surface-sidebar border border-border-subtle flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" data-icon="corporate_fare" style="font-size: 24px;">corporate_fare</span>
+</div>
+<div>
+<h4 class="font-headline-card text-headline-card text-text-primary">Corporate Upskilling Workshops</h4>
+<p class="font-caption text-caption text-chart-accent-emerald font-medium">Delivered at Muller &amp; Phipps &amp; Strategic Partners</p>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                      Conducted interactive internal sessions on migrating legacy spreadsheet reporting to automated Power BI dashboards and self-service DAX measures.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-subtle flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Over 150+ students &amp; professionals coached</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#teaching">
+                Explore Teaching →
+              </a>
+</div>
+</div>
+<!-- Right Card: Technical Insights & Writing (Col-5) -->
+<div class="lg:col-span-5 bg-surface-card rounded-xl border border-border-subtle p-6 kpi-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-border-subtle pb-3 mb-5">
+<div>
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Publications</span>
+<h3 class="font-headline-section text-headline-section text-text-primary">Technical Insights</h3>
+</div>
+<span class="font-caption text-caption text-text-muted">Medium &amp; Systems Docs</span>
+</div>
+<div class="space-y-3.5">
+<!-- Article 1 -->
+<a class="block p-3 rounded-lg border border-border-subtle hover:border-border-hover hover:bg-surface-sidebar transition-all" href="#article-1">
+<div class="flex items-center justify-between text-caption text-text-muted mb-1">
+<span>Architecture</span>
+<span>6 min read</span>
+</div>
+<h4 class="font-body-medium text-body-medium text-text-primary hover:text-primary transition-colors leading-snug">
+                    Architecting Scalable Lakehouses with Microsoft Fabric
+                  </h4>
+</a>
+<!-- Article 2 -->
+<a class="block p-3 rounded-lg border border-border-subtle hover:border-border-hover hover:bg-surface-sidebar transition-all" href="#article-2">
+<div class="flex items-center justify-between text-caption text-text-muted mb-1">
+<span>DAX Optimization</span>
+<span>4 min read</span>
+</div>
+<h4 class="font-body-medium text-body-medium text-text-primary hover:text-primary transition-colors leading-snug">
+                    5 Common DAX Performance Bottlenecks &amp; Star Schema Fixes
+                  </h4>
+</a>
+<!-- Article 3 -->
+<a class="block p-3 rounded-lg border border-border-subtle hover:border-border-hover hover:bg-surface-sidebar transition-all" href="#article-3">
+<div class="flex items-center justify-between text-caption text-text-muted mb-1">
+<span>AI &amp; BI Integration</span>
+<span>8 min read</span>
+</div>
+<h4 class="font-body-medium text-body-medium text-text-primary hover:text-primary transition-colors leading-snug">
+                    Multi-Agent RAG Architectures for Automated Enterprise BI
+                  </h4>
+</a>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-border-subtle flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Regular analytical essays</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-chart-accent-emerald transition-colors" href="#thought-leadership">
+                Read Insights →
+              </a>
+</div>
+</div>
+</section>
+<!-- SECTION G: BOTTOM EXECUTIVE BANNER -->
+<section class="w-full rounded-xl bg-surface-card border border-border-subtle p-8 md:p-10 kpi-shadow flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden" id="contact">
+<div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-highlight-tint/50 pointer-events-none"></div>
+<div class="max-w-2xl relative z-10">
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Strategic Collaboration</span>
+<h2 class="font-headline-section text-headline-section text-text-primary mt-1">
+              Looking for someone who can connect data, technology and business?
+            </h2>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2">
+              Available for full-time senior BI architectural opportunities, data transformation consulting, and executive dashboard implementations.
+            </p>
+</div>
+<div class="flex items-center gap-3 relative z-10 flex-shrink-0">
+<a class="px-4 py-2.5 bg-surface-card border border-border-subtle hover:border-border-hover hover:bg-surface-sidebar rounded-lg text-text-primary font-body-medium text-body-medium transition-all shadow-sm" href="#featured-work">
+              View Case Studies
+            </a>
+<a class="px-5 py-2.5 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-body-medium text-body-medium transition-all shadow-sm" href="mailto:hammad@example.com">
+              Get in Touch
+            </a>
+</div>
+</section>
+</main>
+<!-- SECTION H: MINIMAL EXECUTIVE FOOTER -->
+<!-- Matches Shared Component Footer specifications -->
+<footer class="docked full-width bottom bg-surface-canvas-subtle border-t border-border-subtle mt-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-space-xl py-space-lg w-full max-w-7xl mx-auto gap-4">
+<div class="flex flex-col sm:flex-row items-center gap-2">
+<span class="font-headline-card text-headline-card font-semibold text-text-primary">Mirza Hammad Baig</span>
+<span class="hidden sm:inline text-border-subtle">•</span>
+<p class="font-caption text-caption text-text-secondary text-center sm:text-left">
+              © 2025 Mirza Hammad Baig. BI Solutions Architecture &amp; Enterprise Data Strategy.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 text-caption text-text-secondary">
+<a class="hover:text-primary transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="hover:text-primary transition-colors" href="https://medium.com" rel="noopener noreferrer" target="_blank">Medium</a>
+<a class="hover:text-primary transition-colors" href="#docs">Architecture System Docs</a>
+<a class="hover:text-primary transition-colors" href="#privacy">Privacy &amp; Governance</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

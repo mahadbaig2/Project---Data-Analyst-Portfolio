@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Writing &amp; Insights | Mirza Hammad Baig — BI Solutions Architect</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Google Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "border-subtle": "#E1E8E4",
+            "surface-sidebar": "#F8FAF9",
+            "chart-accent-mint": "#82D387",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#16503f",
+            "on-secondary-fixed": "#002105",
+            "text-muted": "#85938F",
+            "primary": "#004331",
+            "on-primary-fixed-variant": "#00513c",
+            "on-surface": "#141d1b",
+            "on-background": "#141d1b",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#98d1ba",
+            "surface": "#f2fcf8",
+            "outline-variant": "#bfc9c2",
+            "on-tertiary-fixed": "#002117",
+            "highlight-soft": "#DDF5DF",
+            "surface-muted": "#F3F6F4",
+            "primary-fixed": "#acf1d4",
+            "surface-variant": "#dbe5e1",
+            "surface-canvas-subtle": "#F7F9F8",
+            "primary-container": "#145c46",
+            "secondary-fixed": "#96f998",
+            "surface-canvas": "#F5F7F6",
+            "tertiary-container": "#235b49",
+            "on-secondary-container": "#037526",
+            "tertiary-fixed-dim": "#99d2bb",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "border-hover": "#CAD6CF",
+            "chart-accent-emerald": "#1B7358",
+            "inverse-primary": "#91d4b8",
+            "outline": "#707974",
+            "text-secondary": "#5D6965",
+            "surface-dim": "#d2dcd9",
+            "on-surface-variant": "#3f4944",
+            "chart-accent-slate": "#7A8C86",
+            "surface-container-highest": "#dbe5e1",
+            "surface-container-high": "#e0eae7",
+            "surface-tint": "#266a53",
+            "secondary-fixed-dim": "#7bdc7f",
+            "surface-card": "#FFFFFF",
+            "surface-container-low": "#ecf6f2",
+            "on-tertiary": "#ffffff",
+            "background": "#f2fcf8",
+            "tertiary-fixed": "#b5efd7",
+            "highlight-tint": "#ECF8EE",
+            "on-error": "#ffffff",
+            "on-primary-container": "#8fd2b6",
+            "surface-bright": "#f2fcf8",
+            "on-primary-fixed": "#002116",
+            "tertiary": "#024333",
+            "inverse-on-surface": "#e9f3ef",
+            "on-error-container": "#93000a",
+            "surface-container": "#e6f0ec",
+            "on-secondary-fixed-variant": "#005318",
+            "secondary": "#006e23",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#96f998",
+            "text-primary": "#18211F",
+            "primary-fixed-dim": "#91d4b8",
+            "inverse-surface": "#293230"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "margin": "2rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "gutter-desktop": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "2rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem"
+          },
+          "fontFamily": {
+            "caption": ["Inter"],
+            "body-medium": ["Inter"],
+            "headline-section": ["Inter"],
+            "headline-page-mobile": ["Inter"],
+            "body-regular": ["Inter"],
+            "display-kpi": ["Inter"],
+            "body-large": ["Inter"],
+            "label-analytics": ["Inter"],
+            "code-inline": ["Inter"],
+            "headline-card": ["Inter"],
+            "display-kpi-mobile": ["Inter"],
+            "headline-page": ["Inter"]
+          },
+          "fontSize": {
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-section": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-page-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-regular": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-kpi": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-large": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-analytics": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-card": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-kpi-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-page": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #F5F7F6;
+      color: #18211F;
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F3F6F4;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CAD6CF;
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #85938F;
+    }
+    .ambient-card {
+      box-shadow: 0 4px 18px rgba(20, 50, 40, 0.05);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ambient-card:hover {
+      box-shadow: 0 8px 24px rgba(20, 50, 40, 0.08);
+      border-color: #CAD6CF;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-surface-canvas text-text-primary min-h-screen flex flex-col antialiased">
+<!-- Main Viewport Shell: Fixed Left Sidebar + Main Canvas -->
+<div class="flex flex-1 w-full min-h-screen">
+<!-- ================================================================= -->
+<!-- 1. LEFT SIDEBAR: Executive BI Identity & Navigation (280px Desktop) -->
+<!-- ================================================================= -->
+<aside class="w-64 md:w-72 h-screen p-space-md flex flex-col justify-between bg-surface-sidebar dark:bg-surface-container-high border-r border-border-subtle dark:border-outline-variant fixed top-0 left-0 z-50 overflow-y-auto custom-scroll hidden lg:flex">
+<!-- Top Section: Identity & Bio -->
+<div class="flex flex-col gap-space-sm">
+<!-- Identity Cluster -->
+<div class="flex items-center gap-3 pb-3 border-b border-border-subtle dark:border-outline-variant">
+<div class="w-11 h-11 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-card text-headline-card font-bold shadow-sm ring-2 ring-highlight-soft">
+            MB
+          </div>
+<div class="flex flex-col min-w-0">
+<h1 class="font-headline-card text-headline-card font-semibold text-text-primary truncate">
+              Mirza Hammad Baig
+            </h1>
+<p class="font-caption text-caption text-text-secondary truncate">
+              Data Analyst · BI Solutions Architect
+            </p>
+</div>
+</div>
+<!-- Elevator Pitch / Operational Thesis -->
+<div class="px-2.5 py-2 rounded bg-surface-muted border border-border-subtle">
+<p class="font-caption text-caption text-text-secondary leading-snug">
+            Turning complex data into reliable systems, clear insights and better business decisions.
+          </p>
+</div>
+<!-- Primary Navigation: Style and Content Anchored in Design System -->
+<!-- Active item explicitly maps to 'Thought Leadership' / 'Writing / Insights' -->
+<nav class="flex flex-col gap-1 mt-2">
+<!-- 1. Overview -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary dark:text-on-surface-variant font-body-regular text-body-regular hover:bg-surface-muted dark:hover:bg-surface-container-highest hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- 2. Case Studies -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary dark:text-on-surface-variant font-body-regular text-body-regular hover:bg-surface-muted dark:hover:bg-surface-container-highest hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+<span>Case Studies</span>
+</a>
+<!-- 3. Architecture -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary dark:text-on-surface-variant font-body-regular text-body-regular hover:bg-surface-muted dark:hover:bg-surface-container-highest hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<span>Architecture</span>
+</a>
+<!-- 4. Career Journey -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary dark:text-on-surface-variant font-body-regular text-body-regular hover:bg-surface-muted dark:hover:bg-surface-container-highest hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">timeline</span>
+<span>Career Journey</span>
+</a>
+<!-- 5. Capabilities -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary dark:text-on-surface-variant font-body-regular text-body-regular hover:bg-surface-muted dark:hover:bg-surface-container-highest hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">apps</span>
+<span>Capabilities</span>
+</a>
+<!-- 6. Thought Leadership / Writing & Insights (ACTIVE STATE) -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface-card dark:bg-surface-container text-primary dark:text-inverse-primary font-body-medium text-body-medium shadow-sm border border-border-subtle dark:border-outline-variant relative" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">article</span>
+<span class="font-semibold">Thought Leadership</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-chart-accent-emerald"></span>
+</a>
+</nav>
+<!-- Technical Stack Pills -->
+<div class="pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase tracking-wider block mb-2">Core Tech Stack</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">Power BI</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">SQL</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">Python</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">DAX</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">Fabric</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">Kimball Star</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-highlight-tint text-primary border border-primary/10">AI RAG</span>
+</div>
+</div>
+<!-- Direct Social & Publication Links -->
+<div class="flex items-center justify-between pt-2 px-1 text-text-secondary">
+<a class="hover:text-primary transition-colors text-caption" href="https://linkedin.com" target="_blank" title="LinkedIn">LinkedIn</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors text-caption" href="https://github.com" target="_blank" title="GitHub">GitHub</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors text-caption font-semibold flex items-center gap-0.5" href="https://medium.com" target="_blank" title="Medium">
+            Medium <span class="text-[10px]">↗</span>
+</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors text-caption" href="mailto:hammad@example.com" title="Email">Email</a>
+</div>
+</div>
+<!-- Bottom Section: CTA & Utilities -->
+<div class="flex flex-col gap-2 pt-3 border-t border-border-subtle">
+<a class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-body-medium text-body-medium shadow-sm hover:bg-primary transition-all duration-150" href="#consultation">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Schedule Consultation</span>
+</a>
+<div class="flex items-center justify-between px-2 pt-2 text-text-muted font-caption text-caption">
+<a class="flex items-center gap-1 hover:text-text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[14px]">description</span> Docs
+          </a>
+<a class="flex items-center gap-1 hover:text-text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[14px]">settings</span> Settings
+          </a>
+<span class="inline-flex items-center gap-1 text-[11px] text-chart-accent-emerald font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-emerald animate-pulse"></span> Open to Roles
+          </span>
+</div>
+</div>
+</aside>
+<!-- ================================================================= -->
+<!-- 2. MAIN ANALYTICS WORKSPACE: Max 1600px, 12-Column Responsive     -->
+<!-- ================================================================= -->
+<main class="flex-1 lg:ml-72 flex flex-col min-w-0 bg-surface-canvas">
+<!-- Top Navigation Bar: Sticky Contextual Workspace Header -->
+<header class="docked full-width top sticky z-40 bg-surface-card dark:bg-surface-container-low border-b border-border-subtle dark:border-outline-variant shadow-sm dark:shadow-none h-14 px-space-md md:px-space-lg flex items-center justify-between">
+<!-- Left: Workspace Breadcrumb & Live Context -->
+<div class="flex items-center gap-2 md:gap-3 min-w-0">
+<!-- Mobile Menu Trigger -->
+<button aria-label="Toggle navigation" class="lg:hidden p-1.5 rounded text-text-secondary hover:bg-surface-muted">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+<nav class="flex items-center gap-1.5 font-body-medium text-body-medium text-text-secondary">
+<span class="hidden sm:inline hover:text-text-primary cursor-pointer">Enterprise BI Workspace</span>
+<span class="hidden sm:inline text-text-muted">/</span>
+<span class="text-primary font-semibold truncate">Writing &amp; Insights</span>
+</nav>
+<span class="hidden md:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-muted text-text-secondary border border-border-subtle font-label-analytics text-label-analytics uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-emerald"></span>
+            Thought Leadership Hub
+          </span>
+</div>
+<!-- Right: Fast Actions & External Links -->
+<div class="flex items-center gap-2 sm:gap-3">
+<a class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-text-primary border border-border-subtle bg-surface-card hover:bg-surface-sidebar transition-colors font-body-medium text-body-medium" href="https://medium.com" target="_blank">
+<span>Read on Medium</span>
+<span class="material-symbols-outlined text-[15px]">arrow_outward</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-text-secondary hover:text-text-primary border border-border-subtle hover:bg-surface-sidebar transition-colors font-body-medium text-body-medium" href="#cv-download">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="hidden md:inline">Download CV</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-primary text-on-primary hover:bg-primary-container transition-colors font-body-medium text-body-medium shadow-sm" href="#consultation">
+<span>View My Work</span>
+</a>
+</div>
+</header>
+<!-- Scrollable Canvas Area -->
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10 flex flex-col gap-8 md:gap-12">
+<!-- ============================================================= -->
+<!-- SECTION 1: Page Header & Categorical Filter Matrix           -->
+<!-- ============================================================= -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border-subtle pb-6">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-highlight-tint text-primary border border-primary/20">
+                  Technical Publications &amp; Frameworks
+                </span>
+<span class="text-text-muted text-caption">·</span>
+<span class="text-text-secondary font-caption text-caption">18 Published Essays</span>
+</div>
+<h1 class="font-headline-page-mobile md:font-headline-page text-headline-page-mobile md:text-headline-page font-bold text-text-primary tracking-tight">
+                Insights on Data, Analytics &amp; AI
+              </h1>
+<p class="mt-2 font-body-large text-body-large text-text-secondary leading-relaxed">
+                Exploring how data systems, analytical modeling, enterprise BI architectures, and emerging AI technologies logically fit together. Written from real-world warehouse deployments, client transformations, and architectural first principles.
+              </p>
+</div>
+<!-- External Feed Link Block -->
+<div class="flex md:flex-col items-center md:items-end justify-between gap-2 shrink-0">
+<span class="text-caption text-text-muted">Direct Medium RSS Stream</span>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-card border border-border-subtle hover:border-primary hover:text-primary transition-all shadow-sm font-body-medium text-body-medium text-text-primary" href="https://medium.com" target="_blank">
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald"></span>
+<span>Follow on Medium</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Horizontal Filter Ribbon -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 custom-scroll" id="categoryFilterContainer">
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-primary-container text-on-primary border border-primary shadow-sm shrink-0">
+              All Disciplines (18)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors">
+              Data Fundamentals (4)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors">
+              Analytics &amp; BI (5)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors">
+              Data Architecture (3)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors">
+              Data Engineering (2)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors">
+              AI &amp; Machine Learning (2)
+            </button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors">
+              Data Governance (2)
+            </button>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- SECTION 2: FEATURED ARTICLE HERO (High-Impact Editorial Card)  -->
+<!-- ============================================================= -->
+<section>
+<div class="rounded-xl border border-border-subtle bg-surface-card ambient-card overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Left Content Column (7 Cols) -->
+<div class="lg:col-span-7 p-6 sm:p-8 md:p-10 flex flex-col justify-between">
+<div>
+<!-- Metadata Header -->
+<div class="flex flex-wrap items-center gap-2 mb-3">
+<span class="font-label-analytics text-label-analytics uppercase tracking-widest px-2.5 py-1 rounded bg-highlight-tint text-primary font-bold border border-primary/20">
+                      FOUNDATIONAL ESSAY · THE DATA ECOSYSTEM
+                    </span>
+<span class="text-text-muted text-caption">•</span>
+<span class="font-caption text-caption text-text-secondary">Understanding the Data Field (Part 1)</span>
+<span class="text-text-muted text-caption">•</span>
+<span class="font-caption text-caption text-text-muted">14 min read</span>
+</div>
+<!-- Headline -->
+<h2 class="font-headline-page-mobile md:font-headline-section text-headline-page-mobile md:text-headline-section font-bold text-text-primary tracking-tight leading-snug">
+                    Mapping the Modern Data Field: How Infrastructure, Engineering, BI, and AI Actually Connect
+                  </h2>
+<!-- Executive Summary -->
+<p class="mt-4 font-body-large text-body-large text-text-secondary leading-relaxed">
+                    An architectural guide breaking down the boundaries between raw data collection, storage foundations, analytical modeling, semantic reporting, and modern machine learning—providing a unified mental model for data leaders, BI architects, and enterprise engineering teams.
+                  </p>
+<!-- Key Architectural Anchors -->
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-border-subtle">
+<div class="flex flex-col">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Core Focus</span>
+<span class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">End-to-End Topology</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Target Audience</span>
+<span class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">VPs, BI Leads &amp; Modelers</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Delivery Method</span>
+<span class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">Kimball Star + Medallion</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-8 pt-6 border-t border-border-subtle flex flex-wrap items-center justify-between gap-4">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all duration-150 font-body-medium text-body-medium shadow-sm" href="https://medium.com" target="_blank">
+<span>Read Full Article on Medium</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+<button class="inline-flex items-center gap-1.5 text-text-secondary hover:text-primary transition-colors font-body-medium text-body-medium" title="Bookmark architecture note">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>Save to Reading Deck</span>
+</button>
+</div>
+</div>
+<!-- Right Visual Column: Structured Abstract Architecture Blueprint (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-canvas-subtle p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-border-subtle flex flex-col justify-center">
+<div class="w-full bg-surface-card rounded-lg border border-border-subtle p-4 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-border-subtle mb-3">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Dimensional Architecture Flow</span>
+<span class="inline-flex items-center gap-1 font-label-analytics text-label-analytics text-chart-accent-emerald font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-emerald"></span> Verified Schema
+                    </span>
+</div>
+<!-- Visual Node Diagram -->
+<div class="flex flex-col gap-2.5">
+<!-- Layer 4: AI & Decision -->
+<div class="p-2.5 rounded bg-surface-sidebar border border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs">04</span>
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Executive Decisions &amp; AI Agents</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Inference / Action</span>
+</div>
+<!-- Directional Flow Indicator -->
+<div class="flex justify-center -my-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</div>
+<!-- Layer 3: Semantic BI / VertiPaq -->
+<div class="p-2.5 rounded bg-highlight-tint/60 border border-primary/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-bold text-xs">03</span>
+<span class="font-body-medium text-body-medium font-semibold text-primary">Semantic Bus &amp; Power BI DAX</span>
+</div>
+<span class="font-caption text-caption text-primary font-medium">Single Source of Truth</span>
+</div>
+<!-- Directional Flow Indicator -->
+<div class="flex justify-center -my-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</div>
+<!-- Layer 2: Transformation / Star Schema -->
+<div class="p-2.5 rounded bg-surface-sidebar border border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs">02</span>
+<span class="font-body-medium text-body-medium font-semibold text-text-primary">Medallion Pipelines (Gold / Silver)</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Dimensional Star</span>
+</div>
+<!-- Directional Flow Indicator -->
+<div class="flex justify-center -my-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</div>
+<!-- Layer 1: Ingestion & Raw Storage -->
+<div class="p-2.5 rounded bg-surface-sidebar border border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-muted text-text-secondary flex items-center justify-center font-bold text-xs">01</span>
+<span class="font-body-medium text-body-medium font-semibold text-text-secondary">Raw OLTP, Logs &amp; Object Lake</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Bronze Stage</span>
+</div>
+</div>
+<!-- Cross-Cutting Governance Bar -->
+<div class="mt-3 pt-2.5 border-t border-border-subtle flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-chart-accent-emerald">verified_user</span>
+                      Spanning Governance, RLS &amp; Cataloging
+                    </span>
+<span class="text-[11px] font-mono text-text-secondary bg-surface-muted px-1.5 py-0.5 rounded">Fabric / Purview</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- SECTION 3: "UNDERSTANDING THE DATA FIELD" — CURATED ESSAY SERIES-->
+<!-- ============================================================= -->
+<section class="flex flex-col gap-5">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-2 border-b border-border-subtle pb-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">local_library</span>
+<span class="font-label-analytics text-label-analytics uppercase tracking-wider text-primary font-bold">Comprehensive Educational Curriculum</span>
+</div>
+<h2 class="font-headline-section text-headline-section font-bold text-text-primary mt-1">
+                "Understanding the Data Field" — 10-Part Architectural Series
+              </h2>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1 max-w-2xl">
+                A sequential, first-principles breakdown translating ambiguous industry jargon into clear conceptual frameworks, data flows, and concrete enterprise roles.
+              </p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-caption text-caption text-text-secondary">Complete syllabus available:</span>
+<span class="px-2.5 py-1 rounded bg-highlight-tint text-primary font-body-medium text-body-medium font-semibold border border-primary/20">
+                10 Chapters
+              </span>
+</div>
+</div>
+<!-- 10 Chapters Structured Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Chapter 1 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 01</span>
+<span class="font-caption text-caption text-text-muted">7 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  1. What is Data?
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Deconstructing raw observations into recorded, measurable reality—exploring how business activities become stored bits and binary states.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Epistemology &amp; Storage Basics</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 2 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 02</span>
+<span class="font-caption text-caption text-text-muted">9 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  2. History of Data Systems
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Tracing the evolution from Babylonian physical ledgers and punch cards to relational algebra, Codd's RDBMS revolution, and modern distributed cloud lakes.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Evolutionary Context</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 3 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 03</span>
+<span class="font-caption text-caption text-text-muted">8 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  3. The DIKW Pyramid in Enterprise Reality
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Examining the progression from Data to Information, Knowledge, and Operational Wisdom within Fortune 500 decision-making corridors.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Theoretical Frameworks</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 4 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 04</span>
+<span class="font-caption text-caption text-text-muted">11 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  4. Structured vs. Unstructured Data
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Comparing tabular relational integrity and ACID guarantees against multimodal objects, JSON documents, and dense vector embeddings.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Data Typology &amp; Storage</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 5 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 05</span>
+<span class="font-caption text-caption text-text-muted">12 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  5. Mapping the Data Field: Roles &amp; Boundaries
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Clarifying the functional overlaps and crisp distinctions among Data Engineers, Analytical Modelers, BI Developers, and Data Scientists.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Organizational Topology</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 6 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 06</span>
+<span class="font-caption text-caption text-text-muted">15 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  6. Data Infrastructure &amp; Storage Engines
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Demystifying Data Lakes, MPP Warehouses, Delta Lake/Parquet formats, and modern decoupled compute engines like Snowflake and Microsoft Fabric.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Compute &amp; Storage Tiers</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 7 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 07</span>
+<span class="font-caption text-caption text-text-muted">13 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  7. Analytics &amp; Business Intelligence
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Deterministic truth vs. intuition: constructing Kimball Star Schemas, VertiPaq tabular memory structures, and ergonomic DAX measures.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Semantic Layer &amp; BI</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 8 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 08</span>
+<span class="font-caption text-caption text-text-muted">10 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  8. Data Science &amp; Machine Learning
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Transitioning from descriptive retrospectives to probabilistic inference, regression classifiers, and statistical validation in production.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Statistical Modeling</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 9 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 09</span>
+<span class="font-caption text-caption text-text-muted">14 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  9. How Data Disciplines Actually Connect
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Synthesizing ingestion pipelines, conformed dimensions, semantic metrics, and AI models into a self-reinforcing operational delivery loop.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Integration Architecture</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Chapter 10 -->
+<article class="p-5 rounded-lg border border-border-subtle bg-surface-card ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary">CHAPTER 10</span>
+<span class="font-caption text-caption text-text-muted">12 min read</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                  10. Enterprise Data Governance &amp; Trust
+                </h3>
+<p class="mt-1.5 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                  Ensuring long-term survival: Row-Level Security (RLS), metric dictionaries, end-to-end lineage, and active data stewardship.
+                </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-medium text-text-muted">Security &amp; Compliance</span>
+<a class="inline-flex items-center gap-1 font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+                  Read Chapter <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- SECTION 4: THE DATA ECOSYSTEM KNOWLEDGE MAP                   -->
+<!-- (Interactive / Layered Enterprise Architectural Flow)          -->
+<!-- ============================================================= -->
+<section class="rounded-xl border border-border-subtle bg-surface-card p-6 md:p-8 ambient-card">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-border-subtle">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<span class="font-label-analytics text-label-analytics uppercase tracking-wider text-primary font-bold">System Blueprint</span>
+</div>
+<h2 class="font-headline-section text-headline-section font-bold text-text-primary mt-1">
+                The Enterprise Data Ecosystem Knowledge Map
+              </h2>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">
+                A top-to-bottom representation of how data artifacts transition from raw operational capture to executive clarity.
+              </p>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-highlight-tint text-primary text-xs font-semibold border border-primary/20">
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald"></span>
+                Medallion + Kimball Compliant
+              </span>
+</div>
+</div>
+<!-- Stack Layout: 4 Core Horizontal Tiers with a Cross-Cutting Vertical Pillar -->
+<div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-4">
+<!-- Left 9 Columns: 4 Layered Tiers -->
+<div class="lg:col-span-9 flex flex-col gap-3">
+<!-- LAYER 4: DATA SCIENCE & AI -->
+<div class="p-4 rounded-lg border border-border-subtle bg-surface-sidebar relative overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary text-xs font-bold">L4</span>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                      Data Science, Predictive ML &amp; AI Agents
+                    </h3>
+</div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Top Layer · Probabilistic Value</span>
+</div>
+<div class="mt-2.5 flex flex-wrap gap-2 text-caption text-text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">RAG Vector Store</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Forecast Regressions</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">LLM Function Calling</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Predictive Churn Models</span>
+</div>
+</div>
+<!-- Connecting Vector Micro-Bar -->
+<div class="flex items-center justify-center -my-1 text-chart-accent-emerald">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</div>
+<!-- LAYER 3: ANALYTICS & BI -->
+<div class="p-4 rounded-lg border-2 border-primary/30 bg-highlight-tint/40 relative">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary text-xs font-bold">L3</span>
+<h3 class="font-headline-card text-headline-card font-semibold text-primary">
+                      Analytics &amp; Business Intelligence (Semantic Layer)
+                    </h3>
+</div>
+<span class="font-label-analytics text-label-analytics text-primary font-bold uppercase">Core Specialty · Deterministic Truth</span>
+</div>
+<div class="mt-2.5 flex flex-wrap gap-2 text-caption text-text-primary">
+<span class="px-2.5 py-1 rounded bg-surface-card border border-primary/20 font-mono text-[12px] font-medium text-primary">Kimball Star Schema (Facts / Dims)</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-primary/20 font-mono text-[12px] font-medium text-primary">VertiPaq In-Memory Columnar</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-primary/20 font-mono text-[12px] font-medium text-primary">DAX Time-Intelligence Measures</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-primary/20 font-mono text-[12px] font-medium text-primary">Power BI Fabric Workspaces</span>
+</div>
+</div>
+<!-- Connecting Vector Micro-Bar -->
+<div class="flex items-center justify-center -my-1 text-chart-accent-emerald">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</div>
+<!-- LAYER 2: DATA ENGINEERING -->
+<div class="p-4 rounded-lg border border-border-subtle bg-surface-sidebar relative">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-text-primary text-xs font-bold border border-border-subtle">L2</span>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                      Data Engineering &amp; Transformation Pipelines
+                    </h3>
+</div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Medallion Engine</span>
+</div>
+<div class="mt-2.5 flex flex-wrap gap-2 text-caption text-text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Delta Lake Tables</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">PySpark / SQL Cleansing</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Silver / Gold Partitioning</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Incremental CDC Pipelines</span>
+</div>
+</div>
+<!-- Connecting Vector Micro-Bar -->
+<div class="flex items-center justify-center -my-1 text-chart-accent-emerald">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</div>
+<!-- LAYER 1: DATA INFRASTRUCTURE & STORAGE -->
+<div class="p-4 rounded-lg border border-border-subtle bg-surface-sidebar relative">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-muted text-text-primary text-xs font-bold border border-border-subtle">L1</span>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                      Data Infrastructure &amp; Ingestion Fabrics
+                    </h3>
+</div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Foundation</span>
+</div>
+<div class="mt-2.5 flex flex-wrap gap-2 text-caption text-text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Transactional PostgreSQL / SQL Server</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Azure Blob / OneLake Storage</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">REST APIs &amp; Webhooks</span>
+<span class="px-2.5 py-1 rounded bg-surface-card border border-border-subtle font-mono text-[12px]">Kafka Event Streaming</span>
+</div>
+</div>
+</div>
+<!-- Right 3 Columns: Continuous Vertical Spanning Governance Bracket -->
+<div class="lg:col-span-3 rounded-lg border border-primary/30 bg-surface-sidebar p-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+<span class="font-headline-card text-headline-card font-semibold text-primary">
+                    Cross-Cutting Governance
+                  </span>
+</div>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                  A persistent enterprise discipline spanning all four architectural tiers to guarantee security, lineage, and trusted metrics.
+                </p>
+<div class="mt-4 flex flex-col gap-2.5">
+<div class="p-2 rounded bg-surface-card border border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase block">Data Security</span>
+<span class="font-body-medium text-body-medium font-medium text-text-primary">Row-Level Security (RLS)</span>
+</div>
+<div class="p-2 rounded bg-surface-card border border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase block">Semantic Single Truth</span>
+<span class="font-body-medium text-body-medium font-medium text-text-primary">Enterprise Metric Dictionary</span>
+</div>
+<div class="p-2 rounded bg-surface-card border border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase block">Provenance</span>
+<span class="font-body-medium text-body-medium font-medium text-text-primary">End-to-End Data Lineage</span>
+</div>
+<div class="p-2 rounded bg-surface-card border border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase block">Monitoring</span>
+<span class="font-body-medium text-body-medium font-medium text-text-primary">Automated Quality Audits</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-caption text-caption text-text-muted block text-center">
+                  Standardized on Microsoft Purview &amp; Fabric Catalog
+                </span>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- SECTION 5: CATEGORICAL ARTICLE GRID                           -->
+<!-- (Deep-Dive Domain Specific Case Studies & Tactical Essays)    -->
+<!-- ============================================================= -->
+<section class="flex flex-col gap-5">
+<div class="flex items-center justify-between border-b border-border-subtle pb-4">
+<div>
+<span class="font-label-analytics text-label-analytics uppercase tracking-wider text-text-muted">Focused Field Studies</span>
+<h2 class="font-headline-section text-headline-section font-bold text-text-primary mt-0.5">
+                Technical Articles Across Core Domains
+              </h2>
+</div>
+<span class="text-caption text-text-secondary hidden sm:inline">6 Core Architectural Categories</span>
+</div>
+<!-- 6-Card Category Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- 1. Data Fundamentals -->
+<div class="rounded-lg border border-border-subtle bg-surface-card p-5 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-surface-muted text-text-secondary border border-border-subtle">
+                    Data Fundamentals
+                  </span>
+<span class="font-caption text-caption text-text-muted">6 min</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary leading-snug">
+                  Demystifying the DIKW Hierarchy in Practice
+                </h3>
+<p class="mt-2 font-body-regular text-body-regular text-text-secondary leading-relaxed line-clamp-3">
+                  Why most enterprise BI roadmaps fail by attempting to deliver wisdom without validating the foundational tabular integrity of raw operational facts.
+                </p>
+</div>
+<div class="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-mono text-text-muted">Conceptual Theory</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5" href="#">
+                  Read Article →
+                </a>
+</div>
+</div>
+<!-- 2. Analytics & BI -->
+<div class="rounded-lg border border-border-subtle bg-surface-card p-5 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-highlight-tint text-primary border border-primary/20">
+                    Analytics &amp; BI
+                  </span>
+<span class="font-caption text-caption text-text-muted">10 min</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary leading-snug">
+                  Why VertiPaq DAX Optimization Dictates Executive Adoption
+                </h3>
+<p class="mt-2 font-body-regular text-body-regular text-text-secondary leading-relaxed line-clamp-3">
+                  Sub-second query response is not a vanity metric—it is the psychological barrier between active daily executive usage and dashboard abandonment.
+                </p>
+</div>
+<div class="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-mono text-text-muted">Power BI / Performance</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5" href="#">
+                  Read Article →
+                </a>
+</div>
+</div>
+<!-- 3. Data Architecture -->
+<div class="rounded-lg border border-border-subtle bg-surface-card p-5 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-surface-muted text-text-secondary border border-border-subtle">
+                    Data Architecture
+                  </span>
+<span class="font-caption text-caption text-text-muted">12 min</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary leading-snug">
+                  Conformed Dimensions: The Foundation of Cross-Departmental Truth
+                </h3>
+<p class="mt-2 font-body-regular text-body-regular text-text-secondary leading-relaxed line-clamp-3">
+                  How building reusable enterprise dimensions (Customer, Time, Cost Center) prevents fragmented silos when finance, sales, and supply chain analyze identical metrics.
+                </p>
+</div>
+<div class="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-mono text-text-muted">Kimball Dimensional</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5" href="#">
+                  Read Article →
+                </a>
+</div>
+</div>
+<!-- 4. Data Engineering -->
+<div class="rounded-lg border border-border-subtle bg-surface-card p-5 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-surface-muted text-text-secondary border border-border-subtle">
+                    Data Engineering
+                  </span>
+<span class="font-caption text-caption text-text-muted">9 min</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary leading-snug">
+                  Transitioning from Fragile File Dumps to Governed Lakehouse Pipelines
+                </h3>
+<p class="mt-2 font-body-regular text-body-regular text-text-secondary leading-relaxed line-clamp-3">
+                  Practical migration patterns from chaotic network share CSVs into Microsoft Fabric Medallion Delta tables with continuous schema validation.
+                </p>
+</div>
+<div class="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-mono text-text-muted">Delta / Medallion</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5" href="#">
+                  Read Article →
+                </a>
+</div>
+</div>
+<!-- 5. AI / Machine Learning -->
+<div class="rounded-lg border border-border-subtle bg-surface-card p-5 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-highlight-tint text-primary border border-primary/20">
+                    AI &amp; Machine Learning
+                  </span>
+<span class="font-caption text-caption text-text-muted">11 min</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary leading-snug">
+                  Grounding LLMs in Enterprise Truth: RAG Architecture Over Fine-Tuning
+                </h3>
+<p class="mt-2 font-body-regular text-body-regular text-text-secondary leading-relaxed line-clamp-3">
+                  Why indexing validated semantic warehouse schemas and vector chunks delivers reliable, auditable answers while avoiding LLM hallucinations and expensive re-training.
+                </p>
+</div>
+<div class="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-mono text-text-muted">Generative AI / RAG</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5" href="#">
+                  Read Article →
+                </a>
+</div>
+</div>
+<!-- 6. Data Governance -->
+<div class="rounded-lg border border-border-subtle bg-surface-card p-5 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-surface-muted text-text-secondary border border-border-subtle">
+                    Data Governance
+                  </span>
+<span class="font-caption text-caption text-text-muted">8 min</span>
+</div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary leading-snug">
+                  Metric Standardization: Eliminating the 3-Definition Revenue Trap
+                </h3>
+<p class="mt-2 font-body-regular text-body-regular text-text-secondary leading-relaxed line-clamp-3">
+                  How differing definitions of 'Monthly Active Revenue' between Marketing and Operations erode trust, and how a semantic dictionary permanently solves it.
+                </p>
+</div>
+<div class="mt-5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="text-[11px] font-mono text-text-muted">Lineage &amp; Metrics</span>
+<a class="font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5" href="#">
+                  Read Article →
+                </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- SECTIONS 6 & 7: "WHY I WRITE" + TEACHING ASYMMETRIC BENTO     -->
+<!-- ============================================================= -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Card 6: "Why I Write" — Editorial Philosophy (7 Cols) -->
+<div class="lg:col-span-7 rounded-xl border border-border-subtle bg-surface-card p-6 md:p-8 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+<span class="font-label-analytics text-label-analytics uppercase tracking-wider text-text-muted">Editorial Philosophy</span>
+</div>
+<h2 class="font-headline-section text-headline-section font-bold text-text-primary">
+                Writing is an Engineering Discipline
+              </h2>
+<blockquote class="mt-4 pl-4 border-l-2 border-primary text-text-primary font-body-large text-body-large italic leading-relaxed">
+                "Writing technical essays is not a leisure activity; it is how I pressure-test mental models. If you cannot explain the nuanced boundary between a Silver Delta Lake table and a Kimball Star dimension in plain language, you don't yet understand your architecture well enough to build it."
+              </blockquote>
+<p class="mt-4 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                Hammad uses technical writing to decompose distributed systems, stress-test enterprise modeling patterns, and bridge the perpetual communication divide between raw database engineering and high-stakes executive boardrooms.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-border-subtle flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Author: Mirza Hammad Baig</span>
+<span class="font-label-analytics text-label-analytics uppercase text-chart-accent-emerald font-semibold">Strict First Principles</span>
+</div>
+</div>
+<!-- Card 7: From Writing to Teaching (Cross-link Module) (5 Cols) -->
+<div class="lg:col-span-5 rounded-xl border border-primary/20 bg-surface-sidebar p-6 md:p-8 ambient-card flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<span class="font-label-analytics text-label-analytics uppercase tracking-wider text-primary font-bold">Applied Enablement</span>
+</div>
+<h2 class="font-headline-card text-headline-card md:font-headline-section md:text-headline-section font-bold text-text-primary">
+                From Theory to Classroom
+              </h2>
+<p class="mt-3 font-body-regular text-body-regular text-text-secondary leading-relaxed">
+                Translating these architectural concepts directly into practical student cohorts and corporate training at <strong>Atomcamp</strong> and enterprise workshops. Over 300+ students mentored into real-world analytics careers.
+              </p>
+<!-- Cohort Stats -->
+<div class="mt-4 grid grid-cols-2 gap-3">
+<div class="p-3 rounded bg-surface-card border border-border-subtle">
+<span class="font-display-kpi-mobile text-display-kpi-mobile font-bold text-primary block">300+</span>
+<span class="font-caption text-caption text-text-muted">Students Mentored</span>
+</div>
+<div class="p-3 rounded bg-surface-card border border-border-subtle">
+<span class="font-display-kpi-mobile text-display-kpi-mobile font-bold text-primary block">100%</span>
+<span class="font-caption text-caption text-text-muted">Hands-on SQL &amp; DAX</span>
+</div>
+</div>
+</div>
+<!-- Deep Link CTAs -->
+<div class="mt-6 pt-4 border-t border-border-subtle flex flex-col gap-2">
+<a class="inline-flex items-center justify-between font-body-medium text-body-medium text-primary hover:text-primary-container font-semibold" href="#">
+<span>Explore Teaching &amp; Mentoring</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-between font-body-medium text-body-medium text-text-secondary hover:text-text-primary" href="#">
+<span>Inspect Enterprise Case Studies</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- SECTION 8: MEDIUM COMMUNITY BANNER                            -->
+<!-- ============================================================= -->
+<section class="rounded-xl border border-border-subtle bg-surface-card p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 ambient-card">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-highlight-tint text-primary flex items-center justify-center shrink-0 border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">rss_feed</span>
+</div>
+<div>
+<h3 class="font-headline-card text-headline-card font-semibold text-text-primary">
+                Follow Mirza Hammad Baig on Medium
+              </h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-0.5">
+                Get notified when new deep-dives on Microsoft Fabric, DAX patterns, and Kimball modeling are released.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto shrink-0">
+<a class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-body-medium text-body-medium shadow-sm transition-all duration-150" href="https://medium.com" target="_blank">
+<span>View All Publications</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</section>
+</div>
+<!-- ============================================================= -->
+<!-- GLOBAL FOOTER: Executive Analytics Layout                      -->
+<!-- ============================================================= -->
+<footer class="mt-12 border-t border-border-subtle dark:border-outline-variant bg-surface-canvas-subtle dark:bg-surface-container-low w-full">
+<div class="max-w-7xl mx-auto px-space-md md:px-space-xl py-space-lg flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<div class="flex flex-col md:flex-row items-center gap-2">
+<span class="font-headline-card text-headline-card font-semibold text-text-primary dark:text-inverse-on-surface">
+              Mirza Hammad Baig
+            </span>
+<span class="hidden md:inline text-text-muted">·</span>
+<p class="font-caption text-caption text-text-secondary dark:text-on-surface-variant">
+              © 2025 Mirza Hammad Baig. BI Solutions Architecture &amp; Enterprise Data Strategy.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-body-regular text-body-regular text-text-secondary dark:text-on-surface-variant">
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="https://linkedin.com" target="_blank">
+              LinkedIn
+            </a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="https://github.com" target="_blank">
+              GitHub
+            </a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="https://medium.com" target="_blank">
+              Medium
+            </a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#architecture-system">
+              Architecture System Docs
+            </a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#privacy">
+              Privacy &amp; Governance
+            </a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+<!-- Interactive script for filter tabs ribbon -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterContainer = document.getElementById('categoryFilterContainer');
+      if (filterContainer) {
+        const buttons = filterContainer.querySelectorAll('button');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            buttons.forEach(b => {
+              b.className = 'px-3.5 py-1.5 rounded-full text-xs font-medium bg-surface-card text-text-secondary hover:text-text-primary border border-border-subtle hover:border-border-hover shrink-0 transition-colors';
+            });
+            btn.className = 'px-3.5 py-1.5 rounded-full text-xs font-medium bg-primary-container text-on-primary border border-primary shadow-sm shrink-0';
+          });
+        });
+      }
+    });
+  </script>
+</body></html>

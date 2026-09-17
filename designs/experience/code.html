@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Experience · Mirza Hammad Baig | Data Analyst &amp; BI Solutions Architect</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#f2fcf8",
+            "secondary-fixed-dim": "#7bdc7f",
+            "on-secondary-container": "#037526",
+            "on-surface-variant": "#3f4944",
+            "secondary-container": "#96f998",
+            "on-primary": "#ffffff",
+            "text-muted": "#85938F",
+            "surface-container-highest": "#dbe5e1",
+            "background": "#f2fcf8",
+            "on-background": "#141d1b",
+            "on-error-container": "#93000a",
+            "border-subtle": "#E1E8E4",
+            "on-tertiary": "#ffffff",
+            "inverse-on-surface": "#e9f3ef",
+            "surface-tint": "#266a53",
+            "on-tertiary-fixed": "#002117",
+            "tertiary-container": "#235b49",
+            "highlight-tint": "#ECF8EE",
+            "text-secondary": "#5D6965",
+            "inverse-surface": "#293230",
+            "inverse-primary": "#91d4b8",
+            "text-primary": "#18211F",
+            "on-primary-fixed": "#002116",
+            "on-secondary-fixed-variant": "#005318",
+            "on-primary-fixed-variant": "#00513c",
+            "on-primary-container": "#8fd2b6",
+            "primary-fixed-dim": "#91d4b8",
+            "on-surface": "#141d1b",
+            "tertiary": "#024333",
+            "surface-muted": "#F3F6F4",
+            "surface-card": "#FFFFFF",
+            "surface-sidebar": "#F8FAF9",
+            "highlight-soft": "#DDF5DF",
+            "surface-container-high": "#e0eae7",
+            "surface": "#f2fcf8",
+            "border-hover": "#CAD6CF",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#acf1d4",
+            "tertiary-fixed": "#b5efd7",
+            "on-secondary-fixed": "#002105",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "chart-accent-emerald": "#1B7358",
+            "secondary": "#006e23",
+            "surface-dim": "#d2dcd9",
+            "surface-container": "#e6f0ec",
+            "chart-accent-slate": "#7A8C86",
+            "surface-variant": "#dbe5e1",
+            "on-tertiary-fixed-variant": "#16503f",
+            "outline": "#707974",
+            "primary": "#004331",
+            "surface-canvas-subtle": "#F7F9F8",
+            "surface-canvas": "#F5F7F6",
+            "outline-variant": "#bfc9c2",
+            "on-tertiary-container": "#98d1ba",
+            "tertiary-fixed-dim": "#99d2bb",
+            "surface-container-low": "#ecf6f2",
+            "primary-container": "#145c46",
+            "chart-accent-mint": "#82D387",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#96f998"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1rem",
+            "space-xl": "2rem",
+            "space-2xl": "3rem",
+            "gutter": "1.5rem",
+            "margin": "2rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "margin-desktop": "2rem",
+            "gutter-desktop": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "display-kpi-mobile": ["Inter"],
+            "headline-page": ["Inter"],
+            "display-kpi": ["Inter"],
+            "code-inline": ["Inter"],
+            "headline-page-mobile": ["Inter"],
+            "label-analytics": ["Inter"],
+            "body-regular": ["Inter"],
+            "headline-card": ["Inter"],
+            "body-large": ["Inter"],
+            "body-medium": ["Inter"],
+            "caption": ["Inter"],
+            "headline-section": ["Inter"]
+          },
+          "fontSize": {
+            "display-kpi-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-page": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "display-kpi": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "code-inline": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-page-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-analytics": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "body-regular": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-card": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-large": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-medium": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-section": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F8FAF9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #E1E8E4;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #CAD6CF;
+    }
+  </style>
+</head>
+<body class="bg-surface-canvas text-text-primary antialiased font-body-regular selection:bg-highlight-soft selection:text-primary min-h-screen flex flex-col md:flex-row">
+<!-- ========================================================================= -->
+<!-- PERSISTENT EXECUTIVE SIDEBAR (Fixed 272px Desktop Rail) -->
+<!-- ========================================================================= -->
+<aside class="w-full md:w-[272px] md:h-screen md:fixed top-0 left-0 bg-surface-sidebar border-r border-border-subtle flex flex-col justify-between z-30 overflow-y-auto custom-scrollbar">
+<div class="p-5 flex flex-col gap-5">
+<!-- Profile Identification Header -->
+<div class="flex items-start gap-3.5 pb-4 border-b border-border-subtle">
+<div class="w-11 h-11 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-card text-headline-card shadow-sm ring-2 ring-highlight-soft">
+          MB
+        </div>
+<div class="flex flex-col">
+<h1 class="font-headline-card text-headline-card text-text-primary tracking-tight leading-tight">Mirza Hammad Baig</h1>
+<span class="font-caption text-caption text-primary font-medium mt-0.5">Data Analyst · BI Solutions Architect</span>
+<span class="font-label-analytics text-label-analytics text-text-muted mt-0.5 uppercase tracking-wider">Data • BI • Architecture • AI</span>
+</div>
+</div>
+<!-- Elevator Pitch -->
+<p class="font-caption text-caption text-text-secondary leading-relaxed bg-surface-card p-3 rounded-lg border border-border-subtle">
+        Turning complex data into reliable systems, clear insights and better business decisions.
+      </p>
+<!-- Monochrome Social / Connectivity -->
+<div class="flex items-center gap-1.5 text-text-secondary">
+<a aria-label="LinkedIn" class="p-2 rounded-lg hover:bg-surface-muted hover:text-text-primary transition-colors duration-150" href="#" title="LinkedIn">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a aria-label="GitHub" class="p-2 rounded-lg hover:bg-surface-muted hover:text-text-primary transition-colors duration-150" href="#" title="GitHub">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</a>
+<a aria-label="Medium" class="p-2 rounded-lg hover:bg-surface-muted hover:text-text-primary transition-colors duration-150" href="#" title="Medium Articles">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+</a>
+<a aria-label="Email" class="p-2 rounded-lg hover:bg-surface-muted hover:text-text-primary transition-colors duration-150" href="#" title="Contact Email">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+<!-- Navigation Menu -->
+<nav aria-label="Primary Navigation" class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Work / Case Studies</span>
+</a>
+<!-- ACTIVE TAB: Experience -->
+<a class="flex items-center justify-between px-3 py-2 rounded-lg bg-surface-card text-primary font-body-medium text-body-medium shadow-sm border border-border-subtle ring-1 ring-primary-container/10" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="timeline">timeline</span>
+<span class="text-primary font-medium">Experience</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald animate-pulse"></span>
+<span class="font-label-analytics text-label-analytics bg-highlight-tint text-primary px-1.5 py-0.5 rounded text-[10px]">ACTIVE</span>
+</div>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span>Expertise</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span>Teaching &amp; Mentoring</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Writing / Insights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>About</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+<span>Contact</span>
+</a>
+</nav>
+<!-- Skill Pills Area -->
+<div class="pt-3 border-t border-border-subtle">
+<p class="font-label-analytics text-label-analytics text-text-muted uppercase mb-2">Core Tech Stack</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-highlight-tint text-primary border border-border-subtle">Power BI</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-highlight-tint text-primary border border-border-subtle">SQL</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-highlight-tint text-primary border border-border-subtle">Python</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-highlight-tint text-primary border border-border-subtle">DAX</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-surface-card text-text-secondary border border-border-subtle">Data Modeling</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-surface-card text-text-secondary border border-border-subtle">Microsoft Fabric</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-surface-card text-text-secondary border border-border-subtle">Data Engineering</span>
+<span class="font-caption text-caption px-2 py-0.5 rounded-full bg-surface-card text-text-secondary border border-border-subtle">AI Automation</span>
+</div>
+</div>
+</div>
+<!-- CTA & Footer Anchor in Rail -->
+<div class="p-4 border-t border-border-subtle bg-surface-sidebar mt-auto">
+<button class="w-full py-2.5 px-4 bg-primary text-on-primary rounded-lg font-body-medium text-body-medium shadow-sm hover:bg-tertiary transition-all duration-150 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span>Schedule Consultation</span>
+</button>
+<div class="mt-3 flex items-center justify-between font-caption text-caption text-text-muted">
+<span>Available for Advisory</span>
+<span class="inline-block w-2 h-2 rounded-full bg-chart-accent-mint"></span>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN ANALYTICS WORKSPACE (~80% Canvas, offset by sidebar on desktop) -->
+<!-- ========================================================================= -->
+<main class="flex-1 md:ml-[272px] flex flex-col min-w-0">
+<!-- TOP WORKSPACE HEADER BAR -->
+<header class="sticky top-0 z-20 bg-surface-card/95 backdrop-blur border-b border-border-subtle px-6 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex flex-col">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 font-caption text-caption text-text-muted">
+<span>Home</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Experience</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<h2 class="font-headline-section text-headline-section text-text-primary tracking-tight">Professional Experience</h2>
+<span class="hidden lg:inline-flex items-center gap-1 font-label-analytics text-label-analytics px-2 py-0.5 rounded-full bg-highlight-tint text-primary border border-border-subtle">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-emerald"></span>
+            ENTERPRISE VERIFIED
+          </span>
+</div>
+</div>
+<!-- Action Cluster & System Status -->
+<div class="flex items-center gap-3">
+<div class="hidden xl:flex items-center gap-2 px-3 py-1.5 bg-surface-canvas rounded-lg border border-border-subtle text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-chart-accent-emerald" data-icon="verified_user">verified_user</span>
+<span>Enterprise Systems Ready • Available for Strategic Roles</span>
+</div>
+<button class="px-3.5 py-1.5 bg-surface-card border border-border-subtle hover:border-border-hover rounded-lg text-text-primary font-body-medium text-body-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-text-secondary" data-icon="download">download</span>
+<span>Download CV</span>
+</button>
+<a class="p-2 border border-border-subtle rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-canvas transition-colors" href="#" title="View GitHub Architecture">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</a>
+</div>
+</header>
+<!-- CONTENT WRAPPER -->
+<div class="p-6 md:p-8 max-w-[1440px] mx-auto w-full flex flex-col gap-8">
+<!-- SUBTITLE / VALUE STATEMENT -->
+<div>
+<p class="font-body-large text-body-large text-text-secondary max-w-3xl leading-relaxed">
+          Building analytical systems, improving data foundations and helping teams make better decisions through resilient BI architecture, high-performance DAX, and automated data pipelines.
+        </p>
+</div>
+<!-- ===================================================================== -->
+<!-- 1. CAREER OVERVIEW STRIP: 5 FACTUAL METRIC CARDS -->
+<!-- ===================================================================== -->
+<section aria-label="Career Key Metrics" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Metric 1 -->
+<div class="p-4 rounded-xl bg-surface-card border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-analytics text-label-analytics uppercase">Tenure &amp; Track</span>
+<span class="material-symbols-outlined text-text-muted" data-icon="schedule">schedule</span>
+</div>
+<div>
+<div class="font-display-kpi text-display-kpi text-primary leading-tight">4+ Years</div>
+<p class="font-body-medium text-body-medium text-text-primary mt-1">Data &amp; BI Experience</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-2 pt-2 border-t border-border-subtle/60">
+            Cross-functional enterprise &amp; consulting track record
+          </p>
+</div>
+<!-- Metric 2 -->
+<div class="p-4 rounded-xl bg-surface-card border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-analytics text-label-analytics uppercase">Solutions Shipped</span>
+<span class="material-symbols-outlined text-text-muted" data-icon="dashboard_customize">dashboard_customize</span>
+</div>
+<div>
+<div class="font-display-kpi text-display-kpi text-primary leading-tight">20+ Prod</div>
+<p class="font-body-medium text-body-medium text-text-primary mt-1">Enterprise Dashboards</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-2 pt-2 border-t border-border-subtle/60">
+            Delivered on Power BI &amp; Microsoft Fabric
+          </p>
+</div>
+<!-- Metric 3 -->
+<div class="p-4 rounded-xl bg-surface-card border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-analytics text-label-analytics uppercase">Domain Breadth</span>
+<span class="material-symbols-outlined text-text-muted" data-icon="domain">domain</span>
+</div>
+<div>
+<div class="font-display-kpi text-display-kpi text-primary leading-tight">5 Units</div>
+<p class="font-body-medium text-body-medium text-text-primary mt-1">Corporate Functions</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-2 pt-2 border-t border-border-subtle/60">
+            Operations, Sales, HR, CS, Corporate
+          </p>
+</div>
+<!-- Metric 4 -->
+<div class="p-4 rounded-xl bg-surface-card border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-analytics text-label-analytics uppercase">Current Role</span>
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald"></span>
+</div>
+<div>
+<div class="font-headline-card text-headline-card text-primary font-bold">Assistant Manager</div>
+<p class="font-body-medium text-body-medium text-text-primary mt-0.5">Data Analyst</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-2 pt-2 border-t border-border-subtle/60">
+            Ideas by Gul Ahmed (Retail &amp; Omnichannel)
+          </p>
+</div>
+<!-- Metric 5 -->
+<div class="p-4 rounded-xl bg-surface-card border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-analytics text-label-analytics uppercase">Academic Role</span>
+<span class="material-symbols-outlined text-text-muted" data-icon="cast_for_education">cast_for_education</span>
+</div>
+<div>
+<div class="font-headline-card text-headline-card text-primary font-bold">Power BI Lecturer</div>
+<p class="font-body-medium text-body-medium text-text-primary mt-0.5">Atomcamp (Part-Time)</p>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-2 pt-2 border-t border-border-subtle/60">
+            Teaching Modeling, DAX, EDA &amp; SQL
+          </p>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- 2. CAREER TIMELINE (CORE PROGRESSION) -->
+<!-- ===================================================================== -->
+<section aria-labelledby="timeline-heading" class="flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="work_history">work_history</span>
+<h3 class="font-headline-section text-headline-section text-text-primary" id="timeline-heading">Career Progression &amp; Scope</h3>
+</div>
+<span class="font-label-analytics text-label-analytics text-text-secondary uppercase">CHRONOLOGICAL &amp; DOCUMENTED</span>
+</div>
+<div class="relative pl-6 sm:pl-8 border-l-2 border-border-subtle flex flex-col gap-8">
+<!-- TIMELINE ITEM 1: Ideas by Gul Ahmed -->
+<div class="relative group">
+<!-- Node Marker -->
+<span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-surface-card border-2 border-primary flex items-center justify-center ring-4 ring-surface-canvas">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</span>
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 shadow-sm hover:border-border-hover transition-all duration-150">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-border-subtle">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Assistant Manager – Data Analyst</h4>
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-highlight-tint text-primary font-semibold">PRESENT APPOINTMENT</span>
+</div>
+<p class="font-body-medium text-body-medium text-primary mt-0.5">Ideas by Gul Ahmed</p>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary font-caption text-caption bg-surface-canvas px-3 py-1 rounded-md border border-border-subtle self-start">
+<span class="material-symbols-outlined text-[15px]" data-icon="date_range">date_range</span>
+<span>Jun 2026 – Present</span>
+</div>
+</div>
+<!-- Scope & Responsibilities -->
+<div class="py-4">
+<p class="font-label-analytics text-label-analytics text-text-muted uppercase mb-3">Scope &amp; Operational Ownership</p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-text-secondary font-body-regular text-body-regular">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Own sales and retail performance reporting across multiple product categories.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Convert large transactional datasets into decision-ready BI reporting and executive summaries.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Design and develop the company's enterprise data architecture and standard data models.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Optimize the existing data pipeline for reliability, scalability and sub-second performance.</span>
+</li>
+<li class="flex items-start gap-2 md:col-span-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Architect scalable enterprise BI infrastructure and automate recurring reporting workflows across commercial arms.</span>
+</li>
+</ul>
+</div>
+<!-- Focus Tags -->
+<div class="pt-3 border-t border-border-subtle flex flex-wrap items-center gap-1.5">
+<span class="font-label-analytics text-label-analytics text-text-muted mr-1">Focus Areas:</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Retail Analytics</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Data Architecture</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Data Pipelines</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Enterprise BI</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Automation</span>
+</div>
+</div>
+</div>
+<!-- TIMELINE ITEM 2: Atomcamp -->
+<div class="relative group">
+<span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-surface-card border-2 border-chart-accent-slate flex items-center justify-center ring-4 ring-surface-canvas">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-slate"></span>
+</span>
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 shadow-sm hover:border-border-hover transition-all duration-150">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-border-subtle">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Power BI Lecturer</h4>
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary border border-border-subtle">ACADEMIC &amp; WORKSHOPS</span>
+</div>
+<p class="font-body-medium text-body-medium text-primary mt-0.5">Atomcamp — Part-Time</p>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary font-caption text-caption bg-surface-canvas px-3 py-1 rounded-md border border-border-subtle self-start">
+<span class="material-symbols-outlined text-[15px]" data-icon="date_range">date_range</span>
+<span>Apr 2026 – Present</span>
+</div>
+</div>
+<!-- Scope & Responsibilities -->
+<div class="py-4">
+<p class="font-label-analytics text-label-analytics text-text-muted uppercase mb-3">Instructional Scope</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-text-secondary font-body-regular text-body-regular">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="school">school</span>
+<span>Teach Power BI, Python, SQL, and Exploratory Data Analysis (EDA) to career switchers and analysts.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="schema">schema</span>
+<span>Cover practical data modeling, DAX formulation, Power Query transformations, statistical analysis, and executive dashboard development.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="co_present">co_present</span>
+<span>Mentor learners through applied real-world business exercises, enterprise capstones, and portfolio reviews.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="engineering">engineering</span>
+<span>Translate complex architectural concepts into practical professional engineering skills.</span>
+</div>
+</div>
+</div>
+<!-- Focus Tags -->
+<div class="pt-3 border-t border-border-subtle flex flex-wrap items-center gap-1.5">
+<span class="font-label-analytics text-label-analytics text-text-muted mr-1">Curriculum Pillars:</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">Power BI</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">Python</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">SQL</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">EDA</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">Mentoring</span>
+</div>
+</div>
+</div>
+<!-- TIMELINE ITEM 3: Muller & Phipps Logistics -->
+<div class="relative group">
+<span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-surface-card border-2 border-primary flex items-center justify-center ring-4 ring-surface-canvas">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</span>
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 shadow-sm hover:border-border-hover transition-all duration-150">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-border-subtle">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Data Analyst (Power BI)</h4>
+<span class="font-caption text-caption px-2 py-0.5 rounded bg-highlight-soft text-primary font-medium border border-border-subtle">
+                      Fast-Track Promotion: Jr. BI Dev → Data Analyst (&lt; 1 Year)
+                    </span>
+</div>
+<p class="font-body-medium text-body-medium text-primary mt-0.5">Muller &amp; Phipps Logistics</p>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary font-caption text-caption bg-surface-canvas px-3 py-1 rounded-md border border-border-subtle self-start">
+<span class="material-symbols-outlined text-[15px]" data-icon="date_range">date_range</span>
+<span>May 2024 – Jun 2026</span>
+</div>
+</div>
+<!-- Scope & Responsibilities -->
+<div class="py-4">
+<p class="font-label-analytics text-label-analytics text-text-muted uppercase mb-3">Enterprise Scope &amp; Architecture</p>
+<div class="space-y-2.5 text-text-secondary font-body-regular text-body-regular mb-4">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="done_all">done_all</span>
+<span>End-to-end Enterprise BI delivery across Operations, Sales, HR, Customer Service, and Corporate leadership.</span>
+</p>
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="done_all">done_all</span>
+<span>Shipped 20+ production dashboards in Microsoft Fabric with strict enterprise governance.</span>
+</p>
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="done_all">done_all</span>
+<span>Architected optimized star-schema dimensional models, refactored slow DAX calculations, and established uniform semantic standards.</span>
+</p>
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="done_all">done_all</span>
+<span>Automated SQL-based ETL pipelines, scheduled refresh workflows, and enforced dynamic Row-Level Security (RLS).</span>
+</p>
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5" data-icon="done_all">done_all</span>
+<span>Direct C-suite and department-head stakeholder collaboration; conducted hands-on internal corporate training workshops for 80+ staff.</span>
+</p>
+</div>
+<!-- Highlighted Impact Telemetry Grid -->
+<div class="bg-surface-canvas p-4 rounded-lg border border-border-subtle mt-4">
+<p class="font-label-analytics text-label-analytics text-primary uppercase mb-3">Factual Verified Impact Telemetry</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+<div class="bg-surface-card p-2.5 rounded border border-border-subtle">
+<div class="font-headline-card text-headline-card text-primary font-bold">40%</div>
+<div class="font-caption text-caption text-text-secondary leading-tight mt-0.5">Report Load-Time Reduction</div>
+</div>
+<div class="bg-surface-card p-2.5 rounded border border-border-subtle">
+<div class="font-headline-card text-headline-card text-primary font-bold">25%</div>
+<div class="font-caption text-caption text-text-secondary leading-tight mt-0.5">Query Runtime Improvement</div>
+</div>
+<div class="bg-surface-card p-2.5 rounded border border-border-subtle">
+<div class="font-headline-card text-headline-card text-primary font-bold">35%</div>
+<div class="font-caption text-caption text-text-secondary leading-tight mt-0.5">Manual Reporting Eliminated</div>
+</div>
+<div class="bg-surface-card p-2.5 rounded border border-border-subtle">
+<div class="font-headline-card text-headline-card text-primary font-bold">30%</div>
+<div class="font-caption text-caption text-text-secondary leading-tight mt-0.5">Reporting Accuracy Gain</div>
+</div>
+<div class="bg-surface-card p-2.5 rounded border border-border-subtle col-span-2 sm:col-span-1">
+<div class="font-headline-card text-headline-card text-primary font-bold">60%</div>
+<div class="font-caption text-caption text-text-secondary leading-tight mt-0.5">Faster Decision Velocity</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Focus Tags -->
+<div class="pt-3 border-t border-border-subtle flex flex-wrap items-center gap-1.5">
+<span class="font-label-analytics text-label-analytics text-text-muted mr-1">Skills Verified:</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Microsoft Fabric</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Star Schema</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Advanced DAX</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">SQL ETL</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Row-Level Security</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">Corporate Training</span>
+</div>
+</div>
+</div>
+<!-- TIMELINE ITEM 4: Independent Consulting Practice -->
+<div class="relative group">
+<span class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-surface-card border-2 border-chart-accent-slate flex items-center justify-center ring-4 ring-surface-canvas">
+<span class="w-1.5 h-1.5 rounded-full bg-chart-accent-slate"></span>
+</span>
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 shadow-sm hover:border-border-hover transition-all duration-150">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-border-subtle">
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">BI &amp; Data Consultant</h4>
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-muted text-text-secondary border border-border-subtle">ADVISORY &amp; CLIENT PROJECTS</span>
+</div>
+<p class="font-body-medium text-body-medium text-primary mt-0.5">Independent Consulting Practice — Part-Time</p>
+</div>
+<div class="flex items-center gap-1.5 text-text-secondary font-caption text-caption bg-surface-canvas px-3 py-1 rounded-md border border-border-subtle self-start">
+<span class="material-symbols-outlined text-[15px]" data-icon="date_range">date_range</span>
+<span>Jan 2023 – Present</span>
+</div>
+</div>
+<!-- Scope & Responsibilities -->
+<div class="py-4">
+<p class="font-label-analytics text-label-analytics text-text-muted uppercase mb-3">Consulting Scope</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-text-secondary font-body-regular text-body-regular">
+<div class="p-3 bg-surface-canvas rounded border border-border-subtle">
+<span class="font-body-medium text-body-medium text-text-primary block mb-1 font-semibold">End-to-End Delivery</span>
+<p class="font-caption text-caption text-text-secondary">Custom Power BI solutions and automated SQL pipelines designed for fast time-to-insight for SME &amp; mid-market clients.</p>
+</div>
+<div class="p-3 bg-surface-canvas rounded border border-border-subtle">
+<span class="font-body-medium text-body-medium text-text-primary block mb-1 font-semibold">KPI Framework Design</span>
+<p class="font-caption text-caption text-text-secondary">Formulating strategic performance frameworks, margin leak diagnostics, and executive pacing dashboards.</p>
+</div>
+<div class="p-3 bg-surface-canvas rounded border border-border-subtle">
+<span class="font-body-medium text-body-medium text-text-primary block mb-1 font-semibold">AI &amp; RAG Analytics</span>
+<p class="font-caption text-caption text-text-secondary">Extending modern analytical capabilities into RAG architectures, LLM-driven reporting queries, and intelligent data agents.</p>
+</div>
+</div>
+</div>
+<!-- Focus Tags -->
+<div class="pt-3 border-t border-border-subtle flex flex-wrap items-center gap-1.5">
+<span class="font-label-analytics text-label-analytics text-text-muted mr-1">Practice Areas:</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">Consulting</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">Power BI</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">SQL</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-surface-muted text-text-primary border border-border-subtle">Automation</span>
+<span class="font-caption text-caption px-2.5 py-0.5 rounded-full bg-highlight-tint text-primary font-medium">AI &amp; RAG</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- 3. ENTERPRISE IMPACT & TELEMETRY PANEL -->
+<!-- ===================================================================== -->
+<section aria-labelledby="telemetry-heading" class="bg-surface-card rounded-2xl border border-border-subtle p-6 md:p-8 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-6 border-b border-border-subtle">
+<div>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">MEASURABLE ENGINEERING OUTCOMES</span>
+<h3 class="font-headline-section text-headline-section text-text-primary mt-0.5" id="telemetry-heading">Enterprise Impact &amp; Performance Telemetry</h3>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-chart-accent-emerald"></span>
+<span>Production Proven Metrics Across 20+ Systems</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
+<!-- Telemetry 1 -->
+<div class="flex flex-col justify-between p-4 rounded-xl bg-surface-canvas border border-border-subtle">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">LATENCY REDUCTION</span>
+<span class="font-caption text-caption text-primary font-semibold">-40% Load</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Reporting Performance</h4>
+<p class="font-caption text-caption text-text-secondary mt-1.5">
+                Load time reduction achieved through star-schema pruning, column-store compaction, and DAX measure optimization.
+              </p>
+</div>
+<!-- Visual Pacing Bar -->
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<div class="flex justify-between font-label-analytics text-label-analytics text-text-secondary mb-1">
+<span>Optimization Gain</span>
+<span class="text-primary font-semibold">40% Faster</span>
+</div>
+<div class="w-full h-2 bg-surface-card rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-primary rounded-full" style="width: 40%;"></div>
+</div>
+</div>
+</div>
+<!-- Telemetry 2 -->
+<div class="flex flex-col justify-between p-4 rounded-xl bg-surface-canvas border border-border-subtle">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">QUERY EFFICIENCY</span>
+<span class="font-caption text-caption text-primary font-semibold">-25% Runtime</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Model Optimization</h4>
+<p class="font-caption text-caption text-text-secondary mt-1.5">
+                Runtime reduction across enterprise tabular models via VertiPaq engine profiling and relationship restructuring.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<div class="flex justify-between font-label-analytics text-label-analytics text-text-secondary mb-1">
+<span>Tabular Speed</span>
+<span class="text-primary font-semibold">25% Gain</span>
+</div>
+<div class="w-full h-2 bg-surface-card rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-chart-accent-emerald rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Telemetry 3 -->
+<div class="flex flex-col justify-between p-4 rounded-xl bg-surface-canvas border border-border-subtle">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">TOIL ELIMINATION</span>
+<span class="font-caption text-caption text-primary font-semibold">-35% Manual</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Automated Pipelines</h4>
+<p class="font-caption text-caption text-text-secondary mt-1.5">
+                Manual data manipulation eliminated through automated SQL/Fabric pipelines and direct scheduled data refresh routines.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<div class="flex justify-between font-label-analytics text-label-analytics text-text-secondary mb-1">
+<span>Manual Hours Saved</span>
+<span class="text-primary font-semibold">35% Cut</span>
+</div>
+<div class="w-full h-2 bg-surface-card rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-primary rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+</div>
+<!-- Telemetry 4 -->
+<div class="flex flex-col justify-between p-4 rounded-xl bg-surface-canvas border border-border-subtle">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-analytics text-label-analytics text-text-muted">EXECUTIVE VELOCITY</span>
+<span class="font-caption text-caption text-primary font-semibold">+60% Speed</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Decision Cadence</h4>
+<p class="font-caption text-caption text-text-secondary mt-1.5">
+                Faster executive decision cycles alongside 30% reporting accuracy gain via single-source-of-truth semantic models.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<div class="flex justify-between font-label-analytics text-label-analytics text-text-secondary mb-1">
+<span>Decision Velocity</span>
+<span class="text-primary font-semibold">60% Boost</span>
+</div>
+<div class="w-full h-2 bg-surface-card rounded-full overflow-hidden border border-border-subtle">
+<div class="h-full bg-chart-accent-emerald rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- 4. CROSS-FUNCTIONAL EXPERIENCE MATRIX (5 DEPARTMENTS) -->
+<!-- ===================================================================== -->
+<section aria-labelledby="matrix-heading" class="flex flex-col gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
+<h3 class="font-headline-section text-headline-section text-text-primary" id="matrix-heading">Cross-Functional Domain Matrix</h3>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-1">
+            Proven business acumen delivering tailored BI systems across five distinct enterprise operating functions.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- Dept 1: Operations -->
+<div class="bg-surface-card p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div>
+<div class="w-9 h-9 rounded-lg bg-surface-canvas text-primary flex items-center justify-center mb-3 border border-border-subtle">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">1. Operations</h4>
+<p class="font-caption text-caption text-text-secondary mt-2 leading-relaxed">
+                Fleet turnaround, supply chain KPIs, warehouse throughput, dispatch punctuality, and reverse logistics telemetry.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-primary">KPIs: Turnaround &amp; Fill Rate</span>
+</div>
+</div>
+<!-- Dept 2: Sales -->
+<div class="bg-surface-card p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div>
+<div class="w-9 h-9 rounded-lg bg-surface-canvas text-primary flex items-center justify-center mb-3 border border-border-subtle">
+<span class="material-symbols-outlined" data-icon="point_of_sale">point_of_sale</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">2. Sales &amp; Retail</h4>
+<p class="font-caption text-caption text-text-secondary mt-2 leading-relaxed">
+                Multi-category retail pacing, store sales commission models, YoY comparative benchmarks, and margin leakage diagnostics.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-primary">KPIs: Basket Size &amp; SSSG</span>
+</div>
+</div>
+<!-- Dept 3: HR -->
+<div class="bg-surface-card p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div>
+<div class="w-9 h-9 rounded-lg bg-surface-canvas text-primary flex items-center justify-center mb-3 border border-border-subtle">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">3. HR &amp; People</h4>
+<p class="font-caption text-caption text-text-secondary mt-2 leading-relaxed">
+                Attrition analytics, headcount variance, workforce planning, payroll reconciliation, and departmental turnover telemetry.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-primary">KPIs: Attrition &amp; Headcount Delta</span>
+</div>
+</div>
+<!-- Dept 4: CS -->
+<div class="bg-surface-card p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div>
+<div class="w-9 h-9 rounded-lg bg-surface-canvas text-primary flex items-center justify-center mb-3 border border-border-subtle">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">4. Customer Service</h4>
+<p class="font-caption text-caption text-text-secondary mt-2 leading-relaxed">
+                Ticket resolution pacing, SLA breach prevention, first-contact resolution rates, and CSAT / sentiment trend pipelines.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-primary">KPIs: SLA Compliance &amp; FCR</span>
+</div>
+</div>
+<!-- Dept 5: Corporate -->
+<div class="bg-surface-card p-5 rounded-xl border border-border-subtle shadow-sm flex flex-col justify-between hover:border-border-hover transition-colors">
+<div>
+<div class="w-9 h-9 rounded-lg bg-surface-canvas text-primary flex items-center justify-center mb-3 border border-border-subtle">
+<span class="material-symbols-outlined" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">5. Corporate Board</h4>
+<p class="font-caption text-caption text-text-secondary mt-2 leading-relaxed">
+                Board-ready executive summaries, consolidated financial pacing, cross-functional performance scorecards, and board pack automation.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-label-analytics text-label-analytics text-primary">KPIs: EBITDA &amp; Performance Pacing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- 5. WORKING STYLE & METHODOLOGY: 4 COLLABORATIVE CARDS -->
+<!-- ===================================================================== -->
+<section aria-labelledby="methodology-heading" class="flex flex-col gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+<h3 class="font-headline-section text-headline-section text-text-primary" id="methodology-heading">Collaborative Delivery Methodology</h3>
+</div>
+<p class="font-caption text-caption text-text-secondary mt-1">
+            How Hammad transforms ambiguous business questions into scalable, automated decision infrastructure.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="p-5 rounded-xl bg-surface-card border border-border-subtle shadow-sm hover:border-border-hover transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-canvas text-primary font-bold">PHASE 01</span>
+<span class="material-symbols-outlined text-primary" data-icon="search_insights">search_insights</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Stakeholder Discovery</h4>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2 leading-relaxed">
+                Clarifying CEO, VP, and department-head requirements to turn ambiguous questions into measurable KPIs and precise metric definition dictionaries.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-caption text-caption text-text-muted">Outcome: Clear Functional Specs</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-5 rounded-xl bg-surface-card border border-border-subtle shadow-sm hover:border-border-hover transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-canvas text-primary font-bold">PHASE 02</span>
+<span class="material-symbols-outlined text-primary" data-icon="database">database</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Modeling &amp; Architecture</h4>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2 leading-relaxed">
+                Designing scalable Kimball star schemas, conformed dimensions, optimized relationships, and clean medallion data layers for zero redundancy.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-caption text-caption text-text-muted">Outcome: High-Speed Tabular Star Schema</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-5 rounded-xl bg-surface-card border border-border-subtle shadow-sm hover:border-border-hover transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-canvas text-primary font-bold">PHASE 03</span>
+<span class="material-symbols-outlined text-primary" data-icon="grid_view">grid_view</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">BI Delivery &amp; UX</h4>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2 leading-relaxed">
+                Crafting scannable, mobile-accessible, executive-ready Power BI reporting environments that minimize cognitive load and guide decision flows.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-caption text-caption text-text-muted">Outcome: 5-Second Executive Scannability</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-5 rounded-xl bg-surface-card border border-border-subtle shadow-sm hover:border-border-hover transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-analytics text-label-analytics px-2 py-0.5 rounded bg-surface-canvas text-primary font-bold">PHASE 04</span>
+<span class="material-symbols-outlined text-primary" data-icon="handshake">handshake</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-text-primary font-bold">Training &amp; Enablement</h4>
+<p class="font-body-regular text-body-regular text-text-secondary mt-2 leading-relaxed">
+                Leading corporate workshops, documenting measure logic, and mentoring analysts to foster self-service maturity and permanent operational adoption.
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle">
+<span class="font-caption text-caption text-text-muted">Outcome: Long-term Organizational Literacy</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- 6. CONTEXTUAL BOTTOM BANNER & CTAs -->
+<!-- ===================================================================== -->
+<section class="bg-gradient-to-r from-surface-card via-surface-card to-surface-canvas rounded-2xl border border-border-subtle p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col gap-1 max-w-xl text-center md:text-left">
+<span class="font-label-analytics text-label-analytics text-primary uppercase font-semibold">FROM RECORD TO PROOF</span>
+<h3 class="font-headline-section text-headline-section text-text-primary">See how this experience translates into real work.</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">
+            Explore detailed enterprise architecture diagrams, DAX code samples, and business impact case studies.
+          </p>
+</div>
+<div class="flex items-center gap-3 flex-wrap justify-center">
+<a class="px-5 py-2.5 bg-primary text-on-primary rounded-lg font-body-medium text-body-medium shadow-sm hover:bg-tertiary transition-colors flex items-center gap-2" href="#">
+<span>View Case Studies</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-5 py-2.5 bg-surface-card border border-border-subtle hover:border-border-hover text-text-primary rounded-lg font-body-medium text-body-medium transition-colors flex items-center gap-2" href="#">
+<span>Explore Expertise</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="north_east">north_east</span>
+</a>
+</div>
+</section>
+</div>
+<!-- ===================================================================== -->
+<!-- FOOTER: Standard Enterprise Analytics Footer -->
+<!-- ===================================================================== -->
+<footer class="mt-auto border-t border-border-subtle bg-surface-canvas-subtle py-8 px-6 md:px-8">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<div class="flex flex-col">
+<p class="font-body-regular text-body-regular text-text-secondary">
+            © 2025 Mirza Hammad Baig. BI Solutions Architecture &amp; Enterprise Data Strategy.
+          </p>
+<span class="font-caption text-caption text-text-muted mt-0.5">
+            Crafted for enterprise credibility, analytical precision, and executive decision support.
+          </span>
+</div>
+<div class="flex flex-wrap items-center gap-6 font-caption text-caption text-text-secondary">
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="hover:text-primary transition-colors" href="#">Medium</a>
+<a class="hover:text-primary transition-colors" href="#">Architecture System Docs</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy &amp; Governance</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

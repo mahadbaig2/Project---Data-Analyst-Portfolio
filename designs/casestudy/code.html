@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weekly Sales Dashboard for Departmental Stores — Mirza Hammad Baig</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#e0eae7",
+            "error-container": "#ffdad6",
+            "on-surface": "#141d1b",
+            "surface-card": "#FFFFFF",
+            "on-secondary-container": "#037526",
+            "on-primary-container": "#8fd2b6",
+            "primary-container": "#145c46",
+            "secondary-fixed-dim": "#7bdc7f",
+            "surface-bright": "#f2fcf8",
+            "inverse-on-surface": "#e9f3ef",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#96f998",
+            "on-primary-fixed-variant": "#00513c",
+            "surface-sidebar": "#F8FAF9",
+            "border-subtle": "#E1E8E4",
+            "chart-accent-emerald": "#1B7358",
+            "highlight-tint": "#ECF8EE",
+            "error": "#ba1a1a",
+            "surface-dim": "#d2dcd9",
+            "surface-canvas-subtle": "#F7F9F8",
+            "secondary": "#006e23",
+            "highlight-soft": "#DDF5DF",
+            "on-error": "#ffffff",
+            "background": "#f2fcf8",
+            "on-secondary-fixed-variant": "#005318",
+            "surface-variant": "#dbe5e1",
+            "surface-muted": "#F3F6F4",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#98d1ba",
+            "outline": "#707974",
+            "chart-accent-mint": "#82D387",
+            "surface-container-low": "#ecf6f2",
+            "primary-fixed-dim": "#91d4b8",
+            "tertiary": "#024333",
+            "border-hover": "#CAD6CF",
+            "on-tertiary-fixed": "#002117",
+            "text-muted": "#85938F",
+            "chart-accent-slate": "#7A8C86",
+            "on-primary-fixed": "#002116",
+            "inverse-primary": "#91d4b8",
+            "text-secondary": "#5D6965",
+            "primary": "#004331",
+            "surface-tint": "#266a53",
+            "surface-canvas": "#F5F7F6",
+            "text-primary": "#18211F",
+            "tertiary-fixed-dim": "#99d2bb",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#dbe5e1",
+            "outline-variant": "#bfc9c2",
+            "primary-fixed": "#acf1d4",
+            "surface-container": "#e6f0ec",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#235b49",
+            "on-secondary-fixed": "#002105",
+            "on-background": "#141d1b",
+            "tertiary-fixed": "#b5efd7",
+            "inverse-surface": "#293230",
+            "secondary-container": "#96f998",
+            "on-tertiary-fixed-variant": "#16503f",
+            "on-surface-variant": "#3f4944",
+            "surface": "#f2fcf8",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "margin-desktop": "2rem",
+            "space-lg": "1.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "gutter-mobile": "1rem",
+            "space-2xl": "3rem",
+            "margin-mobile": "1rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-analytics": [
+              "Inter"
+            ],
+            "headline-page": [
+              "Inter"
+            ],
+            "headline-card": [
+              "Inter"
+            ],
+            "body-large": [
+              "Inter"
+            ],
+            "headline-page-mobile": [
+              "Inter"
+            ],
+            "display-kpi": [
+              "Inter"
+            ],
+            "caption": [
+              "Inter"
+            ],
+            "headline-section": [
+              "Inter"
+            ],
+            "code-inline": [
+              "Inter"
+            ],
+            "body-medium": [
+              "Inter"
+            ],
+            "display-kpi-mobile": [
+              "Inter"
+            ],
+            "body-regular": [
+              "Inter"
+            ]
+          },
+          "fontSize": {
+            "label-analytics": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.05em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-page": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.025em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-card": [
+              "16px",
+              {
+                "lineHeight": "22px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-large": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-page-mobile": [
+              "26px",
+              {
+                "lineHeight": "34px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "display-kpi": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-section": [
+              "22px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "600"
+              }
+            ],
+            "code-inline": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "body-medium": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ],
+            "display-kpi-mobile": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-regular": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F8FAF9;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CAD6CF;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-surface-canvas text-text-primary antialiased font-body-regular text-body-regular min-h-screen flex flex-col md:flex-row">
+<!-- LEFT PERSISTENT SIDEBAR (~270px) -->
+<aside class="fixed top-0 left-0 h-screen w-64 md:w-72 flex flex-col justify-between bg-surface-sidebar border-r border-border-subtle z-50 overflow-y-auto custom-scroll hidden md:flex">
+<!-- Top Identity Section -->
+<div class="p-space-md flex flex-col gap-space-md border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-white flex items-center justify-center font-headline-card text-headline-card shadow-sm border border-border-subtle">
+          MB
+        </div>
+<div>
+<h1 class="font-headline-card text-headline-card font-semibold text-text-primary">Mirza Hammad Baig</h1>
+<p class="font-caption text-caption text-text-secondary">Data Analyst · BI Solutions Architect</p>
+</div>
+</div>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+        Designing enterprise data pipelines, conformed dimensional schemas, and board-ready Power BI reporting environments.
+      </p>
+<!-- Social & Network Credential Links -->
+<div class="flex items-center gap-2 pt-1">
+<a class="w-7 h-7 rounded border border-border-subtle bg-surface-card flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover transition-colors duration-150" href="#github" title="GitHub">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</a>
+<a class="w-7 h-7 rounded border border-border-subtle bg-surface-card flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover transition-colors duration-150" href="#linkedin" title="LinkedIn">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</a>
+<a class="w-7 h-7 rounded border border-border-subtle bg-surface-card flex items-center justify-center text-text-secondary hover:text-primary hover:border-border-hover transition-colors duration-150" href="#email" title="Contact Email">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</a>
+<div class="ml-auto flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-highlight-tint border border-primary-container/20">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">Available</span>
+</div>
+</div>
+</div>
+<!-- Main Navigation Menu (Shared Components Logic) -->
+<nav class="flex-1 px-space-md py-space-sm space-y-1">
+<div class="px-3 py-1.5 font-label-analytics text-label-analytics text-text-muted uppercase tracking-wider">
+        Workspace Navigation
+      </div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#overview">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Case Studies ACTIVE -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface-card text-primary font-body-medium text-body-medium shadow-sm border border-border-subtle" href="#casestudies">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="flex-1">Case Studies</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#architecture">
+<span class="material-symbols-outlined">account_tree</span>
+<span>Architecture</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#career">
+<span class="material-symbols-outlined">timeline</span>
+<span>Career Journey</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#capabilities">
+<span class="material-symbols-outlined">apps</span>
+<span>Capabilities</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary font-body-regular text-body-regular hover:bg-surface-muted hover:text-text-primary transition-all duration-150" href="#thoughtleadership">
+<span class="material-symbols-outlined">article</span>
+<span>Thought Leadership</span>
+</a>
+<!-- Quick CTA -->
+<div class="pt-4 pb-2">
+<a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-primary text-white font-body-medium text-body-medium hover:bg-primary-container transition-colors shadow-sm" href="#contact">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Schedule Consultation</span>
+</a>
+</div>
+</nav>
+<!-- Bottom Skills & Environment Pills -->
+<div class="p-space-md border-t border-border-subtle bg-surface-canvas-subtle">
+<div class="font-label-analytics text-label-analytics text-text-muted uppercase mb-2">Technical Core</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 text-xs rounded bg-surface-card border border-border-subtle text-text-secondary font-code-inline text-code-inline">Power BI</span>
+<span class="px-2 py-0.5 text-xs rounded bg-surface-card border border-border-subtle text-text-secondary font-code-inline text-code-inline">DAX</span>
+<span class="px-2 py-0.5 text-xs rounded bg-surface-card border border-border-subtle text-text-secondary font-code-inline text-code-inline">Fabric</span>
+<span class="px-2 py-0.5 text-xs rounded bg-surface-card border border-border-subtle text-text-secondary font-code-inline text-code-inline">SQL</span>
+<span class="px-2 py-0.5 text-xs rounded bg-surface-card border border-border-subtle text-text-secondary font-code-inline text-code-inline">Star Schema</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-caption font-caption text-text-muted">
+<span>Environment</span>
+<span class="text-primary font-medium">Enterprise BI v4.2</span>
+</div>
+</div>
+</aside>
+<!-- MAIN VIEWPORT CONTAINER -->
+<div class="flex-1 md:ml-72 flex flex-col min-h-screen">
+<!-- TOP UTILITY / NAV BAR -->
+<header class="sticky top-0 z-40 bg-surface-card/95 backdrop-blur border-b border-border-subtle px-4 md:px-8 py-3 flex items-center justify-between shadow-sm">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+<a class="font-body-medium text-body-medium text-text-secondary hover:text-primary transition-colors" href="#home">Home</a>
+<span class="text-text-muted">/</span>
+<a class="font-body-medium text-body-medium text-text-secondary hover:text-primary transition-colors" href="#work">Work</a>
+<span class="text-text-muted">/</span>
+<span class="font-body-medium text-body-medium text-text-primary font-semibold truncate max-w-[220px] sm:max-w-md">Weekly Sales Dashboard for Departmental Stores</span>
+</nav>
+<!-- Utility Actions -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-body-medium hover:bg-surface-muted hover:border-border-hover transition-colors" href="#work">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span class="hidden sm:inline">Back to Projects</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-body-medium hover:bg-surface-muted hover:border-border-hover transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span class="hidden sm:inline">View on GitHub</span>
+</a>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTENT CANVAS -->
+<main class="flex-1 px-4 md:px-8 py-8 max-w-7xl w-full mx-auto space-y-10">
+<!-- SECTION 1: PROJECT HERO & SNAPSHOT BENTO -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Hero Column (7 Cols) -->
+<div class="lg:col-span-8 bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-highlight-tint border border-primary-container/20 text-primary font-label-analytics text-label-analytics uppercase mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Business Intelligence Case Study
+            </div>
+<h1 class="font-headline-page text-headline-page text-text-primary mb-3">
+              Weekly Sales Dashboard for Departmental Stores
+            </h1>
+<p class="font-headline-section text-headline-section text-text-secondary font-normal mb-5 leading-snug">
+              A management-focused Power BI solution for weekly store and department performance.
+            </p>
+<p class="font-body-large text-body-large text-text-secondary mb-6 leading-relaxed">
+              The project was designed around a CEO requirement for a simple, mobile-friendly reporting experience that could monitor weekly sales, compare current performance with the same period last year, calculate year-to-date values and track manager commissions.
+            </p>
+<!-- Tech Pills -->
+<div class="flex flex-wrap items-center gap-2 mb-8">
+<span class="px-3 py-1 rounded-full bg-highlight-tint text-primary border border-primary-container/20 font-code-inline text-code-inline">Power BI</span>
+<span class="px-3 py-1 rounded-full bg-highlight-tint text-primary border border-primary-container/20 font-code-inline text-code-inline">DAX</span>
+<span class="px-3 py-1 rounded-full bg-highlight-tint text-primary border border-primary-container/20 font-code-inline text-code-inline">Data Modeling</span>
+<span class="px-3 py-1 rounded-full bg-highlight-tint text-primary border border-primary-container/20 font-code-inline text-code-inline">Star Schema</span>
+<span class="px-3 py-1 rounded-full bg-highlight-tint text-primary border border-primary-container/20 font-code-inline text-code-inline">Excel / CSV</span>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-4 border-t border-border-subtle">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-white font-body-medium text-body-medium hover:bg-primary-container transition-all duration-150 shadow-sm" href="#dashboard-preview">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+              View Project
+            </a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-body-medium hover:bg-surface-muted hover:border-border-hover transition-all duration-150" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+              View GitHub
+            </a>
+<div class="ml-auto text-caption font-caption text-text-muted hidden sm:flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Refreshed Weekly Architecture
+            </div>
+</div>
+</div>
+<!-- Right Snapshot Card (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl border border-border-subtle p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-border-subtle pb-3 mb-4">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Project Snapshot</span>
+<span class="material-symbols-outlined text-text-muted">fact_check</span>
+</div>
+<dl class="space-y-4">
+<div>
+<dt class="font-label-analytics text-label-analytics text-text-muted uppercase">Project Type</dt>
+<dd class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">Business Intelligence</dd>
+</div>
+<div class="border-t border-border-subtle/60 pt-3">
+<dt class="font-label-analytics text-label-analytics text-text-muted uppercase">Primary User</dt>
+<dd class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">CEO / Management</dd>
+</div>
+<div class="border-t border-border-subtle/60 pt-3">
+<dt class="font-label-analytics text-label-analytics text-text-muted uppercase">Data Sources</dt>
+<dd class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">Weekly POS CSV / Excel</dd>
+</div>
+<div class="border-t border-border-subtle/60 pt-3">
+<dt class="font-label-analytics text-label-analytics text-text-muted uppercase">Core Platform</dt>
+<dd class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">Power BI Desktop &amp; Service</dd>
+</div>
+<div class="border-t border-border-subtle/60 pt-3">
+<dt class="font-label-analytics text-label-analytics text-text-muted uppercase">Strategic Focus</dt>
+<dd class="font-body-medium text-body-medium text-text-primary font-semibold mt-0.5">Sales Performance &amp; Management Reporting</dd>
+</div>
+</dl>
+</div>
+<!-- Bottom Audit Note -->
+<div class="mt-6 p-3 rounded-lg bg-surface-muted border border-border-subtle flex items-start gap-2.5">
+<span class="material-symbols-outlined text-chart-accent-emerald text-[18px] mt-0.5">verified_user</span>
+<p class="font-caption text-caption text-text-secondary leading-snug">
+              Designed for executive decision-makers needing clear weekly trends without cognitive overload.
+            </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PROJECT OBJECTIVES CARD -->
+<section class="bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">target</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Project Objectives &amp; Deliverables</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Objective 1 -->
+<div class="p-4 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+              01
+            </div>
+<div>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Weekly Store &amp; Dept Sales</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">Monitor weekly sales by individual store locations and merchandise departments.</p>
+</div>
+</div>
+<!-- Objective 2 -->
+<div class="p-4 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+              02
+            </div>
+<div>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Prior Year Comparative Analysis</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">Compare current-week performance against the exact corresponding week of the previous year.</p>
+</div>
+</div>
+<!-- Objective 3 -->
+<div class="p-4 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+              03
+            </div>
+<div>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Cumulative YTD Sales</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">Calculate running Year-to-Date sales volume dynamically adjusted for the current week.</p>
+</div>
+</div>
+<!-- Objective 4 -->
+<div class="p-4 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+              04
+            </div>
+<div>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Track YTD Commissions</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">Accurately calculate and distribute manager incentive pool based on top store thresholds.</p>
+</div>
+</div>
+<!-- Objective 5 -->
+<div class="p-4 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+              05
+            </div>
+<div>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Top &amp; Underperforming Outliers</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">Rapidly isolate top revenue drivers and flags underperforming stores for operational intervention.</p>
+</div>
+</div>
+<!-- Objective 6 -->
+<div class="p-4 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-highlight-tint text-primary flex items-center justify-center font-bold text-xs flex-shrink-0">
+              06
+            </div>
+<div>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mb-1">Mobile-Friendly Executive Views</h3>
+<p class="font-body-regular text-body-regular text-text-secondary">Provide optimized mobile canvas for executive on-the-go review during store walk-throughs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: DATA MODEL & ARCHITECTURE DIAGRAM -->
+<section class="bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-border-subtle gap-4">
+<div>
+<div class="font-label-analytics text-label-analytics text-primary uppercase mb-1">System Architecture &amp; Lineage</div>
+<h2 class="font-headline-section text-headline-section text-text-primary">Data Lineage &amp; Dimensional Star Schema</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-muted text-text-secondary font-label-analytics text-label-analytics border border-border-subtle">Kimball Star Schema</span>
+<span class="px-2.5 py-1 rounded bg-highlight-tint text-primary font-label-analytics text-label-analytics border border-primary-container/20">1:N Relationships</span>
+</div>
+</div>
+<!-- Architectural Visual Flow -->
+<div class="mt-8 overflow-x-auto pb-4 custom-scroll">
+<div class="min-w-[760px] flex items-stretch justify-between gap-3 relative">
+<!-- Step 1: Raw Sources -->
+<div class="w-44 flex-shrink-0 bg-surface-sidebar rounded-lg border border-border-subtle p-4 flex flex-col justify-between">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Ingestion</span>
+<div class="font-headline-card text-headline-card text-text-primary mt-1 font-semibold">Weekly POS Files</div>
+<div class="mt-3 space-y-1.5">
+<div class="flex items-center gap-1.5 text-xs text-text-secondary bg-surface-card p-1.5 rounded border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] text-chart-accent-slate">table_view</span>
+<span>Weekly_Sales.csv</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-text-secondary bg-surface-card p-1.5 rounded border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] text-chart-accent-slate">table_chart</span>
+<span>Store_Master.xlsx</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-border-subtle font-caption text-caption text-text-muted">Folder Drop Source</div>
+</div>
+<!-- Connector 1 -->
+<div class="flex items-center justify-center text-text-muted px-1">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_forward</span>
+</div>
+<!-- Step 2: Power Query ETL -->
+<div class="w-48 flex-shrink-0 bg-surface-sidebar rounded-lg border border-border-subtle p-4 flex flex-col justify-between">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Data Prep</span>
+<div class="font-headline-card text-headline-card text-text-primary mt-1 font-semibold">Power Query ETL</div>
+<ul class="mt-3 space-y-1 text-xs text-text-secondary">
+<li class="flex items-center gap-1"><span class="text-primary font-bold">•</span> Type coercion &amp; clean</li>
+<li class="flex items-center gap-1"><span class="text-primary font-bold">•</span> Surrogate key creation</li>
+<li class="flex items-center gap-1"><span class="text-primary font-bold">•</span> Weekly date anchoring</li>
+</ul>
+</div>
+<div class="mt-4 pt-2 border-t border-border-subtle font-caption text-caption text-text-muted">Automated M-Code</div>
+</div>
+<!-- Connector 2 -->
+<div class="flex items-center justify-center text-text-muted px-1">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_forward</span>
+</div>
+<!-- Step 3: Star Schema Model (Centerpiece) -->
+<div class="w-64 flex-shrink-0 bg-highlight-tint/60 rounded-lg border border-primary-container/30 p-4 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-analytics text-label-analytics text-primary uppercase font-bold">Star Schema</span>
+<span class="material-symbols-outlined text-[16px] text-primary">schema</span>
+</div>
+<div class="mt-2.5 space-y-2">
+<!-- Dimensions -->
+<div class="p-2 bg-surface-card rounded border border-border-subtle text-xs">
+<div class="font-semibold text-text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald"></span> Dim_Date
+                  </div>
+<div class="text-[11px] text-text-secondary mt-0.5">DateKey, WeekNo, Year, PriorWeekKey</div>
+</div>
+<div class="p-2 bg-surface-card rounded border border-border-subtle text-xs">
+<div class="font-semibold text-text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-chart-accent-emerald"></span> Dim_Store &amp; Dim_Dept
+                  </div>
+<div class="text-[11px] text-text-secondary mt-0.5">Store_ID, Region, Dept_ID, Category</div>
+</div>
+<!-- Central Fact -->
+<div class="p-2 bg-primary text-white rounded border border-primary-container text-xs shadow-sm">
+<div class="font-semibold flex items-center justify-between">
+<span>Fact_WeeklySales</span>
+<span class="text-[10px] px-1 bg-white/20 rounded">1:N Links</span>
+</div>
+<div class="text-[11px] text-white/80 mt-0.5">SalesAmount, Units, StoreKey, DateKey</div>
+</div>
+</div>
+</div>
+<!-- Connector 3 -->
+<div class="flex items-center justify-center text-text-muted px-1">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_forward</span>
+</div>
+<!-- Step 4: DAX & Semantic Layer -->
+<div class="w-48 flex-shrink-0 bg-surface-sidebar rounded-lg border border-border-subtle p-4 flex flex-col justify-between">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Logic Layer</span>
+<div class="font-headline-card text-headline-card text-text-primary mt-1 font-semibold">DAX Measures</div>
+<div class="mt-3 space-y-1.5 text-xs text-text-secondary">
+<div class="p-1 rounded bg-surface-card border border-border-subtle font-code-inline text-code-inline text-[11px]">
+                    [Weekly Sales]
+                  </div>
+<div class="p-1 rounded bg-surface-card border border-border-subtle font-code-inline text-code-inline text-[11px]">
+                    [Growth Index vs LY]
+                  </div>
+<div class="p-1 rounded bg-surface-card border border-border-subtle font-code-inline text-code-inline text-[11px]">
+                    [YTD Commission Pool]
+                  </div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-border-subtle font-caption text-caption text-text-muted">Strict Separation of Facts</div>
+</div>
+<!-- Connector 4 -->
+<div class="flex items-center justify-center text-text-muted px-1">
+<span class="material-symbols-outlined text-[20px] text-primary">arrow_forward</span>
+</div>
+<!-- Step 5: Power BI Executive View -->
+<div class="w-44 flex-shrink-0 bg-surface-sidebar rounded-lg border border-border-subtle p-4 flex flex-col justify-between">
+<div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Output</span>
+<div class="font-headline-card text-headline-card text-text-primary mt-1 font-semibold">Executive UI</div>
+<div class="mt-3 space-y-1.5 text-xs text-text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">laptop_mac</span>
+<span>Desktop Board</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">smartphone</span>
+<span>Mobile CEO App</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-border-subtle font-caption text-caption text-text-muted">Power BI Service</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: DASHBOARD PREVIEW (HIGH-FIDELITY POWER BI EXECUTIVE CANVAS) -->
+<section class="bg-surface-card rounded-xl border border-border-subtle overflow-hidden shadow-sm" id="dashboard-preview">
+<!-- Header Bar simulating Power BI Ribbon / Title -->
+<div class="bg-surface-muted border-b border-border-subtle px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-chart-accent-emerald"></span>
+<span class="font-label-analytics text-label-analytics text-text-secondary uppercase">Dashboard Preview — Power BI Executive Canvas</span>
+</div>
+<h2 class="font-headline-card text-headline-card text-text-primary mt-0.5">Retail Departmental Sales &amp; Performance Command (Week 38)</h2>
+</div>
+<!-- Mock Filters & Mobile Switcher -->
+<div class="flex items-center gap-3">
+<div class="inline-flex rounded-md border border-border-subtle bg-surface-card p-0.5 text-xs">
+<button class="px-2.5 py-1 rounded bg-primary text-white font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">desktop_windows</span>
+<span>Executive Desktop</span>
+</button>
+<button class="px-2.5 py-1 rounded text-text-secondary hover:text-text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">phone_iphone</span>
+<span>Mobile View</span>
+</button>
+</div>
+<div class="text-caption font-caption text-text-muted px-2 py-1 rounded bg-surface-card border border-border-subtle hidden md:block">
+              Filter: All Regions | FY2024
+            </div>
+</div>
+</div>
+<!-- Simulated Dashboard Body (Canvas 2dp) -->
+<div class="p-6 md:p-8 bg-surface-canvas space-y-6">
+<!-- 1. KPI Cards Row (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1: Weekly Gross Sales -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="font-label-analytics text-label-analytics text-text-muted uppercase">Weekly Gross Sales</div>
+<div class="font-display-kpi text-display-kpi text-primary mt-1">$482,910</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-highlight-tint text-primary">
+                  ↑ +8.4%
+                </span>
+<span class="font-caption text-caption text-text-secondary">vs. same week LY ($445.5k)</span>
+</div>
+</div>
+<!-- Metric 2: YTD Gross Sales -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="font-label-analytics text-label-analytics text-text-muted uppercase">YTD Gross Sales</div>
+<div class="font-display-kpi text-display-kpi text-primary mt-1">$18.42M</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-highlight-tint text-primary">
+                  ↑ +11.2%
+                </span>
+<span class="font-caption text-caption text-text-secondary">Cumulative through Wk 38</span>
+</div>
+</div>
+<!-- Metric 3: Growth Index vs LY -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="font-label-analytics text-label-analytics text-text-muted uppercase">Growth Index vs LY</div>
+<div class="font-display-kpi text-display-kpi text-primary mt-1">108.4</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-highlight-tint text-primary">
+                  Benchmark: 100.0
+                </span>
+<span class="font-caption text-caption text-text-secondary">Outperforming LY pace</span>
+</div>
+</div>
+<!-- Metric 4: YTD Manager Commission -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="font-label-analytics text-label-analytics text-text-muted uppercase">YTD Manager Commission Pool</div>
+<div class="font-display-kpi text-display-kpi text-primary mt-1">$92,100</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-highlight-tint text-primary">
+                  0.5% Pool
+                </span>
+<span class="font-caption text-caption text-text-secondary">Top 5 qualifying stores</span>
+</div>
+</div>
+</div>
+<!-- 2. Mid Section: Department Breakdown & Trend -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Department Performance (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="font-headline-card text-headline-card text-text-primary">Department Performance vs LY Baseline</h3>
+<p class="font-caption text-caption text-text-secondary">Weekly revenue distribution and variance against prior year target</p>
+</div>
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Week 38</span>
+</div>
+<div class="space-y-4 pt-1">
+<!-- Apparel -->
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="font-semibold text-text-primary">Apparel &amp; Fashion</span>
+<span class="text-text-secondary"><strong class="text-primary">$178,400</strong> (114% vs LY)</span>
+</div>
+<div class="w-full h-3 bg-surface-muted rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full" style="width: 82%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted mt-0.5">
+<span>Target: $155,000</span>
+<span class="text-secondary font-medium">+$23,400 Outperformance</span>
+</div>
+</div>
+<!-- Electronics -->
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="font-semibold text-text-primary">Consumer Electronics</span>
+<span class="text-text-secondary"><strong class="text-primary">$134,250</strong> (106% vs LY)</span>
+</div>
+<div class="w-full h-3 bg-surface-muted rounded-full overflow-hidden flex">
+<div class="h-full bg-chart-accent-emerald rounded-full" style="width: 71%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted mt-0.5">
+<span>Target: $126,000</span>
+<span class="text-secondary font-medium">+$8,250 Outperformance</span>
+</div>
+</div>
+<!-- Home & Kitchen -->
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="font-semibold text-text-primary">Home &amp; Living</span>
+<span class="text-text-secondary"><strong class="text-primary">$98,120</strong> (102% vs LY)</span>
+</div>
+<div class="w-full h-3 bg-surface-muted rounded-full overflow-hidden flex">
+<div class="h-full bg-chart-accent-mint rounded-full" style="width: 58%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted mt-0.5">
+<span>Target: $96,000</span>
+<span class="text-text-secondary">+$2,120 On Target</span>
+</div>
+</div>
+<!-- Groceries / Essentials -->
+<div>
+<div class="flex justify-between text-xs mb-1">
+<span class="font-semibold text-text-primary">Fresh Groceries &amp; Essentials</span>
+<span class="text-text-secondary"><strong class="text-error">$72,140</strong> (94% vs LY)</span>
+</div>
+<div class="w-full h-3 bg-surface-muted rounded-full overflow-hidden flex">
+<div class="h-full bg-error rounded-full" style="width: 44%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-text-muted mt-0.5">
+<span>Target: $76,800</span>
+<span class="text-error font-medium">-$4,660 Deficit</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekly Growth Trend (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-card text-headline-card text-text-primary">8-Week Growth Trendline</h3>
+<span class="font-label-analytics text-label-analytics text-secondary uppercase">Pacing Positive</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mb-4">Consecutive weekly index tracking (LY = 100 baseline)</p>
+<!-- Mock SVG Micro-Trendline -->
+<div class="h-28 w-full flex items-end gap-2 pt-2 px-1">
+<!-- Wk 31 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 55px;" title="Wk 31: 99.2"></div>
+<span class="text-[10px] text-text-muted">31</span>
+</div>
+<!-- Wk 32 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 62px;" title="Wk 32: 101.4"></div>
+<span class="text-[10px] text-text-muted">32</span>
+</div>
+<!-- Wk 33 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 58px;" title="Wk 33: 100.8"></div>
+<span class="text-[10px] text-text-muted">33</span>
+</div>
+<!-- Wk 34 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 68px;" title="Wk 34: 103.5"></div>
+<span class="text-[10px] text-text-muted">34</span>
+</div>
+<!-- Wk 35 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 72px;" title="Wk 35: 104.9"></div>
+<span class="text-[10px] text-text-muted">35</span>
+</div>
+<!-- Wk 36 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 70px;" title="Wk 36: 104.1"></div>
+<span class="text-[10px] text-text-muted">36</span>
+</div>
+<!-- Wk 37 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-primary transition-colors" style="height: 80px;" title="Wk 37: 106.8"></div>
+<span class="text-[10px] text-text-muted">37</span>
+</div>
+<!-- Wk 38 (Current) -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-primary rounded-t" style="height: 88px;" title="Wk 38: 108.4 (Active)"></div>
+<span class="text-[10px] text-primary font-bold">38</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between text-caption font-caption text-text-secondary">
+<span>Baseline Index: 100.0</span>
+<span class="text-primary font-medium">Current Wk 38 Index: 108.4</span>
+</div>
+</div>
+</div>
+<!-- 3. Bottom Section: Top vs Underperforming Stores Comparison Table -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Top Performing Stores Table -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<h4 class="font-headline-card text-headline-card text-text-primary">Top 5 Performing Stores (Commission Eligible)</h4>
+</div>
+<span class="font-label-analytics text-label-analytics text-secondary uppercase">Rank Tier 1</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle text-text-muted font-label-analytics text-label-analytics">
+<th class="py-2">Store Name</th>
+<th class="py-2 text-right">Weekly Sales</th>
+<th class="py-2 text-right">Growth vs LY</th>
+<th class="py-2 text-right">0.5% Comm.</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle text-xs text-text-primary font-body-regular">
+<tr>
+<td class="py-2.5 font-medium">Store #104 — Downtown Central</td>
+<td class="py-2.5 text-right font-medium">$74,820</td>
+<td class="py-2.5 text-right text-secondary font-semibold">+14.2%</td>
+<td class="py-2.5 text-right font-code-inline text-primary font-medium">$374.10</td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #112 — Metro North Mall</td>
+<td class="py-2.5 text-right font-medium">$68,910</td>
+<td class="py-2.5 text-right text-secondary font-semibold">+12.8%</td>
+<td class="py-2.5 text-right font-code-inline text-primary font-medium">$344.55</td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #108 — Westside Galleria</td>
+<td class="py-2.5 text-right font-medium">$62,400</td>
+<td class="py-2.5 text-right text-secondary font-semibold">+9.6%</td>
+<td class="py-2.5 text-right font-code-inline text-primary font-medium">$312.00</td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #121 — Bayview Pavilion</td>
+<td class="py-2.5 text-right font-medium">$58,190</td>
+<td class="py-2.5 text-right text-secondary font-semibold">+8.5%</td>
+<td class="py-2.5 text-right font-code-inline text-primary font-medium">$290.95</td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #119 — Summit Heights</td>
+<td class="py-2.5 text-right font-medium">$54,230</td>
+<td class="py-2.5 text-right text-secondary font-semibold">+7.9%</td>
+<td class="py-2.5 text-right font-code-inline text-primary font-medium">$271.15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Underperforming Stores Table -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-5 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">warning</span>
+<h4 class="font-headline-card text-headline-card text-text-primary">Underperforming Stores (Action Required)</h4>
+</div>
+<span class="font-label-analytics text-label-analytics text-error uppercase">Needs Review</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle text-text-muted font-label-analytics text-label-analytics">
+<th class="py-2">Store Name</th>
+<th class="py-2 text-right">Weekly Sales</th>
+<th class="py-2 text-right">Variance vs LY</th>
+<th class="py-2 text-right">Operational Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle text-xs text-text-primary font-body-regular">
+<tr>
+<td class="py-2.5 font-medium">Store #102 — South Harbor Plaza</td>
+<td class="py-2.5 text-right font-medium text-error">$31,100</td>
+<td class="py-2.5 text-right text-error font-semibold">-12.4%</td>
+<td class="py-2.5 text-right"><span class="px-2 py-0.5 rounded bg-error-container text-on-error-container text-[11px] font-medium">Footfall Down</span></td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #115 — Oakridge District</td>
+<td class="py-2.5 text-right font-medium text-error">$33,450</td>
+<td class="py-2.5 text-right text-error font-semibold">-8.9%</td>
+<td class="py-2.5 text-right"><span class="px-2 py-0.5 rounded bg-error-container text-on-error-container text-[11px] font-medium">Stock Shortage</span></td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #107 — Eastgate Strip</td>
+<td class="py-2.5 text-right font-medium text-error">$35,200</td>
+<td class="py-2.5 text-right text-error font-semibold">-6.3%</td>
+<td class="py-2.5 text-right"><span class="px-2 py-0.5 rounded bg-surface-muted text-text-secondary text-[11px] font-medium">Remodel In Progress</span></td>
+</tr>
+<tr>
+<td class="py-2.5 font-medium">Store #114 — Lakeview Square</td>
+<td class="py-2.5 text-right font-medium text-text-secondary">$38,900</td>
+<td class="py-2.5 text-right text-text-secondary font-semibold">-2.1%</td>
+<td class="py-2.5 text-right"><span class="px-2 py-0.5 rounded bg-surface-muted text-text-secondary text-[11px] font-medium">Marginal Variance</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: BUSINESS LOGIC & KEY CALCULATIONS (DAX) -->
+<section class="bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">functions</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Key Calculations &amp; DAX Formulation</h2>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary mb-6">
+          Deterministic business logic codified into robust DAX measures to support rapid visual recalculation and filter context preservation.
+        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Calculation 1: Weekly Growth Index -->
+<div class="p-5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-card text-headline-card text-text-primary font-semibold">Weekly Growth Index</span>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">Pacing Ratio</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mb-3">
+                Calculates ratio of current week sales to prior year same week sales normalized to a 100 baseline.
+              </p>
+<div class="bg-surface-card p-3 rounded border border-border-subtle font-code-inline text-code-inline text-text-primary overflow-x-auto custom-scroll">
+<code>Growth_Index = DIVIDE([Weekly Sales], [Sales_Same_Week_LY], 0) * 100</code>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-border-subtle/80 text-caption font-caption text-text-muted">
+              Formula: (Current Week Sales / Previous Year Same Week Sales) × 100
+            </div>
+</div>
+<!-- Calculation 2: YTD Sales Calculation -->
+<div class="p-5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-card text-headline-card text-text-primary font-semibold">Year-to-Date (YTD) Sales</span>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">Time Intelligence</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mb-3">
+                Cumulative sales through the active calendar or fiscal week using canonical time intelligence.
+              </p>
+<div class="bg-surface-card p-3 rounded border border-border-subtle font-code-inline text-code-inline text-text-primary overflow-x-auto custom-scroll">
+<code>YTD_Sales = TOTALYTD(SUM(Fact_WeeklySales[SalesAmount]), Dim_Date[Date])</code>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-border-subtle/80 text-caption font-caption text-text-muted">
+              Formula: Cumulative sales through current calendar/fiscal week using TOTALYTD / DATESYTD
+            </div>
+</div>
+<!-- Calculation 3: Dynamic Store Tiering -->
+<div class="p-5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-card text-headline-card text-text-primary font-semibold">Dynamic Store &amp; Dept Tiering</span>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">Ranking Logic</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mb-3">
+                Dynamically tiers stores into top, median, and bottom tranches based on weekly revenue volume.
+              </p>
+<div class="bg-surface-card p-3 rounded border border-border-subtle font-code-inline text-code-inline text-text-primary overflow-x-auto custom-scroll">
+<code>Store_Rank = RANKX(ALLSELECTED(Dim_Store[Store_Name]), [Weekly Sales],, DESC)</code>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-border-subtle/80 text-caption font-caption text-text-muted">
+              Formula: Ranked dynamic tiering using weekly sales volume without hardcoded partitions
+            </div>
+</div>
+<!-- Calculation 4: Manager Commission Allocation -->
+<div class="p-5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-card text-headline-card text-text-primary font-semibold">Manager Commission Pool</span>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">Incentive Policy</span>
+</div>
+<p class="font-caption text-caption text-text-secondary mb-3">
+                Allocates a 0.5% commission incentive strictly to store managers qualifying in the weekly top 5.
+              </p>
+<div class="bg-surface-card p-3 rounded border border-border-subtle font-code-inline text-code-inline text-text-primary overflow-x-auto custom-scroll">
+<code>Manager_Commission = IF([Store_Rank] &lt;= 5, [Weekly Sales] * 0.005, 0)</code>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-border-subtle/80 text-caption font-caption text-text-muted">
+              Formula: 0.5% of weekly sales allocated to managers of the top 5 performing stores
+            </div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: 5-STEP DELIVERY METHODOLOGY / PROCESS TIMELINE -->
+<section class="bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">route</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">5-Step Delivery Methodology</h2>
+</div>
+<p class="font-body-regular text-body-regular text-text-secondary mb-8">
+          The end-to-end framework applied to translate fragmented departmental store spreadsheets into an automated BI product.
+        </p>
+<!-- Vertical/Horizontal Adaptive Stepper -->
+<div class="relative pl-6 md:pl-0 border-l-2 md:border-l-0 md:grid md:grid-cols-5 gap-4 border-border-subtle space-y-6 md:space-y-0">
+<!-- Step 1 -->
+<div class="relative flex flex-col justify-between group">
+<div class="absolute -left-[31px] md:static md:mb-3 w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold ring-4 ring-surface-card">
+              1
+            </div>
+<div class="bg-surface-canvas-subtle p-4 rounded-lg border border-border-subtle h-full">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Phase 01</span>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mt-1 mb-2">Executive Scoping</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Understand executive reporting requirements and identify CEO priority metrics (weekly index, manager commissions, store variance).
+              </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col justify-between group">
+<div class="absolute -left-[31px] md:static md:mb-3 w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold ring-4 ring-surface-card">
+              2
+            </div>
+<div class="bg-surface-canvas-subtle p-4 rounded-lg border border-border-subtle h-full">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Phase 02</span>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mt-1 mb-2">Data Ingestion</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Structure source data &amp; ingestion schema across weekly POS export formats, standardizing headers, dates, and currency fields.
+              </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col justify-between group">
+<div class="absolute -left-[31px] md:static md:mb-3 w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold ring-4 ring-surface-card">
+              3
+            </div>
+<div class="bg-surface-canvas-subtle p-4 rounded-lg border border-border-subtle h-full">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Phase 03</span>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mt-1 mb-2">Star Schema Modeling</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Build star-schema data model with conformed dimensions (Date, Store, Department) connected via 1-to-many relationships to the central fact table.
+              </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col justify-between group">
+<div class="absolute -left-[31px] md:static md:mb-3 w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold ring-4 ring-surface-card">
+              4
+            </div>
+<div class="bg-surface-canvas-subtle p-4 rounded-lg border border-border-subtle h-full">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Phase 04</span>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mt-1 mb-2">DAX &amp; Canvas Design</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Create DAX measures and executive dashboard views with clean hierarchy, high contrast KPI banners, and mobile responsive layout presets.
+              </p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative flex flex-col justify-between group">
+<div class="absolute -left-[31px] md:static md:mb-3 w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold ring-4 ring-surface-card">
+              5
+            </div>
+<div class="bg-surface-canvas-subtle p-4 rounded-lg border border-border-subtle h-full">
+<span class="font-label-analytics text-label-analytics text-text-muted uppercase">Phase 05</span>
+<h3 class="font-body-medium text-body-medium font-semibold text-text-primary mt-1 mb-2">Validation &amp; Handoff</h3>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+                Validate reporting accuracy against historical audits and establish a reliable weekly refresh workflow for ongoing leadership reviews.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: DESIGN DECISIONS & BUSINESS IMPACT BENTO -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Design Decisions Card (6 Cols) -->
+<div class="lg:col-span-6 bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">design_services</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Executive UX Decisions</h2>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span>
+<div>
+<strong class="font-body-medium text-body-medium text-text-primary block">Simple Uncluttered Layout</strong>
+<span class="font-body-regular text-body-regular text-text-secondary">Eliminated non-essential slicers and secondary charts from the main canvas to prioritize rapid executive cognitive parsing.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span>
+<div>
+<strong class="font-body-medium text-body-medium text-text-primary block">Prominent Executive-Friendly Metrics</strong>
+<span class="font-body-regular text-body-regular text-text-secondary">Displayed primary KPIs in 36px bold typography with clear prior year comparatives to allow 10-second performance diagnosis.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span>
+<div>
+<strong class="font-body-medium text-body-medium text-text-primary block">Mobile Accessibility First</strong>
+<span class="font-body-regular text-body-regular text-text-secondary">Formatted dedicated vertical mobile layout for executive inspection on smartphone screens during physical store tours.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span>
+<div>
+<strong class="font-body-medium text-body-medium text-text-primary block">Separation of Top &amp; Underperformers</strong>
+<span class="font-body-regular text-body-regular text-text-secondary">Dedicated twin comparative tables immediately contrast top revenue contributors against locations with operational lag.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check</span>
+<div>
+<strong class="font-body-medium text-body-medium text-text-primary block">Automated Refresh Upon Source Replacement</strong>
+<span class="font-body-regular text-body-regular text-text-secondary">Configured parameter-based file ingestion so placing a new week's CSV triggers complete visual and measure recalculation.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Business Value & Impact (6 Cols) -->
+<div class="lg:col-span-6 bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<h2 class="font-headline-section text-headline-section text-text-primary">Business Value Delivered</h2>
+</div>
+<div class="space-y-4">
+<div class="p-3.5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">query_stats</span>
+<div>
+<h4 class="font-body-medium text-body-medium font-semibold text-text-primary">Weekly &amp; YTD Clarity</h4>
+<p class="font-body-regular text-body-regular text-text-secondary">Eliminates conflicting spreadsheet versions and gives executive leadership a unified source of truth every Monday morning.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">storefront</span>
+<div>
+<h4 class="font-body-medium text-body-medium font-semibold text-text-primary">Targeted Operational Intervention</h4>
+<p class="font-body-regular text-body-regular text-text-secondary">Identifies low-performing stores immediately, enabling regional managers to rebalance inventory and staff before quarter close.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">payments</span>
+<div>
+<h4 class="font-body-medium text-body-medium font-semibold text-text-primary">Automated Manager Commission Tracking</h4>
+<p class="font-body-regular text-body-regular text-text-secondary">Automates the 0.5% incentive calculation for the top 5 stores, removing manual calculation errors and payroll delays.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-canvas-subtle border border-border-subtle flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">schedule</span>
+<div>
+<h4 class="font-body-medium text-body-medium font-semibold text-text-primary">Reduction of Manual Reporting Steps</h4>
+<p class="font-body-regular text-body-regular text-text-secondary">Replaces 4+ hours of weekly Excel copy-paste compilation with an automated, scheduled refresh workflow.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between text-caption font-caption text-text-muted">
+<span>Client Scope: Retail Department Stores</span>
+<span class="text-primary font-medium">Outcome: 100% On-Schedule CEO Delivery</span>
+</div>
+</div>
+</section>
+<!-- SECTION 8: FUTURE IMPROVEMENT & ARCHITECTURAL THINKING -->
+<section class="bg-gradient-to-br from-surface-card to-surface-canvas-subtle rounded-xl border border-primary-container/30 p-6 md:p-8 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">cloud_sync</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-highlight-tint border border-primary-container/20 text-primary font-label-analytics text-label-analytics uppercase mb-2">
+              Solutions Architect Perspective
+            </div>
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Future Scalability: Centralized Cloud Lakehouse Pipeline</h2>
+<p class="font-body-regular text-body-regular text-text-secondary leading-relaxed mb-4">
+              While the weekly CSV drop provided an immediate, low-friction solution matching the organization’s current operational maturity, migrating this system to a centralized <strong>Azure Data Factory / Microsoft Fabric Lakehouse</strong> architecture represents the logical phase two.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="p-3.5 rounded-lg bg-surface-card border border-border-subtle">
+<div class="font-headline-card text-headline-card font-semibold text-text-primary text-sm mb-1">Direct POS API Ingestion</div>
+<p class="font-caption text-caption text-text-secondary">Replacing manual file uploads with automated REST endpoints directly from point-of-sale registers eliminates human handling entirely.</p>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-card border border-border-subtle">
+<div class="font-headline-card text-headline-card font-semibold text-text-primary text-sm mb-1">Delta Lake Storage &amp; ACID</div>
+<p class="font-caption text-caption text-text-secondary">Medallion architecture (Bronze → Silver → Gold) guarantees audit compliance, automated schema validation, and instantaneous rollbacks.</p>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-card border border-border-subtle">
+<div class="font-headline-card text-headline-card font-semibold text-text-primary text-sm mb-1">Direct Lake Mode in Power BI</div>
+<p class="font-caption text-caption text-text-secondary">Querying Parquet files directly from OneLake eliminates import refresh latency, enabling real-time intra-day sales pacing.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: RELATED SKILLS & NEXT PROJECT NAVIGATION -->
+<section class="space-y-6 pt-4">
+<!-- Related Skills -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 shadow-sm">
+<div class="font-label-analytics text-label-analytics text-text-muted uppercase mb-3">Applied Competencies in this Case Study</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">Business Intelligence</span>
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">Data Modeling</span>
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">DAX Formulation</span>
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">Power Query ETL</span>
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">Dashboard Strategy</span>
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">Executive Reporting</span>
+<span class="px-3 py-1 rounded-full bg-surface-muted text-text-primary border border-border-subtle font-body-medium text-body-medium">KPI Design</span>
+</div>
+</div>
+<!-- Next Project Card -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 hover:border-border-hover transition-all duration-150">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high border border-border-subtle flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">hotel</span>
+</div>
+<div>
+<span class="font-label-analytics text-label-analytics text-primary uppercase">Next Case Study</span>
+<h3 class="font-headline-card text-headline-card text-text-primary mt-0.5">Global Hospitality Booking Analytics &amp; Revenue Management</h3>
+<p class="font-body-regular text-body-regular text-text-secondary mt-1">Multi-property RevPAR, ADR, and occupancy forecasting model.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<a class="px-4 py-2 rounded-lg border border-border-subtle bg-surface-card text-text-primary font-body-medium text-body-medium hover:bg-surface-muted transition-colors" href="#work">
+              View All Work
+            </a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-white font-body-medium text-body-medium hover:bg-primary-container transition-colors shadow-sm" href="#next-study">
+<span>Read Next Case Study</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Matching Shared Components JSON & DESIGN.md) -->
+<footer class="bg-surface-canvas-subtle border-t border-border-subtle mt-16">
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div>
+<p class="font-body-regular text-body-regular text-text-secondary text-sm">
+            © 2025 Mirza Hammad Baig. BI Solutions Architecture &amp; Enterprise Data Strategy.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 text-xs font-body-regular text-text-secondary">
+<a class="hover:text-primary transition-colors" href="#linkedin">LinkedIn</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors" href="#github">GitHub</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors" href="#medium">Medium</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors" href="#docs">Architecture System Docs</a>
+<span class="text-border-subtle">·</span>
+<a class="hover:text-primary transition-colors" href="#privacy">Privacy &amp; Governance</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -2,11 +2,7 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { LinkButton } from '@/components/ui/LinkButton';
-import {
-  TEACHING_TOPICS,
-  LEARNING_FLOW,
-  MENTORSHIP_THEMES,
-} from '@/lib/fixtures/portfolio';
+import { getTeachingPageData } from '@/lib/adapters/sanity-adapter';
 import {
   AtomcampLecturerHero,
   LearningFlowSection,
@@ -20,14 +16,16 @@ export const metadata: Metadata = {
     'Applied data analytics education, Power BI lecturing at Atomcamp, corporate workshops, and technical mentorship in Kimball modeling and DAX.',
 };
 
-export default function TeachingPage() {
+export default async function TeachingPage() {
+  const data = await getTeachingPageData();
+
   return (
     <div className="space-y-12">
       {/* 1. Page Header */}
       <PageHeader
-        badgeText="Faculty & Mentorship"
-        title="Teaching & Knowledge Transfer"
-        description="Treating education as an essential engineering discipline. Guiding aspiring analysts and corporate teams from theoretical syntax to production business intelligence."
+        badgeText={data.badgeText}
+        title={data.title}
+        description={data.description}
         actions={
           <>
             <LinkButton href="/about#contact" variant="primary" showArrow>
@@ -44,7 +42,7 @@ export default function TeachingPage() {
       <AtomcampLecturerHero />
 
       {/* 3. 6-Phase Applied Learning Flow */}
-      <LearningFlowSection flow={LEARNING_FLOW} />
+      <LearningFlowSection flow={data.flow} />
 
       {/* 4. Core Curriculum Modules */}
       <div className="space-y-6">
@@ -54,11 +52,11 @@ export default function TeachingPage() {
           description="Modular technical tracks delivered across cohort-based bootcamps and enterprise upskilling sessions."
         />
 
-        <TeachingTopicCards topics={TEACHING_TOPICS} />
+        <TeachingTopicCards topics={data.topics} />
       </div>
 
       {/* 5. Mentorship Themes & Editorial Statement */}
-      <MentorshipAndEditorial themes={MENTORSHIP_THEMES} />
+      <MentorshipAndEditorial themes={data.mentorship} />
     </div>
   );
 }

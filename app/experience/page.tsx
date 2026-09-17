@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Card } from '@/components/ui/Card';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { LinkButton } from '@/components/ui/LinkButton';
-import { EXPERIENCE_ITEMS } from '@/lib/fixtures/portfolio';
+import { getExperiencePageData } from '@/lib/adapters/sanity-adapter';
 import {
   ExperienceTimeline,
   WorkingStyleCards,
@@ -15,14 +15,16 @@ export const metadata: Metadata = {
     'Chronological career history, enterprise roles at Ideas by Gul Ahmed and Muller & Phipps, cross-departmental enablement, and BI leadership.',
 };
 
-export default function ExperiencePage() {
+export default async function ExperiencePage() {
+  const data = await getExperiencePageData();
+
   return (
     <div className="space-y-12">
       {/* 1. Header */}
       <PageHeader
-        badgeText="Career History"
-        title="Experience & Career Chronology"
-        description="A verified record of enterprise data roles, cross-functional department enablement, dimensional data architecture, and commercial BI delivery."
+        badgeText={data.badgeText}
+        title={data.title}
+        description={data.description}
         actions={
           <>
             <LinkButton href="/work" variant="primary" showArrow>
@@ -43,7 +45,7 @@ export default function ExperiencePage() {
           description="Direct engineering and analytical responsibility across commercial retail, distribution logistics, and data education."
         />
 
-        <ExperienceTimeline items={EXPERIENCE_ITEMS} />
+        <ExperienceTimeline items={data.items} />
       </div>
 
       {/* 3. Working Style & Operational Standards */}

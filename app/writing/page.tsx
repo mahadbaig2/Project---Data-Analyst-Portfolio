@@ -3,11 +3,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { LinkButton } from '@/components/ui/LinkButton';
 import { Icons } from '@/components/ui/Icons';
-import {
-  WRITING_SERIES,
-  KNOWLEDGE_MAP_LAYERS,
-  PROFILE_IDENTITY,
-} from '@/lib/fixtures/portfolio';
+import { getWritingPageData, getSiteSettings } from '@/lib/adapters/sanity-adapter';
 import {
   WritingHeroBanner,
   KnowledgeMapSection,
@@ -21,18 +17,23 @@ export const metadata: Metadata = {
     'Educational essays and field mappings: "Understanding the Data Field", data infrastructure, Kimball dimensional engineering, and AI analytics.',
 };
 
-export default function WritingPage() {
+export default async function WritingPage() {
+  const [data, siteSettings] = await Promise.all([
+    getWritingPageData(),
+    getSiteSettings(),
+  ]);
+
   const mediumLink =
-    PROFILE_IDENTITY.socialLinks.find((s) => s.platform === 'medium')?.href ||
+    siteSettings.socialLinks.find((s) => s.platform === 'medium')?.href ||
     'https://medium.com/@mirzahammad';
 
   return (
     <div className="space-y-12">
       {/* 1. Header */}
       <PageHeader
-        badgeText="Publications & Field Maps"
-        title="Writing & Thought Leadership"
-        description="Structured technical essays deconstructing the fragmented data landscape into first principles for students, analysts, and engineering leaders."
+        badgeText={data.badgeText}
+        title={data.title}
+        description={data.description}
         actions={
           <LinkButton href={mediumLink} variant="secondary" isExternal showArrow>
             <Icons.medium size={14} className="mr-1.5" />
@@ -45,7 +46,7 @@ export default function WritingPage() {
       <WritingHeroBanner />
 
       {/* 3. Layered Knowledge Map */}
-      <KnowledgeMapSection layers={KNOWLEDGE_MAP_LAYERS} />
+      <KnowledgeMapSection layers={data.knowledgeMap} />
 
       {/* 4. Categorized Article Cards Grid */}
       <div className="space-y-6">
@@ -55,7 +56,7 @@ export default function WritingPage() {
           description="Curated essays exploring key layers of data engineering, dimensional business intelligence, and analytical workflows."
         />
 
-        <ArticleCardsGrid articles={WRITING_SERIES} />
+        <ArticleCardsGrid articles={data.articles} />
       </div>
 
       {/* 5. Why I Write & Teaching Connection */}

@@ -32,12 +32,12 @@ This plan deliberately contains only five milestones. Finish and verify each mil
 
 **Outcome:** Hammad can maintain all significant public content without editing code.
 
-- [ ] Configure Sanity project, Studio, environment variables, datasets, CORS/preview requirements, and typed client/query helpers.
-- [ ] Create schemas for settings/pages, case studies, professional profile, experience, achievements/evidence, skills/capabilities, education/certifications, teaching/training, articles, source documents, and generation runs.
-- [ ] Design a simple Studio structure with field groups, helpful descriptions, previews, validations, references, and singleton handling.
-- [ ] Replace fixture data with centralized, typed GROQ queries and mapping helpers; support draft preview and graceful empty states.
-- [ ] Add image handling, Portable Text components, CV/file management, SEO fields, and revalidation after publishing.
-- [ ] Seed/import the verified content used in Milestone 2 and document the essential editing workflow.
+- [x] Configure Sanity project, Studio, environment variables, datasets, CORS/preview requirements, and typed client/query helpers.
+- [x] Create schemas for settings/pages, case studies, professional profile, experience, achievements/evidence, skills/capabilities, education/certifications, teaching/training, articles, source documents, and generation runs.
+- [x] Design a simple Studio structure with field groups, helpful descriptions, previews, validations, references, and singleton handling.
+- [x] Replace fixture data with centralized, typed GROQ queries and mapping helpers; support draft preview and graceful empty states.
+- [x] Add image handling, Portable Text components, CV/file management, SEO fields, and revalidation after publishing.
+- [x] Seed/import the verified content used in Milestone 2 and document the essential editing workflow.
 
 **Done when:** Hammad can change the identity, page copy, experience, expertise, teaching, writing, case studies, links, media, CV, and SEO in Sanity, preview the result, and publish it without a code change.
 

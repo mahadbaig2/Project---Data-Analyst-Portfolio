@@ -3,12 +3,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Card } from '@/components/ui/Card';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { LinkButton } from '@/components/ui/LinkButton';
-import {
-  CAPABILITIES,
-  TECHNOLOGY_GROUPS,
-  PROBLEMS_I_WORK_ON,
-  PROFESSIONAL_APPROACH,
-} from '@/lib/fixtures/portfolio';
+import { getExpertisePageData } from '@/lib/adapters/sanity-adapter';
 import {
   ValueChainDiagram,
   CapabilitiesGrid,
@@ -23,14 +18,16 @@ export const metadata: Metadata = {
     'Core technical capabilities across Kimball star schemas, Power BI, SQL, Python, Microsoft Fabric, and AI-augmented analytics.',
 };
 
-export default function ExpertisePage() {
+export default async function ExpertisePage() {
+  const data = await getExpertisePageData();
+
   return (
     <div className="space-y-12">
       {/* 1. Header */}
       <PageHeader
-        badgeText="Technical Capabilities"
-        title="Expertise & Data System Architecture"
-        description="Comprehensive technical capabilities spanning the complete data lifecycle: dimensional modeling, business intelligence, relational pipelines, and applied AI."
+        badgeText={data.badgeText}
+        title={data.title}
+        description={data.description}
         actions={
           <>
             <LinkButton href="/work" variant="primary" showArrow>
@@ -54,7 +51,7 @@ export default function ExpertisePage() {
           description="A balanced analytical practice connecting raw infrastructure with executive commercial decision-making."
         />
 
-        <CapabilitiesGrid capabilities={CAPABILITIES} />
+        <CapabilitiesGrid capabilities={data.capabilities} />
       </div>
 
       {/* 4. End-to-End System Flow Diagram */}
@@ -68,13 +65,13 @@ export default function ExpertisePage() {
           description="Curated tools and engines deployed in production. Grouped by architectural responsibility rather than a superficial logo wall."
         />
 
-        <TechnologyEcosystem groups={TECHNOLOGY_GROUPS} />
+        <TechnologyEcosystem groups={data.technologyGroups} />
       </div>
 
       {/* 6. Problems I Work On & 7-Step Methodology */}
       <ProblemsAndApproach
-        problems={PROBLEMS_I_WORK_ON}
-        approach={PROFESSIONAL_APPROACH}
+        problems={data.problems}
+        approach={data.approach}
       />
 
       {/* 7. Final Action CTA */}

@@ -6,13 +6,16 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Badge } from '@/components/ui/Badge';
 import { LinkButton } from '@/components/ui/LinkButton';
 import { Icons } from '@/components/ui/Icons';
-import { CASE_STUDIES } from '@/lib/fixtures/portfolio';
+import {
+  getCaseStudyBySlug,
+  getCaseStudySlugs,
+  getAllCaseStudies,
+} from '@/lib/adapters/sanity-adapter';
 import { ArchitectureDiagram } from '@/components/modules/ArchitectureDiagram';
 
-export function generateStaticParams() {
-  return CASE_STUDIES.map((project) => ({
-    slug: project.slug,
-  }));
+export async function generateStaticParams() {
+  const slugs = await getCaseStudySlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -21,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = CASE_STUDIES.find((p) => p.slug === slug);
+  const project = await getCaseStudyBySlug(slug);
 
   if (!project) {
     return {
@@ -42,16 +45,18 @@ export default async function CaseStudyDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = CASE_STUDIES.find((p) => p.slug === slug);
+  const project = await getCaseStudyBySlug(slug);
 
   if (!project) {
     notFound();
   }
 
-  // Find next project for seamless sequential reading
-  const currentIndex = CASE_STUDIES.findIndex((p) => p.slug === slug);
+  const allProjects = await getAllCaseStudies();
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
   const nextProject =
-    CASE_STUDIES[(currentIndex + 1) % CASE_STUDIES.length];
+    currentIndex >= 0 && allProjects.length > 1
+      ? allProjects[(currentIndex + 1) % allProjects.length]
+      : null;
 
   return (
     <div className="space-y-10">

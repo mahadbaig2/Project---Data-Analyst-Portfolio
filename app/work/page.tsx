@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Card } from '@/components/ui/Card';
 import { LinkButton } from '@/components/ui/LinkButton';
-import { CASE_STUDIES } from '@/lib/fixtures/portfolio';
+import { getAllCaseStudies } from '@/lib/adapters/sanity-adapter';
 import { WorkFilterGrid } from '@/components/modules/WorkFilterGrid';
 
 export const metadata: Metadata = {
@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     'Documented business intelligence case studies, enterprise Kimball data models, retail analytics, and analytical automation systems.',
 };
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const projects = await getAllCaseStudies();
+
   return (
     <div className="space-y-10">
       {/* Page Header */}
@@ -22,7 +24,7 @@ export default function WorkPage() {
       />
 
       {/* Interactive Case Studies Grid with Category Filter & Search */}
-      <WorkFilterGrid projects={CASE_STUDIES} />
+      <WorkFilterGrid projects={projects} />
 
       {/* Architectural Rigor Note */}
       <Card padding="lg" className="bg-surface-sidebar border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">

@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { Sidebar } from './Sidebar';
 import { TopUtilityBar } from './TopUtilityBar';
 import { MobileNav } from './MobileNav';
@@ -9,6 +12,13 @@ export interface AppShellProps {
 }
 
 export function AppShell({ children }: AppShellProps) {
+  const pathname = usePathname();
+
+  // Allow Sanity Studio to render full-viewport without portfolio shell
+  if (pathname?.startsWith('/studio')) {
+    return <>{children}</>;
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-surface-canvas text-text-primary">
       {/* Accessible Skip Link */}

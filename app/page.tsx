@@ -6,13 +6,13 @@ import { LinkButton } from '@/components/ui/LinkButton';
 import { Badge } from '@/components/ui/Badge';
 import { Icons } from '@/components/ui/Icons';
 import {
-  PROFILE_IDENTITY,
-  CASE_STUDIES,
-  EXPERIENCE_ITEMS,
-  CAPABILITIES,
-  WRITING_SERIES,
-  TEACHING_TOPICS,
-} from '@/lib/fixtures/portfolio';
+  getSiteSettings,
+  getHomePageData,
+  getExperiencePageData,
+  getExpertisePageData,
+  getTeachingPageData,
+  getWritingPageData,
+} from '@/lib/adapters/sanity-adapter';
 import { FeaturedProjectCard } from '@/components/modules/FeaturedProjectCard';
 import { ProjectCard } from '@/components/modules/ProjectCard';
 
@@ -22,18 +22,28 @@ export const metadata: Metadata = {
     'Executive analytics workspace, enterprise Power BI architecture, Kimball star schemas, and data engineering by Mirza Hammad Baig.',
 };
 
-export default function HomePage() {
-  const featuredProject = CASE_STUDIES.find((p) => p.isFeatured) || CASE_STUDIES[0];
-  const secondaryProjects = CASE_STUDIES.filter((p) => p.slug !== featuredProject.slug);
-  const currentRole = EXPERIENCE_ITEMS.find((e) => e.isCurrent);
+export default async function HomePage() {
+  const [siteSettings, homeData, experienceData, expertiseData, teachingData, writingData] =
+    await Promise.all([
+      getSiteSettings(),
+      getHomePageData(),
+      getExperiencePageData(),
+      getExpertisePageData(),
+      getTeachingPageData(),
+      getWritingPageData(),
+    ]);
+
+  const featuredProject = homeData.featuredCaseStudy;
+  const secondaryProjects = homeData.secondaryCaseStudies || [];
+  const currentRole = experienceData.items.find((e) => e.isCurrent) || experienceData.items[0];
 
   return (
     <div className="space-y-12">
       {/* 1. Hero & Positioning */}
       <PageHeader
-        badgeText="Executive Analytics Workspace"
-        title="Mirza Hammad Baig"
-        description="Data Analyst & BI Solutions Architect specializing in conformed Kimball dimensional models, high-performance Power BI reporting suites, and automated analytical pipelines."
+        badgeText={homeData.heroBadge}
+        title={homeData.heroTitle}
+        description={homeData.heroDescription}
         actions={
           <>
             <LinkButton href="/work" variant="primary" showArrow>
@@ -112,7 +122,7 @@ export default function HomePage() {
             </h2>
           </div>
           <span className="text-xs font-mono text-primary font-bold bg-surface-sidebar px-3 py-1 rounded-md border border-border-subtle self-start sm:self-auto">
-            {PROFILE_IDENTITY.valueChain}
+            {siteSettings.valueChain}
           </span>
         </div>
 
@@ -143,34 +153,38 @@ export default function HomePage() {
       </Card>
 
       {/* 4. Featured Solution Architecture */}
-      <div className="space-y-4">
-        <SectionHeading
-          overline="Selected Case Study"
-          title="Featured Production Architecture"
-          description="Detailed inspection of conformed data modeling, business constraints, and documented deliverables."
-        />
-        <FeaturedProjectCard project={featuredProject} />
-      </div>
+      {featuredProject && (
+        <div className="space-y-4">
+          <SectionHeading
+            overline="Selected Case Study"
+            title="Featured Production Architecture"
+            description="Detailed inspection of conformed data modeling, business constraints, and documented deliverables."
+          />
+          <FeaturedProjectCard project={featuredProject} />
+        </div>
+      )}
 
       {/* 5. Additional Case Studies Grid */}
-      <div className="space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <SectionHeading
-            overline="Case Studies"
-            title="Enterprise Implementations"
-            description="Production implementations across retail sales, hospitality revenue, and multi-agent AI systems."
-          />
-          <LinkButton href="/work" variant="ghost" size="sm" showArrow className="self-start sm:self-auto">
-            View All Work
-          </LinkButton>
-        </div>
+      {secondaryProjects.length > 0 && (
+        <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <SectionHeading
+              overline="Case Studies"
+              title="Enterprise Implementations"
+              description="Production implementations across retail sales, hospitality revenue, and multi-agent AI systems."
+            />
+            <LinkButton href="/work" variant="ghost" size="sm" showArrow className="self-start sm:self-auto">
+              View All Work
+            </LinkButton>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {secondaryProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {secondaryProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 6. Professional Journey & Current Posture */}
       <Card padding="xl" className="space-y-6">
@@ -183,10 +197,10 @@ export default function HomePage() {
               </span>
             </div>
             <h3 className="text-xl font-bold text-text-primary tracking-tight">
-              From Operational Logistics to Enterprise BI Architecture
+              {homeData.careerNarrativeTitle}
             </h3>
             <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-              Having advanced from logistics data specialist at Muller & Phipps to BI Architect at Ideas by Gul Ahmed, my perspective is rooted in real commercial workflows. I don&rsquo;t design dashboards in isolation—I build analytical systems that operational teams rely on daily.
+              {homeData.careerNarrativeBody}
             </p>
           </div>
 
@@ -226,8 +240,8 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {CAPABILITIES.slice(0, 3).map((cap) => (
-            <Card key={cap.id} padding="lg" hoverable className="space-y-3">
+          {expertiseData.capabilities.slice(0, 3).map((cap) => (
+            <Card key={cap.id || cap.title} padding="lg" hoverable className="space-y-3">
               <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
                 {cap.category}
               </span>
@@ -259,8 +273,8 @@ export default function HomePage() {
               Lecturing on Kimball modeling, DAX formulations, and practical data analysis. Guiding students through hands-on capstone projects and commercial problem decomposition.
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1">
-              {TEACHING_TOPICS.slice(0, 3).map((t) => (
-                <span key={t.id} className="text-[10px] px-2 py-0.5 bg-surface-sidebar rounded border border-border-subtle font-mono text-text-secondary">
+              {teachingData.topics.slice(0, 3).map((t) => (
+                <span key={t.id || t.title} className="text-[10px] px-2 py-0.5 bg-surface-sidebar rounded border border-border-subtle font-mono text-text-secondary">
                   {t.title}
                 </span>
               ))}
@@ -286,8 +300,8 @@ export default function HomePage() {
               A comprehensive technical essay series mapping the data landscape from physical bits and infrastructure to business intelligence, machine learning, and governance.
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1">
-              {WRITING_SERIES.slice(0, 3).map((w) => (
-                <span key={w.id} className="text-[10px] px-2 py-0.5 bg-surface-sidebar rounded border border-border-subtle font-mono text-text-secondary">
+              {writingData.articles.slice(0, 3).map((w) => (
+                <span key={w.id || w.title} className="text-[10px] px-2 py-0.5 bg-surface-sidebar rounded border border-border-subtle font-mono text-text-secondary">
                   {w.category}
                 </span>
               ))}

@@ -1,0 +1,230 @@
+import { defineType, defineField } from 'sanity';
+
+export const caseStudy = defineType({
+  name: 'caseStudy',
+  title: 'Case Study & Architecture',
+  type: 'document',
+  fieldsets: [
+    { name: 'meta', title: 'Metadata & Classification', options: { collapsible: true } },
+    { name: 'narrative', title: 'Problem & Context', options: { collapsible: true } },
+    { name: 'technical', title: 'Architecture, Modeling & DAX', options: { collapsible: true } },
+    { name: 'results', title: 'Outcomes & Learnings', options: { collapsible: true } },
+  ],
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Project Title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug (URL identifier)',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'summary',
+      title: 'Executive Summary',
+      type: 'text',
+      rows: 3,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'domain',
+      title: 'Industry / Domain',
+      type: 'string',
+      fieldset: 'meta',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'category',
+      title: 'Technical Category',
+      type: 'string',
+      fieldset: 'meta',
+      options: {
+        list: [
+          { title: 'Business Intelligence', value: 'Business Intelligence' },
+          { title: 'Data Analytics', value: 'Data Analytics' },
+          { title: 'Data Engineering', value: 'Data Engineering' },
+          { title: 'AI / Automation', value: 'AI / Automation' },
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'organization',
+      title: 'Client / Organization',
+      type: 'string',
+      fieldset: 'meta',
+    }),
+    defineField({
+      name: 'role',
+      title: 'Hammad’s Role',
+      type: 'string',
+      fieldset: 'meta',
+      initialValue: 'BI Solutions Architect & Analyst',
+    }),
+    defineField({
+      name: 'period',
+      title: 'Timeframe / Period',
+      type: 'string',
+      fieldset: 'meta',
+    }),
+    defineField({
+      name: 'status',
+      title: 'Deployment Status',
+      type: 'string',
+      fieldset: 'meta',
+      options: {
+        list: [
+          { title: 'Production Deployed', value: 'Production Deployed' },
+          { title: 'Operational', value: 'Operational' },
+          { title: 'Architecture Blueprint', value: 'Architecture Blueprint' },
+        ],
+      },
+      initialValue: 'Production Deployed',
+    }),
+    defineField({
+      name: 'confidentiality',
+      title: 'Confidentiality Setting',
+      type: 'string',
+      fieldset: 'meta',
+      description: 'Privacy note (e.g. "Anonymized for commercial confidentiality").',
+    }),
+    defineField({
+      name: 'isFeatured',
+      title: 'Featured on Overview',
+      type: 'boolean',
+      fieldset: 'meta',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'displayOrder',
+      title: 'Display Order Weight',
+      type: 'number',
+      fieldset: 'meta',
+      initialValue: 0,
+    }),
+    defineField({
+      name: 'problem',
+      title: 'Problem Statement & Dilemma',
+      type: 'text',
+      rows: 4,
+      fieldset: 'narrative',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'background',
+      title: 'Background Environment',
+      type: 'text',
+      rows: 3,
+      fieldset: 'narrative',
+    }),
+    defineField({
+      name: 'primaryUser',
+      title: 'Primary Stakeholder / User',
+      type: 'string',
+      fieldset: 'narrative',
+    }),
+    defineField({
+      name: 'objectives',
+      title: 'Strategic Objectives',
+      type: 'array',
+      fieldset: 'narrative',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({ name: 'id', title: 'Identifier', type: 'string' }),
+            defineField({ name: 'title', title: 'Objective Title', type: 'string' }),
+            defineField({ name: 'description', title: 'Description', type: 'text', rows: 2 }),
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'technologies',
+      title: 'Technologies Employed',
+      type: 'array',
+      fieldset: 'technical',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'architecture',
+      title: 'Architecture & Lineage Graph',
+      type: 'architectureGraph',
+      fieldset: 'technical',
+    }),
+    defineField({
+      name: 'calculations',
+      title: 'Key Analytical Measures & DAX Calculations',
+      type: 'array',
+      fieldset: 'technical',
+      of: [{ type: 'calculation' }],
+    }),
+    defineField({
+      name: 'outcomes',
+      title: 'Documented Outcomes & Impact',
+      type: 'array',
+      fieldset: 'results',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'decisions',
+      title: 'Key Architectural Decisions & Trade-offs',
+      type: 'array',
+      fieldset: 'results',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'challenges',
+      title: 'Technical Challenges Overcome',
+      type: 'array',
+      fieldset: 'results',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'learnings',
+      title: 'Key Learnings',
+      type: 'array',
+      fieldset: 'results',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'githubUrl',
+      title: 'GitHub Repository URL',
+      type: 'url',
+      fieldset: 'meta',
+      validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] }),
+    }),
+    defineField({
+      name: 'previewImage',
+      title: 'Preview Image / Thumbnail',
+      type: 'customImage',
+      fieldset: 'meta',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'Case Study SEO',
+      type: 'seo',
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'domain',
+      category: 'category',
+    },
+    prepare({ title, subtitle, category }) {
+      return {
+        title,
+        subtitle: `${subtitle || 'General'} · ${category || ''}`,
+      };
+    },
+  },
+});

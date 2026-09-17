@@ -19,12 +19,12 @@ This plan deliberately contains only five milestones. Finish and verify each mil
 
 **Outcome:** All public pages are complete using reusable components and verified content.
 
-- [ ] Implement Home, Work, reusable Case Study, Experience, Expertise, Teaching, Writing, and About/Contact using the Stitch screenshots as references and `DESIGN.md` as the system authority.
-- [ ] Resolve Stitch inconsistencies in spacing, alignment, naming, density, and navigation rather than reproducing them.
-- [ ] Build reusable modules for KPI/evidence cards, timelines, project cards, process flows, technology groups, article cards, CTAs, and responsive diagrams.
-- [ ] Add real portrait, CV, project screenshots, social links, and verified Hammad content as it becomes available; clearly mark unresolved content instead of inventing it.
-- [ ] Implement responsive and accessible behavior for all modules, including reduced motion and diagram text alternatives.
-- [ ] Add SEO essentials: per-route metadata, canonical handling, sitemap, robots, Open Graph defaults, and truthful structured data.
+- [x] Implement Home, Work, reusable Case Study, Experience, Expertise, Teaching, Writing, and About/Contact using the Stitch screenshots as references and `DESIGN.md` as the system authority.
+- [x] Resolve Stitch inconsistencies in spacing, alignment, naming, density, and navigation rather than reproducing them.
+- [x] Build reusable modules for KPI/evidence cards, timelines, project cards, process flows, technology groups, article cards, CTAs, and responsive diagrams.
+- [x] Add real portrait, CV, project screenshots, social links, and verified Hammad content as it becomes available; clearly mark unresolved content instead of inventing it.
+- [x] Implement responsive and accessible behavior for all modules, including reduced motion and diagram text alternatives.
+- [x] Add SEO essentials: per-route metadata, canonical handling, sitemap, robots, Open Graph defaults, and truthful structured data.
 
 **Done when:** The complete portfolio is visually polished on representative desktop and mobile sizes and contains no fabricated metrics, placeholder claims, broken actions, or layout gaps.
 

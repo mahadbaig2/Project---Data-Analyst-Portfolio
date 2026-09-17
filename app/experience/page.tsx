@@ -2,140 +2,128 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Card } from '@/components/ui/Card';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Badge } from '@/components/ui/Badge';
 import { LinkButton } from '@/components/ui/LinkButton';
-import { PROFILE_IDENTITY } from '@/lib/fixtures/portfolio';
+import { EXPERIENCE_ITEMS } from '@/lib/fixtures/portfolio';
+import {
+  ExperienceTimeline,
+  WorkingStyleCards,
+} from '@/components/modules/ExperienceTimeline';
 
 export const metadata: Metadata = {
-  title: 'Experience & Career Chronology',
+  title: 'Experience & Career Chronology | Mirza Hammad Baig',
   description:
-    'Professional career trajectory, organizational impact, and business intelligence leadership of Mirza Hammad Baig.',
+    'Chronological career history, enterprise roles at Ideas by Gul Ahmed and Muller & Phipps, cross-departmental enablement, and BI leadership.',
 };
 
 export default function ExperiencePage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
+      {/* 1. Header */}
       <PageHeader
-        badgeText="Career Journey"
-        title="Experience & Chronology"
-        description="Chronological record of enterprise data roles, cross-functional department enablement, dimensional modeling, and BI delivery."
+        badgeText="Career History"
+        title="Experience & Career Chronology"
+        description="A verified record of enterprise data roles, cross-functional department enablement, dimensional data architecture, and commercial BI delivery."
         actions={
-          <LinkButton href={PROFILE_IDENTITY.cvUrl} variant="primary" isExternal>
-            Download Formal CV
-          </LinkButton>
+          <>
+            <LinkButton href="/work" variant="primary" showArrow>
+              View Documented Case Studies
+            </LinkButton>
+            <LinkButton href="/about#contact" variant="secondary">
+              Contact Hammad
+            </LinkButton>
+          </>
         }
       />
 
-      {/* Timeline Section */}
+      {/* 2. Career Chronology Timeline */}
       <div className="space-y-6">
         <SectionHeading
-          overline="Chronological History"
-          title="Organizational Roles"
-          description="Direct impact across data architecture, business intelligence, and stakeholder decision support."
+          overline="Verified Roles"
+          title="Organizational Trajectory & System Ownership"
+          description="Direct engineering and analytical responsibility across commercial retail, distribution logistics, and data education."
         />
 
-        <div className="relative pl-6 sm:pl-8 border-l-2 border-border-subtle space-y-8">
-          {/* Timeline Item 1 */}
-          <div className="relative">
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-surface-canvas" />
-            <Card padding="lg" className="space-y-3">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                <div>
-                  <h3 className="text-base sm:text-lg font-bold text-text-primary">
-                    Data Analyst & BI Solutions Architect
-                  </h3>
-                  <p className="text-xs sm:text-sm text-text-secondary">
-                    Enterprise Data Practice · Solutions Delivery
-                  </p>
-                </div>
-                <Badge variant="tint" size="sm" hasDot>
-                  Current / Strategic Focus
-                </Badge>
-              </div>
-              <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-                Architecting dimensional star schemas, high-performance DAX measure layers, and executive dashboards. Leading discovery sessions with business leaders to align reporting structures with key organizational decisions.
-              </p>
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {['Power BI', 'Microsoft Fabric', 'DAX', 'SQL', 'Dimensional Modeling'].map((tech) => (
-                  <Badge key={tech} variant="neutral" size="sm">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-          </div>
-
-          {/* Timeline Item 2 */}
-          <div className="relative">
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-border-hover ring-4 ring-surface-canvas" />
-            <Card padding="lg" className="space-y-3">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                <div>
-                  <h3 className="text-base sm:text-lg font-bold text-text-primary">
-                    Data Science & BI Instructor / Trainer
-                  </h3>
-                  <p className="text-xs sm:text-sm text-text-secondary">
-                    Atomcamp · Applied Analytics Programs
-                  </p>
-                </div>
-                <Badge variant="neutral" size="sm">
-                  Teaching & Mentorship
-                </Badge>
-              </div>
-              <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-                Delivering intensive hands-on curricula across Power BI, SQL, Python for Data Analysis, and Exploratory Data Analysis (EDA). Mentoring aspiring analysts on case-study-driven problem solving.
-              </p>
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {['Curriculum Design', 'Power BI Training', 'Python EDA', 'SQL Instruction'].map((tech) => (
-                  <Badge key={tech} variant="neutral" size="sm">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-          </div>
-        </div>
+        <ExperienceTimeline items={EXPERIENCE_ITEMS} />
       </div>
 
-      {/* Operational Working Style */}
-      <div>
+      {/* 3. Working Style & Operational Standards */}
+      <div className="space-y-6">
         <SectionHeading
           overline="Methodology"
-          title="Operational Engagement Style"
-          description="How technical analysis connects systematically to stakeholder decision workflows."
+          title="Working Style & Operational Competencies"
+          description="How I approach complex business questions, from initial stakeholder alignment to ongoing user enablement."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card padding="md" className="space-y-2">
-            <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">01 · Discovery</span>
-            <h4 className="text-sm font-bold text-text-primary">Stakeholder Alignment</h4>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Uncovering the underlying business questions and metric definitions before designing data structures.
-            </p>
-          </Card>
-          <Card padding="md" className="space-y-2">
-            <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">02 · Modeling</span>
-            <h4 className="text-sm font-bold text-text-primary">Dimensional Rigor</h4>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Constructing robust star schemas that ensure reporting consistency, high calculation speed, and auditability.
-            </p>
-          </Card>
-          <Card padding="md" className="space-y-2">
-            <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">03 · Delivery</span>
-            <h4 className="text-sm font-bold text-text-primary">Executive Visualization</h4>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Crafting calm, intuitive report layouts that emphasize variance, trends, and decision paths.
-            </p>
-          </Card>
-          <Card padding="md" className="space-y-2">
-            <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">04 · Enablement</span>
-            <h4 className="text-sm font-bold text-text-primary">Adoption & Training</h4>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Conducting hands-on walkthroughs to ensure ongoing self-service adoption and data trust across teams.
-            </p>
-          </Card>
-        </div>
+        <WorkingStyleCards />
       </div>
+
+      {/* 4. Cross-Functional Department Enablement */}
+      <Card padding="xl" className="space-y-4">
+        <div className="space-y-1">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
+            Departmental Scope
+          </span>
+          <h3 className="text-base font-bold text-text-primary">
+            Cross-Functional Stakeholder Partnerships
+          </h3>
+          <p className="text-xs text-text-secondary">
+            Enterprise analytics succeeds when technical models reflect the distinct operational vocabularies of diverse business units.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
+          {[
+            {
+              dept: 'Commercial Retail',
+              focus: 'Store performance, sales velocity, category mix, discount elasticity, and basket size analysis.',
+            },
+            {
+              dept: 'Supply Chain & Logistics',
+              focus: 'Fleet turnarounds, cold-chain compliance, SLA adherence, warehouse bottleneck tracking, and inventory aging.',
+            },
+            {
+              dept: 'Executive Finance',
+              focus: 'Gross margin contributions, EBITDA bridges, operational overhead, budget variance, and YoY cash cycles.',
+            },
+            {
+              dept: 'Academic & Training',
+              focus: 'Cohort-based instruction, structured curriculum design, capstone mentoring, and technical enablement.',
+            },
+          ].map((item) => (
+            <div
+              key={item.dept}
+              className="p-3.5 bg-surface-sidebar rounded-lg border border-border-subtle space-y-1"
+            >
+              <h4 className="text-xs font-bold text-primary">
+                {item.dept}
+              </h4>
+              <p className="text-[11px] text-text-secondary leading-relaxed">
+                {item.focus}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* 5. Next Steps CTA */}
+      <Card padding="lg" className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="space-y-1 text-center sm:text-left">
+          <h4 className="text-sm font-bold text-text-primary">
+            Want to see how these roles translate into technical solutions?
+          </h4>
+          <p className="text-xs text-text-secondary">
+            Explore the full case studies or examine the architecture and technology stack.
+          </p>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <LinkButton href="/work" variant="primary" size="sm" showArrow>
+            Explore Case Studies
+          </LinkButton>
+          <LinkButton href="/expertise" variant="secondary" size="sm">
+            View Expertise
+          </LinkButton>
+        </div>
+      </Card>
     </div>
   );
 }

@@ -2,102 +2,100 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Card } from '@/components/ui/Card';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Badge } from '@/components/ui/Badge';
 import { LinkButton } from '@/components/ui/LinkButton';
+import {
+  CAPABILITIES,
+  TECHNOLOGY_GROUPS,
+  PROBLEMS_I_WORK_ON,
+  PROFESSIONAL_APPROACH,
+} from '@/lib/fixtures/portfolio';
+import {
+  ValueChainDiagram,
+  CapabilitiesGrid,
+  TechnologyEcosystem,
+  SystemArchitectureFlow,
+  ProblemsAndApproach,
+} from '@/components/modules/TechnologySection';
 
 export const metadata: Metadata = {
-  title: 'Expertise & Capabilities',
+  title: 'Expertise & Technical Architecture | Mirza Hammad Baig',
   description:
-    'Core technical capabilities, system architecture proficiencies, and technology ecosystem of Mirza Hammad Baig.',
+    'Core technical capabilities across Kimball star schemas, Power BI, SQL, Python, Microsoft Fabric, and AI-augmented analytics.',
 };
 
 export default function ExpertisePage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
+      {/* 1. Header */}
       <PageHeader
         badgeText="Technical Capabilities"
-        title="Expertise & Architecture"
-        description="Comprehensive technical capabilities across the entire data lifecycle: dimensional modeling, BI solutions architecture, pipeline development, and applied AI."
+        title="Expertise & Data System Architecture"
+        description="Comprehensive technical capabilities spanning the complete data lifecycle: dimensional modeling, business intelligence, relational pipelines, and applied AI."
         actions={
-          <LinkButton href="/work" variant="primary" showArrow>
-            View Applied Solutions
-          </LinkButton>
+          <>
+            <LinkButton href="/work" variant="primary" showArrow>
+              View Applied Case Studies
+            </LinkButton>
+            <LinkButton href="/about#contact" variant="secondary">
+              Discuss Technical Scope
+            </LinkButton>
+          </>
         }
       />
 
-      {/* Grouped Ecosystem Matrix */}
-      <div>
+      {/* 2. End-to-End Value Chain */}
+      <ValueChainDiagram />
+
+      {/* 3. Six Core Capability Pillars */}
+      <div className="space-y-6">
         <SectionHeading
-          overline="Technology Ecosystem"
-          title="Technical Core & Competencies"
-          description="Grouped by functional domain rather than a generic logo wall, reflecting architectural ownership."
+          overline="Core Disciplines"
+          title="Six Functional Capability Domains"
+          description="A balanced analytical practice connecting raw infrastructure with executive commercial decision-making."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card padding="lg" className="space-y-4">
-            <div className="space-y-1">
-              <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">
-                Primary Specialty
-              </span>
-              <h3 className="text-base font-bold text-text-primary">
-                Business Intelligence & Visualization
-              </h3>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Executive dashboard design, semantic reporting layers, drill-through workflows, and mobile-responsive report interfaces.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border-subtle">
-              {['Power BI', 'DAX Measures', 'Paginated Reports', 'Row-Level Security', 'Power BI Service'].map((tech) => (
-                <Badge key={tech} variant="tint" size="sm">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </Card>
-
-          <Card padding="lg" className="space-y-4">
-            <div className="space-y-1">
-              <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">
-                Architecture & Foundation
-              </span>
-              <h3 className="text-base font-bold text-text-primary">
-                Data Modeling & Dimensional Design
-              </h3>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Kimball dimensional schemas, conformed dimensions, surrogate keys, slowly changing dimensions, and relationship optimization.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border-subtle">
-              {['Star Schema', 'Snowflake Modeling', 'Relational Schemas', 'Granularity Alignment'].map((tech) => (
-                <Badge key={tech} variant="tint" size="sm">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </Card>
-
-          <Card padding="lg" className="space-y-4">
-            <div className="space-y-1">
-              <span className="text-[10px] font-semibold uppercase text-primary tracking-wider">
-                Engineering & Querying
-              </span>
-              <h3 className="text-base font-bold text-text-primary">
-                Data Engineering & Transformation
-              </h3>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Complex SQL querying, window functions, CTEs, Power Query ETL procedures, and automated data ingestion pipelines.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border-subtle">
-              {['SQL (PostgreSQL / T-SQL)', 'Python (Pandas, NumPy)', 'Power Query M', 'Microsoft Fabric'].map((tech) => (
-                <Badge key={tech} variant="tint" size="sm">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </Card>
-        </div>
+        <CapabilitiesGrid capabilities={CAPABILITIES} />
       </div>
+
+      {/* 4. End-to-End System Flow Diagram */}
+      <SystemArchitectureFlow />
+
+      {/* 5. Grouped Technology Ecosystem */}
+      <div className="space-y-6">
+        <SectionHeading
+          overline="Toolchain & Ecosystem"
+          title="Grouped Technology Stack"
+          description="Curated tools and engines deployed in production. Grouped by architectural responsibility rather than a superficial logo wall."
+        />
+
+        <TechnologyEcosystem groups={TECHNOLOGY_GROUPS} />
+      </div>
+
+      {/* 6. Problems I Work On & 7-Step Methodology */}
+      <ProblemsAndApproach
+        problems={PROBLEMS_I_WORK_ON}
+        approach={PROFESSIONAL_APPROACH}
+      />
+
+      {/* 7. Final Action CTA */}
+      <Card padding="xl" className="bg-surface-card border-primary/20 text-center py-10">
+        <div className="max-w-xl mx-auto space-y-4">
+          <h3 className="text-xl font-bold text-text-primary tracking-tight">
+            Looking to modernize your data reporting architecture?
+          </h3>
+          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+            From cleaning legacy operational databases to publishing certified Power BI suites and conducting corporate upskilling.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <LinkButton href="/about#contact" variant="primary" showArrow>
+              Initiate Technical Consultation
+            </LinkButton>
+            <LinkButton href="/work" variant="secondary">
+              Review Work Samples
+            </LinkButton>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }

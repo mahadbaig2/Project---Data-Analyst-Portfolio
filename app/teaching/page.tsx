@@ -1,94 +1,64 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
-import { Card } from '@/components/ui/Card';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { Badge } from '@/components/ui/Badge';
 import { LinkButton } from '@/components/ui/LinkButton';
+import {
+  TEACHING_TOPICS,
+  LEARNING_FLOW,
+  MENTORSHIP_THEMES,
+} from '@/lib/fixtures/portfolio';
+import {
+  AtomcampLecturerHero,
+  LearningFlowSection,
+  TeachingTopicCards,
+  MentorshipAndEditorial,
+} from '@/components/modules/TeachingModules';
 
 export const metadata: Metadata = {
-  title: 'Teaching & Mentorship',
+  title: 'Teaching & Mentorship | Mirza Hammad Baig',
   description:
-    'Applied data analytics education, corporate training, and mentoring in Power BI, SQL, and Python by Mirza Hammad Baig.',
+    'Applied data analytics education, Power BI lecturing at Atomcamp, corporate workshops, and technical mentorship in Kimball modeling and DAX.',
 };
 
 export default function TeachingPage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
+      {/* 1. Page Header */}
       <PageHeader
-        badgeText="Instruction & Mentoring"
+        badgeText="Faculty & Mentorship"
         title="Teaching & Knowledge Transfer"
-        description="Hands-on training programs designed to bridge the gap between textbook data theory and real-world enterprise analytics."
+        description="Treating education as an essential engineering discipline. Guiding aspiring analysts and corporate teams from theoretical syntax to production business intelligence."
         actions={
-          <LinkButton href="/about#contact" variant="primary">
-            Inquire for Training / Workshops
-          </LinkButton>
+          <>
+            <LinkButton href="/about#contact" variant="primary" showArrow>
+              Inquire About Workshops
+            </LinkButton>
+            <LinkButton href="/writing" variant="secondary">
+              Read Technical Articles
+            </LinkButton>
+          </>
         }
       />
 
-      {/* Applied Learning Approach */}
-      <Card padding="xl">
-        <SectionHeading
-          overline="Philosophy"
-          title="Applied Case-Study Learning"
-          description="Focusing on problem discovery, data realities, business metrics, and decision-driven reporting."
-        />
-        <p className="text-sm text-text-secondary leading-relaxed max-w-3xl">
-          Training focuses on practical application rather than syntax memorization. Learners work directly with messy datasets, build conformed dimensional models, author performant DAX measures, and present findings in executive-ready dashboards.
-        </p>
-      </Card>
+      {/* 2. Atomcamp Lecturer Hero & Corporate Enablement */}
+      <AtomcampLecturerHero />
 
-      {/* Core Topics Covered */}
-      <div>
+      {/* 3. 6-Phase Applied Learning Flow */}
+      <LearningFlowSection flow={LEARNING_FLOW} />
+
+      {/* 4. Core Curriculum Modules */}
+      <div className="space-y-6">
         <SectionHeading
-          overline="Curriculum Modules"
+          overline="Curriculum"
           title="Instructional Focus Areas"
-          description="Specialized programs taught through bootcamps, corporate sessions, and 1-on-1 mentorship."
+          description="Modular technical tracks delivered across cohort-based bootcamps and enterprise upskilling sessions."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card padding="lg" className="space-y-3">
-            <div className="flex items-center justify-between">
-              <Badge variant="tint" size="sm">
-                BI Track
-              </Badge>
-            </div>
-            <h3 className="text-base font-bold text-text-primary">
-              Enterprise Power BI & DAX
-            </h3>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              From data connection and star schema design to complex filter context, time intelligence, and polished visual delivery.
-            </p>
-          </Card>
-
-          <Card padding="lg" className="space-y-3">
-            <div className="flex items-center justify-between">
-              <Badge variant="tint" size="sm">
-                Data Foundation Track
-              </Badge>
-            </div>
-            <h3 className="text-base font-bold text-text-primary">
-              SQL for Analytics & EDA
-            </h3>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Relational query construction, joins, aggregation, window functions, and data validation techniques for decision support.
-            </p>
-          </Card>
-
-          <Card padding="lg" className="space-y-3">
-            <div className="flex items-center justify-between">
-              <Badge variant="tint" size="sm">
-                Python Track
-              </Badge>
-            </div>
-            <h3 className="text-base font-bold text-text-primary">
-              Python for Data Analysis
-            </h3>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Exploratory data analysis (EDA), data wrangling with Pandas/NumPy, pattern detection, and clean reporting automation.
-            </p>
-          </Card>
-        </div>
+        <TeachingTopicCards topics={TEACHING_TOPICS} />
       </div>
+
+      {/* 5. Mentorship Themes & Editorial Statement */}
+      <MentorshipAndEditorial themes={MENTORSHIP_THEMES} />
     </div>
   );
 }

@@ -149,3 +149,45 @@ npx tsx scripts/seed-sanity.ts
 ```
 
 This script populates all verified case studies, roles, capabilities, articles, education, and singletons with stable IDs, ensuring zero downtime or manual data entry during initial onboarding.
+
+---
+
+## 9. AI Case-Study Draft Generator Workflow
+
+Milestone 4 introduces an evidence-grounded AI draft generator assisting Hammad in turning unstructured project Markdown or notes into complete, schema-valid Sanity drafts.
+
+### Editorial Workflow
+1. **Create / Open a Source Document**:
+   - In Studio, navigate to **AI Case-Study Generator** → **Source Documents (AI Input)**.
+   - Click **Create** or open an existing source document.
+   - Enter or paste your project Markdown / plain-text notes into **Raw Text Content** or upload a `.md` / `.txt` file.
+   - (Optional) Provide hints: Title hint, Target Organization, and Known Technologies.
+2. **Confidentiality Check & Acknowledgement**:
+   - Select the **Confidentiality Classification** (*Public*, *Permission Granted*, or *Anonymized*).
+   - Check the **Confidentiality Acknowledgement** checkbox. Note: Documents marked *Confidential — Do NOT Process* will be blocked by system safety guards.
+3. **Execute Draft Generation**:
+   - In the Studio document action bar at the bottom, click **Generate Case-Study Draft**.
+   - The engine normalizes the source, queries verified professional context, extracts facts, maps evidence, synthesizes a case study draft with a Kimball dimensional architecture graph, and executes deterministic claim validation.
+4. **Review Generated Draft & Warnings**:
+   - The generator saves the output as an unpublished draft (`drafts.caseStudy-<slug>`).
+   - Open **AI Case-Study Generator** → **Generated Case Study Drafts**.
+   - Review the generated problem statement, Kimball dimensional architecture, DAX calculations, and the **Internal Review & Validation Warnings** list.
+   - **Crucial Rule**: The AI NEVER publishes automatically. Review all fields, make manual edits, and click **Publish** in Sanity Studio once satisfied.
+
+### AI Provider Configuration & Switching
+Configure your chosen provider in `.env.local`:
+- **Development & Testing Mode**:
+  `CASE_STUDY_AI_PROVIDER="mock"` (requires zero credentials, deterministic test fixtures).
+- **Google Gemini (Primary)**:
+  `CASE_STUDY_AI_PROVIDER="gemini"`
+  `CASE_STUDY_AI_MODEL="gemini-2.5-flash"`
+  `CASE_STUDY_AI_API_KEY="your_google_ai_studio_api_key"`
+- **Groq / Qwen (Fallback or Alternative)**:
+  `CASE_STUDY_AI_FALLBACK_PROVIDER="groq"`
+  `CASE_STUDY_AI_FALLBACK_MODEL="qwen-2.5-32b"`
+  `CASE_STUDY_AI_FALLBACK_API_KEY="your_groq_api_key"`
+
+### Deterministic Safeguards
+- **Invented Metrics Detection**: Percentages, currencies, and latency claims that do not appear in the uploaded source text are actively flagged as blocking issues.
+- **Proposed vs. Implemented**: Technologies cited as recommendations or future roadmap items are strictly tagged as proposed and barred from implementation verbs.
+- **No Vector Embeddings / RAG Hallucination**: Professional context is queried deterministically via GROQ filters, ensuring only approved, verified claims enter the prompt.

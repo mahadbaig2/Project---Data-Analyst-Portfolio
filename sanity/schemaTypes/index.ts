@@ -13,6 +13,7 @@ import { identityPillar } from './objects/identityPillar';
 import { careerPrinciple } from './objects/careerPrinciple';
 import { verifiedOutcome } from './objects/verifiedOutcome';
 import { blockContent } from './objects/blockContent';
+import { visualSpecification } from './objects/visualSpecification';
 
 // Singletons
 import { siteSettings } from './singletons/siteSettings';
@@ -52,6 +53,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     careerPrinciple,
     verifiedOutcome,
     blockContent,
+    visualSpecification,
 
     // Singletons
     siteSettings,

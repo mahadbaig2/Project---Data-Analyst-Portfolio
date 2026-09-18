@@ -82,12 +82,21 @@ export const caseStudy = defineType({
       fieldset: 'meta',
       options: {
         list: [
+          { title: 'Draft (Under Review)', value: 'Draft' },
           { title: 'Production Deployed', value: 'Production Deployed' },
           { title: 'Operational', value: 'Operational' },
           { title: 'Architecture Blueprint', value: 'Architecture Blueprint' },
         ],
       },
       initialValue: 'Production Deployed',
+    }),
+    defineField({
+      name: 'publicVisibility',
+      title: 'Publicly Visible on Portfolio',
+      type: 'boolean',
+      fieldset: 'meta',
+      initialValue: false,
+      description: 'Must be explicitly set to true to appear on the public /work route.',
     }),
     defineField({
       name: 'confidentiality',
@@ -207,6 +216,34 @@ export const caseStudy = defineType({
       title: 'Preview Image / Thumbnail',
       type: 'customImage',
       fieldset: 'meta',
+    }),
+    defineField({
+      name: 'supportingVisuals',
+      title: 'Supporting Visual Specifications',
+      type: 'array',
+      fieldset: 'technical',
+      of: [{ type: 'visualSpecification' }],
+    }),
+    defineField({
+      name: 'sourceDocument',
+      title: 'Originating Source Document',
+      type: 'reference',
+      to: [{ type: 'sourceDocument' }],
+      fieldset: 'meta',
+    }),
+    defineField({
+      name: 'generationRun',
+      title: 'AI Generation Audit Run',
+      type: 'reference',
+      to: [{ type: 'generationRun' }],
+      fieldset: 'meta',
+    }),
+    defineField({
+      name: 'reviewWarnings',
+      title: 'Internal Review & Validation Warnings',
+      type: 'array',
+      of: [{ type: 'string' }],
+      fieldset: 'results',
     }),
     defineField({
       name: 'seo',

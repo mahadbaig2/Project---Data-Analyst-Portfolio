@@ -31,6 +31,7 @@ export interface ArchitectureNode {
   category: string;
   items?: string[];
   detail?: string;
+  implementationStatus?: 'implemented' | 'proposed' | 'contextual';
 }
 
 export interface ArchitectureEdge {

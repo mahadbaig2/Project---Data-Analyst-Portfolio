@@ -45,14 +45,14 @@ This plan deliberately contains only five milestones. Finish and verify each mil
 
 **Outcome:** An authorized user can turn unstructured Markdown into an evidence-aware Sanity case-study draft.
 
-- [ ] Define Zod/JSON contracts for extraction, selected professional context, evidence claims, case-study fields, architecture graphs, visual specifications, validation warnings, and generation status.
-- [ ] Implement a provider-neutral server-only model adapter; verify the selected free/low-cost model, limits, schema-output support, and current terms against official documentation.
-- [ ] Build the deterministic Context Builder using Sanity relationships, organizations, dates, domains, capabilities, and linked achievements; do not add vector search in v1.
-- [ ] Implement the generation pipeline: source upload → extraction → context selection → evidence map → structured writing → claim validation → Sanity draft.
-- [ ] Enforce evidence rules: no invented metrics, professional context cannot silently become project outcome, recommendations are labeled, contradictions are surfaced, and publication remains manual.
-- [ ] Build structured architecture/flow rendering with branded React/SVG components plus responsive text alternatives and a safe fallback visual.
-- [ ] Add Studio-facing generation controls/status, confidentiality warning, retryable failures, review warnings, and links to the created draft.
-- [ ] Test the complete flow on at least one real project and one deliberately weak/ambiguous Markdown source.
+- [x] Define Zod/JSON contracts for extraction, selected professional context, evidence claims, case-study fields, architecture graphs, visual specifications, validation warnings, and generation status.
+- [x] Implement a provider-neutral server-only model adapter; verify the selected free/low-cost model, limits, schema-output support, and current terms against official documentation.
+- [x] Build the deterministic Context Builder using Sanity relationships, organizations, dates, domains, capabilities, and linked achievements; do not add vector search in v1.
+- [x] Implement the generation pipeline: source upload → extraction → context selection → evidence map → structured writing → claim validation → Sanity draft.
+- [x] Enforce evidence rules: no invented metrics, professional context cannot silently become project outcome, recommendations are labeled, contradictions are surfaced, and publication remains manual.
+- [x] Build structured architecture/flow rendering with branded React/SVG components plus responsive text alternatives and a safe fallback visual.
+- [x] Add Studio-facing generation controls/status, confidentiality warning, retryable failures, review warnings, and links to the created draft.
+- [x] Test the complete flow on at least one real project and one deliberately weak/ambiguous Markdown source.
 
 **Done when:** A real Markdown upload produces a useful, schema-valid, editable Sanity draft with traceable claims and a legible architecture visual, while unsupported claims are omitted or flagged.
 

@@ -68,17 +68,70 @@ export const structure: StructureResolver = (S) =>
             ])
         ),
 
-      // Group 4: Evidence & Context
+      // Group 4: AI Case-Study Generator Workflows
       S.listItem()
-        .title('Professional Context & AI')
+        .title('AI Case-Study Generator')
         .child(
           S.list()
-            .title('Context & Evidence')
+            .title('AI Case-Study Editorial Workflow')
             .items([
-              S.documentTypeListItem('professionalProfile').title('Professional Bio & Context'),
-              S.documentTypeListItem('achievement').title('Verified Evidence Claims'),
-              S.documentTypeListItem('sourceDocument').title('Source Documents (AI Input)'),
-              S.documentTypeListItem('generationRun').title('Generation Audit Runs'),
+              S.listItem()
+                .title('Source Documents (AI Input)')
+                .child(
+                  S.documentList()
+                    .title('All Source Documents')
+                    .filter('_type == "sourceDocument"')
+                ),
+              S.listItem()
+                .title('Ready to Generate')
+                .child(
+                  S.documentList()
+                    .title('Ready to Generate')
+                    .filter('_type == "sourceDocument" && processingStatus == "pending" && confidentialityAcknowledged == true')
+                ),
+              S.listItem()
+                .title('Active Processing')
+                .child(
+                  S.documentList()
+                    .title('Processing Runs')
+                    .filter('_type == "generationRun" && status in ["queued", "processing", "extracting", "drafting", "validating"]')
+                ),
+              S.listItem()
+                .title('Needs Review (Completed Runs)')
+                .child(
+                  S.documentList()
+                    .title('Runs Needing Review')
+                    .filter('_type == "generationRun" && reviewerStatus == "pending" && status in ["completed", "completed_with_warnings"]')
+                ),
+              S.listItem()
+                .title('Generated Case Study Drafts')
+                .child(
+                  S.documentList()
+                    .title('Unpublished Case Study Drafts')
+                    .filter('_type == "caseStudy" && status == "Draft"')
+                ),
+              S.listItem()
+                .title('Failed Generation Runs')
+                .child(
+                  S.documentList()
+                    .title('Failed Runs')
+                    .filter('_type == "generationRun" && status == "failed"')
+                ),
+              S.divider(),
+              S.listItem()
+                .title('Verified Evidence Claims')
+                .child(
+                  S.documentList()
+                    .title('Verified Claims')
+                    .filter('_type == "achievement"')
+                ),
+              S.listItem()
+                .title('Professional Bio & Context')
+                .child(
+                  S.documentList()
+                    .title('Professional Profiles')
+                    .filter('_type == "professionalProfile"')
+                ),
             ])
         ),
 

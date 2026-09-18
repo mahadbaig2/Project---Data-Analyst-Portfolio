@@ -36,6 +36,19 @@ export const architectureNode = defineType({
       title: 'Technical Note',
       type: 'string',
     }),
+    defineField({
+      name: 'implementationStatus',
+      title: 'Implementation Status',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Implemented', value: 'implemented' },
+          { title: 'Proposed / Future', value: 'proposed' },
+          { title: 'Contextual', value: 'contextual' },
+        ],
+      },
+      initialValue: 'implemented',
+    }),
   ],
   preview: {
     select: {

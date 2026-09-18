@@ -38,17 +38,57 @@ export const sourceDocument = defineType({
       rows: 10,
     }),
     defineField({
+      name: 'projectTitleHint',
+      title: 'Project Title Hint (Optional)',
+      type: 'string',
+      description: 'Suggested title for the generated case study.',
+    }),
+    defineField({
+      name: 'relatedOrganization',
+      title: 'Target Organization / Client (Optional)',
+      type: 'string',
+    }),
+    defineField({
+      name: 'relatedExperience',
+      title: 'Related Career Experience',
+      type: 'reference',
+      to: [{ type: 'experience' }],
+    }),
+    defineField({
+      name: 'relatedTechnologies',
+      title: 'Known Technologies (Optional Hints)',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
       name: 'relatedCaseStudy',
-      title: 'Target Case Study (if existing)',
+      title: 'Target Case Study (if updating existing)',
       type: 'reference',
       to: [{ type: 'caseStudy' }],
     }),
     defineField({
+      name: 'confidentialityStatus',
+      title: 'Confidentiality Classification',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Public / Open Information', value: 'public' },
+          { title: 'Employer / Client Permission Granted', value: 'permission_granted' },
+          { title: 'Anonymized & Redacted', value: 'anonymized' },
+          { title: 'Confidential — Do NOT Process', value: 'confidential_do_not_process' },
+        ],
+      },
+      initialValue: 'anonymized',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'confidentialityAcknowledged',
-      title: 'Confidentiality & Anonymization Verified',
+      title: 'Confidentiality Acknowledgement',
       type: 'boolean',
       initialValue: false,
-      description: 'Confirms that proprietary credentials and sensitive data are redacted prior to processing.',
+      description:
+        'I acknowledge that this document contains no unauthorized confidential or proprietary information.',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'processingStatus',
@@ -56,13 +96,38 @@ export const sourceDocument = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Pending Upload', value: 'pending' },
-          { title: 'Extracted', value: 'extracted' },
+          { title: 'Pending Upload / Review', value: 'pending' },
+          { title: 'Extracting Facts', value: 'extracting' },
           { title: 'Draft Generated', value: 'generated' },
+          { title: 'Generation Failed', value: 'failed' },
           { title: 'Archived', value: 'archived' },
         ],
       },
       initialValue: 'pending',
+    }),
+    defineField({
+      name: 'sourceHash',
+      title: 'Source SHA-256 Hash',
+      type: 'string',
+      readOnly: true,
+    }),
+    defineField({
+      name: 'fileSizeBytes',
+      title: 'File Size (Bytes)',
+      type: 'number',
+      readOnly: true,
+    }),
+    defineField({
+      name: 'latestRun',
+      title: 'Latest Generation Audit Run',
+      type: 'reference',
+      to: [{ type: 'generationRun' }],
+    }),
+    defineField({
+      name: 'internalNotes',
+      title: 'Internal Editorial Notes',
+      type: 'text',
+      rows: 3,
     }),
   ],
   preview: {

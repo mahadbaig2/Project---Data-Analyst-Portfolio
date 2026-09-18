@@ -5,6 +5,7 @@ import { structureTool } from 'sanity/structure';
 import { projectId, dataset } from './sanity/env';
 import { schema } from './sanity/schemaTypes';
 import { structure } from './sanity/structure';
+import { GenerateCaseStudyAction } from './sanity/actions/generateCaseStudyAction';
 
 export default defineConfig({
   basePath: '/studio',
@@ -16,4 +17,12 @@ export default defineConfig({
   plugins: [
     structureTool({ structure }),
   ],
+  document: {
+    actions: (prev, context) => {
+      if (context.schemaType === 'sourceDocument') {
+        return [GenerateCaseStudyAction, ...prev];
+      }
+      return prev;
+    },
+  },
 });

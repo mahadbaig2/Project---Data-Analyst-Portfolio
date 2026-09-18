@@ -59,6 +59,27 @@ export const achievement = defineType({
       initialValue: true,
     }),
     defineField({
+      name: 'canUseAsProjectOutcome',
+      title: 'Can Use as Project Outcome',
+      type: 'boolean',
+      initialValue: false,
+      description:
+        'Must remain false unless this achievement is explicitly linked to a specific project and authorized to be cited as an outcome.',
+    }),
+    defineField({
+      name: 'allowedUsage',
+      title: 'AI Generator Usage Permission',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'General Professional Context Only', value: 'general_context' },
+          { title: 'Specific Project Outcome (Linked Only)', value: 'project_outcome' },
+          { title: 'Tone & Style Guidance Only', value: 'tone_guidance' },
+        ],
+      },
+      initialValue: 'general_context',
+    }),
+    defineField({
       name: 'internalReviewNotes',
       title: 'Internal Review Notes',
       type: 'text',

@@ -43,19 +43,32 @@ export function ArchitectureDiagram({
           {graph.nodes.map((node, index) => {
             const isLast = index === graph.nodes.length - 1;
             const edge = graph.edges.find((e) => e.from === node.id);
+            const isProposed = node.implementationStatus === 'proposed';
 
             return (
               <React.Fragment key={node.id}>
                 {/* Node Box */}
-                <div className="flex-1 bg-surface-sidebar rounded-xl border border-border-subtle p-4 flex flex-col justify-between gap-3 shadow-xs hover:border-border-hover transition-colors">
+                <div
+                  className={`flex-1 rounded-xl p-4 flex flex-col justify-between gap-3 shadow-xs transition-colors ${
+                    isProposed
+                      ? 'bg-amber-500/5 border-2 border-dashed border-amber-500/40 hover:border-amber-500/70'
+                      : 'bg-surface-sidebar border border-border-subtle hover:border-border-hover'
+                  }`}
+                >
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-semibold uppercase tracking-wider text-text-muted">
+                    <div className="flex items-center justify-between gap-1">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-text-muted truncate">
                         {node.category}
                       </span>
-                      <span className="text-[10px] font-bold text-primary bg-highlight-tint px-1.5 py-0.5 rounded">
-                        0{index + 1}
-                      </span>
+                      {isProposed ? (
+                        <span className="text-[9px] font-bold text-amber-700 dark:text-amber-400 bg-amber-500/15 px-1.5 py-0.5 rounded uppercase">
+                          Proposed
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-bold text-primary bg-highlight-tint px-1.5 py-0.5 rounded">
+                          0{index + 1}
+                        </span>
+                      )}
                     </div>
 
                     <h4 className="text-sm font-bold text-text-primary">

@@ -35,10 +35,10 @@ import {
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
-const token = process.env.SANITY_API_WRITE_TOKEN;
+const token = process.env.SANITY_API_WRITE_TOKEN || process.env.SANITY_API_TOKEN;
 
 if (!projectId || !token) {
-  console.error('Missing NEXT_PUBLIC_SANITY_PROJECT_ID or SANITY_API_WRITE_TOKEN.');
+  console.error('Missing NEXT_PUBLIC_SANITY_PROJECT_ID or SANITY_API_WRITE_TOKEN (or SANITY_API_TOKEN).');
   console.info('Set these variables in your environment to execute this migration script.');
   process.exit(1);
 }

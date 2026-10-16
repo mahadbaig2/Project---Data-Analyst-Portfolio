@@ -50,7 +50,7 @@ export const siteSettings = defineType({
       title: 'Contact Email',
       type: 'string',
       validation: (Rule) => Rule.required().email(),
-      initialValue: 'hammadbaig.work@gmail.com',
+      initialValue: 'mirzahammadbaig147@gmail.com',
     }),
     defineField({
       name: 'location',

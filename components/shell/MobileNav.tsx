@@ -170,16 +170,30 @@ export function MobileNav() {
 
             {/* Bottom Drawer Actions */}
             <div className="flex flex-col gap-3 pt-4 border-t border-border-subtle mt-6">
-              <LinkButton
-                href={PROFILE_IDENTITY.cvUrl}
-                variant="secondary"
-                size="sm"
-                isExternal
-                className="w-full justify-center"
-              >
-                <Icons.download size={14} className="mr-1" />
-                <span>Download CV</span>
-              </LinkButton>
+              {PROFILE_IDENTITY.cvUrl &&
+              PROFILE_IDENTITY.cvUrl !== '#' &&
+              !PROFILE_IDENTITY.cvUrl.startsWith('#') ? (
+                <LinkButton
+                  href={PROFILE_IDENTITY.cvUrl}
+                  variant="secondary"
+                  size="sm"
+                  isExternal
+                  className="w-full justify-center"
+                >
+                  <Icons.download size={14} className="mr-1" />
+                  <span>Download CV</span>
+                </LinkButton>
+              ) : (
+                <LinkButton
+                  href="/about#contact"
+                  variant="secondary"
+                  size="sm"
+                  className="w-full justify-center"
+                >
+                  <Icons.alternate_email size={14} className="mr-1" />
+                  <span>CV on Request</span>
+                </LinkButton>
+              )}
 
               <LinkButton
                 href="/about#contact"

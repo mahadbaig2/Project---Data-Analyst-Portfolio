@@ -12,6 +12,7 @@ import {
   getAllCaseStudies,
 } from '@/lib/adapters/sanity-adapter';
 import { ArchitectureDiagram } from '@/components/modules/ArchitectureDiagram';
+import { SupportingVisual } from '@/components/modules/SupportingVisual';
 
 export async function generateStaticParams() {
   const slugs = await getCaseStudySlugs();
@@ -199,6 +200,22 @@ export default async function CaseStudyDetailPage({
       {/* 4. Architecture Diagram Component */}
       {project.architecture && (
         <ArchitectureDiagram graph={project.architecture} />
+      )}
+
+      {/* Supporting Visual Specifications (if present) */}
+      {project.supportingVisuals && project.supportingVisuals.length > 0 && (
+        <div className="space-y-6">
+          <SectionHeading
+            overline="Analytical Specifications"
+            title="Supporting Visual Specifications"
+            description="Process flows, before/after architectural shifts, and stakeholder interaction maps."
+          />
+          <div className="space-y-6">
+            {project.supportingVisuals.map((visual, idx) => (
+              <SupportingVisual key={visual.id || idx} spec={visual} />
+            ))}
+          </div>
+        </div>
       )}
 
       {/* 5. Calculations / DAX Engine Specification */}

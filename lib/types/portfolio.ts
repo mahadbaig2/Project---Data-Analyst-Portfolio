@@ -1,3 +1,5 @@
+import type { SupportingVisualSpec } from '@/lib/ai/schemas/visual-spec';
+
 export interface NavigationItem {
   label: string;
   href: string;
@@ -68,6 +70,7 @@ export interface CaseStudy {
   deliverables?: string[];
   architecture?: ArchitectureGraph;
   calculations?: { measure: string; formula: string; purpose: string }[];
+  supportingVisuals?: SupportingVisualSpec[];
   outcomes?: string[];
   decisions?: string[];
   challenges?: string[];

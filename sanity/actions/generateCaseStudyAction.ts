@@ -39,25 +39,49 @@ export function GenerateCaseStudyAction(props: DocumentActionProps): DocumentAct
     onHandle: async () => {
       setIsProcessing(true);
       try {
-        const response = await fetch('/api/ai/generate', {
-          method: 'POST',
-          headers: {
+        let editorialSecret = typeof window !== 'undefined' ? localStorage.getItem('mhb_editorial_secret') || '' : '';
+
+        const makeRequest = async (secret: string) => {
+          const headers: Record<string, string> = {
             'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            sourceDocumentId: props.id.replace(/^drafts\./, ''),
-            sourceContent: doc.rawContent,
-            projectTitleHint: doc.projectTitleHint || doc.title,
-            relatedOrganization: doc.relatedOrganization,
-            confidentialityStatus: doc.confidentialityStatus || 'anonymized',
-            confidentialityAcknowledged: doc.confidentialityAcknowledged,
-          }),
-        });
+          };
+          if (secret) {
+            headers['Authorization'] = `Bearer ${secret}`;
+            headers['x-editorial-secret'] = secret;
+          }
+
+          return fetch('/api/ai/generate', {
+            method: 'POST',
+            headers,
+            body: JSON.stringify({
+              sourceDocumentId: props.id.replace(/^drafts\./, ''),
+              sourceContent: doc.rawContent,
+              projectTitleHint: doc.projectTitleHint || doc.title,
+              relatedOrganization: doc.relatedOrganization,
+              confidentialityStatus: doc.confidentialityStatus || 'anonymized',
+              confidentialityAcknowledged: doc.confidentialityAcknowledged,
+            }),
+          });
+        };
+
+        let response = await makeRequest(editorialSecret);
+
+        // If 401 Unauthorized, prompt the editor for the secret
+        if (response.status === 401 && typeof window !== 'undefined') {
+          const promptedSecret = window.prompt(
+            'Editorial Authentication Required\n\nPlease enter the SANITY_PREVIEW_SECRET or CASE_STUDY_EDITORIAL_SECRET configured on the server:'
+          );
+          if (promptedSecret && promptedSecret.trim().length > 0) {
+            editorialSecret = promptedSecret.trim();
+            localStorage.setItem('mhb_editorial_secret', editorialSecret);
+            response = await makeRequest(editorialSecret);
+          }
+        }
 
         const result = await response.json();
 
         if (!response.ok || !result.success) {
-          setDialogMessage(`Generation failed: ${result.message || 'Unknown error'}`);
+          setDialogMessage(`Generation failed: ${result.message || result.error || 'Unknown error'}`);
           setDialogOpen(true);
         } else {
           const draftId = result.data?.targetCaseStudyDraftId || '';

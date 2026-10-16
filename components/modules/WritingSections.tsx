@@ -120,6 +120,19 @@ export function KnowledgeMapSection({
   );
 }
 
+function isExactArticleUrl(url?: string): boolean {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    const segments = parsed.pathname.split('/').filter(Boolean);
+    if (segments.length === 0) return false;
+    if (segments.length === 1 && segments[0].startsWith('@')) return false;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export function ArticleCardsGrid({ articles }: { articles: ArticleItem[] }) {
   const featured = articles.find((a) => a.isFeatured);
   const others = articles.filter((a) => a.id !== featured?.id);
@@ -143,7 +156,7 @@ export function ArticleCardsGrid({ articles }: { articles: ArticleItem[] }) {
                 </Badge>
               </div>
               <span className="text-[11px] text-text-muted">
-                Core Publication
+                {isExactArticleUrl(featured.mediumUrl) ? 'Published Essay' : 'Flagship Topic'}
               </span>
             </div>
 
@@ -157,15 +170,34 @@ export function ArticleCardsGrid({ articles }: { articles: ArticleItem[] }) {
             </div>
 
             <div className="pt-2">
-              <LinkButton
-                href={featured.mediumUrl}
-                variant="primary"
-                size="sm"
-                isExternal
-                showArrow
-              >
-                Read Article on Medium
-              </LinkButton>
+              {isExactArticleUrl(featured.mediumUrl) ? (
+                <LinkButton
+                  href={featured.mediumUrl}
+                  variant="primary"
+                  size="sm"
+                  isExternal
+                  showArrow
+                >
+                  Read Article on Medium
+                </LinkButton>
+              ) : (
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge variant="neutral" size="sm">
+                    Publication Forthcoming
+                  </Badge>
+                  {featured.mediumUrl && (
+                    <LinkButton
+                      href={featured.mediumUrl}
+                      variant="secondary"
+                      size="sm"
+                      isExternal
+                      showArrow
+                    >
+                      Author Profile on Medium
+                    </LinkButton>
+                  )}
+                </div>
+              )}
             </div>
           </Card>
         </div>
@@ -177,44 +209,63 @@ export function ArticleCardsGrid({ articles }: { articles: ArticleItem[] }) {
           All Essays in the Series
         </span>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {others.map((article) => (
-            <Card
-              key={article.id}
-              padding="lg"
-              hoverable
-              className="space-y-3 flex flex-col justify-between"
-            >
-              <div className="space-y-2.5">
-                <div className="flex items-center justify-between gap-2">
-                  <Badge variant="neutral" size="sm">
-                    {article.category}
-                  </Badge>
-                  <Icons.article size={14} className="text-text-muted" />
+          {others.map((article) => {
+            const hasExactPost = isExactArticleUrl(article.mediumUrl);
+            return (
+              <Card
+                key={article.id}
+                padding="lg"
+                hoverable
+                className="space-y-3 flex flex-col justify-between"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between gap-2">
+                    <Badge variant="neutral" size="sm">
+                      {article.category}
+                    </Badge>
+                    <Icons.article size={14} className="text-text-muted" />
+                  </div>
+
+                  <h4 className="text-sm font-bold text-text-primary">
+                    {article.title}
+                  </h4>
+
+                  <p className="text-xs text-text-secondary leading-relaxed">
+                    {article.summary}
+                  </p>
                 </div>
 
-                <h4 className="text-sm font-bold text-text-primary">
-                  {article.title}
-                </h4>
-
-                <p className="text-xs text-text-secondary leading-relaxed">
-                  {article.summary}
-                </p>
-              </div>
-
-              <div className="pt-3 border-t border-border-subtle">
-                <LinkButton
-                  href={article.mediumUrl}
-                  variant="ghost"
-                  size="sm"
-                  isExternal
-                  showArrow
-                  className="p-0 text-primary font-semibold"
-                >
-                  Read on Medium
-                </LinkButton>
-              </div>
-            </Card>
-          ))}
+                <div className="pt-3 border-t border-border-subtle">
+                  {hasExactPost ? (
+                    <LinkButton
+                      href={article.mediumUrl}
+                      variant="ghost"
+                      size="sm"
+                      isExternal
+                      showArrow
+                      className="p-0 text-primary font-semibold"
+                    >
+                      Read on Medium
+                    </LinkButton>
+                  ) : (
+                    <div className="flex items-center justify-between text-xs text-text-muted">
+                      <span className="text-[11px] text-text-muted">Topic Forthcoming</span>
+                      {article.mediumUrl && (
+                        <a
+                          href={article.mediumUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] font-semibold text-primary hover:underline"
+                        >
+                          Profile →
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </div>

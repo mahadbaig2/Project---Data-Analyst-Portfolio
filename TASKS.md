@@ -61,11 +61,11 @@ This plan deliberately contains only five milestones. Finish and verify each mil
 **Outcome:** The portfolio is trustworthy, stable, documented, and production-ready.
 
 - [ ] Perform a content audit with Hammad for names, titles, dates, metrics, links, project relationships, confidential details, and final CTA copy.
-- [ ] Test public routes, CMS editing, preview, publishing, generation retries, validation, empty states, 404/error behavior, forms/links, CV download, and responsive layouts.
-- [ ] Run lint and production build; fix accessibility, performance, metadata, image optimization, and layout-shift issues.
-- [ ] Confirm secrets remain server-only; add file validation, authorization, rate limits, safe logs, and privacy warnings to generation endpoints.
+- [x] Test public routes, CMS editing, preview, publishing, generation retries, validation, empty states, 404/error behavior, forms/links, CV download, and responsive layouts.
+- [x] Run lint and production build; fix accessibility, performance, metadata, image optimization, and layout-shift issues.
+- [x] Confirm secrets remain server-only; add file validation, authorization, rate limits, safe logs, and privacy warnings to generation endpoints.
 - [ ] Configure production deployment, Sanity production settings, environment variables, domain, sitemap/robots, and revalidation.
-- [ ] Complete concise handover documentation covering content edits, case-study generation/review, model/provider configuration, deployments, and common failures.
+- [x] Complete concise handover documentation covering content edits, case-study generation/review, model/provider configuration, deployments, and common failures.
 
 **Done when:** Production is live, all critical paths pass, Hammad can independently edit and publish content, and the real case-study workflow has been approved end to end.
 

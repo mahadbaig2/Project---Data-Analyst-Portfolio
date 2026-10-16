@@ -237,7 +237,9 @@ export function EducationAndCertifications({
   );
 }
 
-export function ContactPanel() {
+export function ContactPanel({ email }: { email?: string }) {
+  const contactEmail = email || 'mirzahammadbaig147@gmail.com';
+
   return (
     <div id="contact" className="space-y-6 pt-4 scroll-mt-20">
       <Card padding="xl" className="space-y-6">
@@ -263,10 +265,10 @@ export function ContactPanel() {
               Direct Email
             </span>
             <a
-              href="mailto:hammadbaig.work@gmail.com"
+              href={`mailto:${contactEmail}`}
               className="text-xs font-bold text-primary hover:underline break-all"
             >
-              hammadbaig.work@gmail.com
+              {contactEmail}
             </a>
           </div>
 

@@ -8,6 +8,14 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: [
+        '/studio',
+        '/studio/',
+        '/api/',
+        '/api/ai/',
+        '/api/draft-mode/',
+        '/api/revalidate',
+      ],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
   };

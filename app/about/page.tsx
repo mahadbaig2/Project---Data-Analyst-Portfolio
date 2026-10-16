@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { LinkButton } from '@/components/ui/LinkButton';
-import { getAboutPageData } from '@/lib/adapters/sanity-adapter';
+import { getAboutPageData, getSiteSettings } from '@/lib/adapters/sanity-adapter';
 import {
   AboutHeroSection,
   IdentityPillarsGrid,
@@ -17,7 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const data = await getAboutPageData();
+  const [data, siteSettings] = await Promise.all([
+    getAboutPageData(),
+    getSiteSettings(),
+  ]);
 
   return (
     <div className="space-y-12">
@@ -49,7 +52,7 @@ export default async function AboutPage() {
       />
 
       {/* 6. Contact Panel (with #contact anchor target) */}
-      <ContactPanel />
+      <ContactPanel email={siteSettings.email} />
     </div>
   );
 }

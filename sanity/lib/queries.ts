@@ -87,7 +87,7 @@ export const HOME_PAGE_QUERY = groq`
  * All Public Case Studies Query (for /work index)
  */
 export const ALL_CASE_STUDIES_QUERY = groq`
-  *[_type == "caseStudy"] | order(displayOrder asc, _createdAt desc) {
+  *[_type == "caseStudy" && !(_id in path('drafts.**')) && publicVisibility != false && status != "Draft"] | order(displayOrder asc, _createdAt desc) {
     title,
     "slug": slug.current,
     summary,
@@ -172,7 +172,7 @@ export const CASE_STUDY_BY_SLUG_QUERY = groq`
  * Slugs Query for Static Path Generation
  */
 export const CASE_STUDY_SLUGS_QUERY = groq`
-  *[_type == "caseStudy" && defined(slug.current)] {
+  *[_type == "caseStudy" && !(_id in path('drafts.**')) && publicVisibility != false && status != "Draft" && defined(slug.current)] {
     "slug": slug.current
   }
 `;

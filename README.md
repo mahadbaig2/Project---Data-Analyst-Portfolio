@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mirza Hammad Baig — Data Analyst & BI Solutions Architect Portfolio
+
+Production portfolio and AI-assisted case-study publishing system for **Mirza Hammad Baig**, operating across enterprise data analytics, Kimball dimensional architecture, business intelligence, teaching, and AI-powered analytics.
+
+---
+
+## Key Features
+
+- **Executive Analytics Design:** Custom design system built with Next.js App Router and vanilla CSS tokens reflecting enterprise BI aesthetics.
+- **Embedded Sanity Studio:** Full CMS editorial workflow embedded directly at `/studio`.
+- **AI Case-Study Draft Generator:** Server-only engine that converts unstructured Markdown/notes into structured case-study drafts with Kimball dimensional architecture diagrams and supporting visuals.
+- **Deterministic Safeguards:** Regex and AST validators prevent metric hallucination, context leakage, unevidenced technologies, and superlatives.
+- **Resilient Fallbacks:** Deterministic mock provider for local development, automatic failover from Google Gemini (`gemini-2.5-flash`) to Groq (`qwen-2.5-32b`), and verified fixture fallback when remote Sanity is offline.
+
+---
+
+## Documentation Links
+
+- [**Editorial & Handover Guide (for Hammad)**](docs/sanity-cms-guide.md): Complete instructions for signing in, editing pages, uploading assets (portrait, CV), running the AI generator, reviewing drafts, and publishing.
+- [**Product Requirements Document (PRD)**](PRD.md): Core vision, target audiences, integrity rules, and acceptance criteria.
+- [**Design Authority Document (DESIGN.md)**](DESIGN.md): Authoritative design system, tokens, typography, grid, and UI specifications.
+- [**Milestone Build Plan (TASKS.md)**](TASKS.md): Milestone progress and verified deliverables.
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Configuration
+Copy `.env.example` to `.env.local`:
+```bash
+cp .env.example .env.local
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Configure your Sanity project ID and API keys as described in [docs/sanity-cms-guide.md](docs/sanity-cms-guide.md). The application runs out of the box with verified fixture data and the deterministic mock AI provider if no remote credentials are provided.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the public site or [http://localhost:3000/studio](http://localhost:3000/studio) to access Sanity Studio.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Verification & Testing Suite
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the automated test suite:
+```bash
+npm run test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run TypeScript compilation check:
+```bash
+npx tsc --noEmit
+```
 
-## Deploy on Vercel
+Run ESLint:
+```bash
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run Next.js production build:
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (Turbopack, App Router, React Server Components)
+- **CMS:** Sanity Studio v3 (`sanity`, `next-sanity`)
+- **Validation:** Zod 4
+- **AI Providers:** Google Gemini REST API, Groq Cloud (Qwen 2.5 32B), Deterministic Mock Provider
+- **Styling:** Vanilla CSS design tokens & Tailwind CSS v4 utility primitives

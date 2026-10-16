@@ -53,15 +53,28 @@ export function TopUtilityBar() {
 
           {/* Quick Actions */}
           <div className="flex items-center gap-2">
-            <LinkButton
-              href={PROFILE_IDENTITY.cvUrl}
-              variant="secondary"
-              size="sm"
-              isExternal
-            >
-              <Icons.download size={14} className="text-text-secondary mr-1" />
-              <span>Download CV</span>
-            </LinkButton>
+            {PROFILE_IDENTITY.cvUrl &&
+            PROFILE_IDENTITY.cvUrl !== '#' &&
+            !PROFILE_IDENTITY.cvUrl.startsWith('#') ? (
+              <LinkButton
+                href={PROFILE_IDENTITY.cvUrl}
+                variant="secondary"
+                size="sm"
+                isExternal
+              >
+                <Icons.download size={14} className="text-text-secondary mr-1" />
+                <span>Download CV</span>
+              </LinkButton>
+            ) : (
+              <LinkButton
+                href="/about#contact"
+                variant="secondary"
+                size="sm"
+              >
+                <Icons.alternate_email size={14} className="text-text-secondary mr-1" />
+                <span>CV on Request</span>
+              </LinkButton>
+            )}
 
             <LinkButton
               href="/work"

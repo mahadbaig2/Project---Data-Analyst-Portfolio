@@ -56,6 +56,68 @@ export default async function HomePage() {
         }
       />
 
+      {/* Give visitors clear starting points instead of asking them to read the whole CV. */}
+      <section aria-labelledby="start-here" className="space-y-4">
+        <div className="max-w-2xl space-y-1">
+          <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">
+            Start here
+          </span>
+          <h2 id="start-here" className="text-xl sm:text-2xl font-bold tracking-tight text-text-primary">
+            What would you like to explore?
+          </h2>
+          <p className="text-sm text-text-secondary leading-relaxed">
+            A quick route through the portfolio, whether you are hiring, looking for an analytics partner, or here to learn.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            {
+              href: '/work',
+              icon: 'analytics' as const,
+              label: 'See the work',
+              description: 'Browse real BI and data-system case studies with the decisions, architecture, and outcomes behind them.',
+              action: 'Explore case studies',
+            },
+            {
+              href: '/expertise',
+              icon: 'account_tree' as const,
+              label: 'Understand the approach',
+              description: 'See how data modeling, Power BI delivery, and AI-assisted workflows fit together into useful systems.',
+              action: 'View capabilities',
+            },
+            {
+              href: '/about#contact',
+              icon: 'alternate_email' as const,
+              label: 'Start a conversation',
+              description: 'Have a role, reporting challenge, or training need? Find the simplest way to get in touch.',
+              action: 'Get in touch',
+            },
+          ].map((path) => {
+            const IconComponent = Icons[path.icon];
+            return (
+              <LinkButton
+                key={path.href}
+                href={path.href}
+                variant="ghost"
+                className="group h-full items-start justify-start rounded-2xl border border-border-subtle bg-surface-card p-5 text-left shadow-xs hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+              >
+                <span className="flex h-full flex-col gap-4">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-highlight-tint text-primary">
+                    {IconComponent && <IconComponent size={19} />}
+                  </span>
+                  <span className="space-y-1.5">
+                    <span className="block text-base font-bold text-text-primary">{path.label}</span>
+                    <span className="block text-xs font-normal leading-relaxed text-text-secondary">{path.description}</span>
+                  </span>
+                  <span className="mt-auto text-xs font-semibold text-primary">{path.action} <span aria-hidden="true">→</span></span>
+                </span>
+              </LinkButton>
+            );
+          })}
+        </div>
+      </section>
+
       {/* 2. Executive Indicators (Factual & Structural) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card padding="lg" className="space-y-2 border-l-4 border-l-primary">

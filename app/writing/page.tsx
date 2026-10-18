@@ -25,7 +25,7 @@ export default async function WritingPage() {
 
   const mediumLink =
     siteSettings.socialLinks.find((s) => s.platform === 'medium')?.href ||
-    'https://medium.com/@mirzahammad';
+    'https://medium.com/@mirzahammadbaig147';
 
   return (
     <div className="space-y-12">

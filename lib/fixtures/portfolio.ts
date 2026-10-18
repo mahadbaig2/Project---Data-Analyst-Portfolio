@@ -16,10 +16,10 @@ import {
 export const CANONICAL_NAVIGATION: NavigationItem[] = [
   { label: 'Home', href: '/', icon: 'home' },
   { label: 'Work', href: '/work', icon: 'analytics' },
-  { label: 'Experience', href: '/experience', icon: 'timeline' },
   { label: 'Expertise', href: '/expertise', icon: 'account_tree' },
-  { label: 'Teaching', href: '/teaching', icon: 'school' },
+  { label: 'Experience', href: '/experience', icon: 'timeline' },
   { label: 'Writing', href: '/writing', icon: 'article' },
+  { label: 'Teaching', href: '/teaching', icon: 'school' },
   { label: 'About', href: '/about', icon: 'person' },
   { label: 'Contact', href: '/about#contact', icon: 'alternate_email' },
 ];
@@ -47,17 +47,17 @@ export const PROFILE_IDENTITY: ProfileIdentity = {
   socialLinks: [
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/mirzahammad/',
+      href: 'https://www.linkedin.com/in/mirzahammadbaig1/',
       platform: 'linkedin',
     },
     {
       label: 'GitHub',
-      href: 'https://github.com/hammadbaig',
+      href: 'https://github.com/mirzahammad1',
       platform: 'github',
     },
     {
       label: 'Medium',
-      href: 'https://medium.com/@mirzahammadbaig',
+      href: 'https://medium.com/@mirzahammadbaig147',
       platform: 'medium',
     },
     {
@@ -219,7 +219,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Clear definition of fiscal week cutoffs with business stakeholders is essential before modeling calendar dimensions.',
       'Explicit measure branching in DAX provides superior maintainability over deeply nested monolithic formulas.',
     ],
-    githubUrl: 'https://github.com/hammadbaig',
+    githubUrl: 'https://github.com/mirzahammad1',
     previewImage: {
       alt: 'Power BI Weekly Sales Dashboard screenshot preview',
       caption: 'Executive overview displaying weekly gross sales, YoY variance, department distribution, and store comparisons.',
@@ -310,7 +310,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     decisions: [
       'Utilized Python for statistical validation before committing final calculation metrics to the Power BI semantic model.',
     ],
-    githubUrl: 'https://github.com/hammadbaig',
+    githubUrl: 'https://github.com/mirzahammad1',
     previewImage: {
       alt: 'Hospitality Booking Analytics Power BI interface',
       caption: 'Multivariate dashboard detailing ADR trends, lead-time correlations, and cancellation patterns.',
@@ -406,7 +406,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Proved that multi-agent routing paired with strict RAG context reduces resolution delays while ensuring zero hallucinated curriculum requirements.',
       'Generated actionable feedback on common student stumbling blocks in DAX and SQL for instructors.',
     ],
-    githubUrl: 'https://github.com/hammadbaig',
+    githubUrl: 'https://github.com/mirzahammad1',
     previewImage: {
       alt: 'EDU Assist Multi-Agent System Architecture diagram',
       caption: 'Agentic orchestration workflow highlighting vector search, intent classification, and grounded synthesis.',
@@ -715,7 +715,7 @@ export const WRITING_SERIES: ArticleItem[] = [
     series: 'Understanding the Data Field',
     category: 'Foundations',
     summary: 'An exploration of what data fundamentally represents in modern organizations, the DIKW pyramid, and structured vs unstructured realities.',
-    mediumUrl: 'https://medium.com/@mirzahammadbaig',
+    mediumUrl: 'https://medium.com/@mirzahammadbaig147',
     isFeatured: true,
   },
   {
@@ -724,7 +724,7 @@ export const WRITING_SERIES: ArticleItem[] = [
     series: 'Understanding the Data Field',
     category: 'Architecture',
     summary: 'A technical breakdown of VertiPaq compression, memory consumption, relationship cardinality, and why single-table models fail at scale.',
-    mediumUrl: 'https://medium.com/@mirzahammadbaig',
+    mediumUrl: 'https://medium.com/@mirzahammadbaig147',
     isFeatured: true,
   },
   {
@@ -733,7 +733,7 @@ export const WRITING_SERIES: ArticleItem[] = [
     series: 'Understanding the Data Field',
     category: 'Ecosystem',
     summary: 'Disentangling overlapping roles across data engineering, business intelligence, data architecture, and applied machine learning.',
-    mediumUrl: 'https://medium.com/@mirzahammadbaig',
+    mediumUrl: 'https://medium.com/@mirzahammadbaig147',
     isFeatured: false,
   },
   {
@@ -742,7 +742,7 @@ export const WRITING_SERIES: ArticleItem[] = [
     series: 'Understanding the Data Field',
     category: 'DAX & BI',
     summary: 'Deconstructing row context transition, CALCULATE modifiers, and common pitfalls when calculating running totals and YoY variances.',
-    mediumUrl: 'https://medium.com/@mirzahammadbaig',
+    mediumUrl: 'https://medium.com/@mirzahammadbaig147',
     isFeatured: false,
   },
   {
@@ -751,7 +751,7 @@ export const WRITING_SERIES: ArticleItem[] = [
     series: 'Understanding the Data Field',
     category: 'Governance',
     summary: 'Why self-service analytics without conformable dimensions and certified semantic models creates corporate chaos.',
-    mediumUrl: 'https://medium.com/@mirzahammadbaig',
+    mediumUrl: 'https://medium.com/@mirzahammadbaig147',
     isFeatured: false,
   },
   {
@@ -760,7 +760,7 @@ export const WRITING_SERIES: ArticleItem[] = [
     series: 'Understanding the Data Field',
     category: 'Modern AI',
     summary: 'Separating marketing hype from practical value: using agentic RAG for knowledge discovery while keeping deterministic data models for calculations.',
-    mediumUrl: 'https://medium.com/@mirzahammadbaig',
+    mediumUrl: 'https://medium.com/@mirzahammadbaig147',
     isFeatured: false,
   },
 ];

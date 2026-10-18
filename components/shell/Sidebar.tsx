@@ -48,19 +48,6 @@ export function Sidebar() {
           </div>
         </div>
 
-        {/* Narrative & Descriptor */}
-        <div className="p-3 bg-surface-card rounded-lg border border-border-subtle">
-          <div className="flex items-center gap-1.5 mb-1 text-chart-accent-emerald">
-            <Icons.account_tree size={13} />
-            <span className="text-[10px] font-semibold uppercase tracking-wider">
-              {PROFILE_IDENTITY.descriptor}
-            </span>
-          </div>
-          <p className="text-xs text-text-secondary leading-snug">
-            {PROFILE_IDENTITY.summary}
-          </p>
-        </div>
-
         {/* Social Channels */}
         <div className="flex items-center justify-between px-1 py-0.5 border-b border-border-subtle pb-2.5">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-text-muted">
@@ -85,36 +72,41 @@ export function Sidebar() {
           </div>
         </div>
 
-        {/* Canonical Navigation Menu */}
-        <nav aria-label="Main Navigation" className="flex flex-col gap-1">
-          {CANONICAL_NAVIGATION.map((item) => {
-            const active = isRouteActive(item.href);
-            const IconComponent = Icons[item.icon];
+        {/* Visitor-first navigation: start with the work, then go deeper. */}
+        <nav aria-label="Main Navigation" className="space-y-4">
+          {[
+            { label: 'Explore', items: CANONICAL_NAVIGATION.filter((item) => ['Home', 'Work', 'Expertise'].includes(item.label)) },
+            { label: 'More about me', items: CANONICAL_NAVIGATION.filter((item) => ['Experience', 'Writing', 'Teaching', 'About', 'Contact'].includes(item.label)) },
+          ].map((section) => (
+            <div key={section.label} className="space-y-1.5">
+              <span className="px-3 text-[10px] font-bold uppercase tracking-[0.16em] text-text-muted">
+                {section.label}
+              </span>
+              <div className="flex flex-col gap-1">
+                {section.items.map((item) => {
+                  const active = isRouteActive(item.href);
+                  const IconComponent = Icons[item.icon];
 
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={active ? 'page' : undefined}
-                className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-150 ${
-                  active
-                    ? 'bg-surface-card text-primary font-medium shadow-xs border border-border-subtle border-l-4 border-l-primary'
-                    : 'text-text-secondary hover:bg-surface-muted hover:text-text-primary'
-                }`}
-              >
-                {IconComponent && (
-                  <IconComponent
-                    size={17}
-                    className={active ? 'text-primary' : 'text-text-muted'}
-                  />
-                )}
-                <span className="truncate">{item.label}</span>
-                {active && (
-                  <span className="ml-auto w-1.5 h-1.5 rounded-full bg-chart-accent-emerald" />
-                )}
-              </Link>
-            );
-          })}
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      aria-current={active ? 'page' : undefined}
+                      className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-150 ${
+                        active
+                          ? 'bg-surface-card text-primary font-medium shadow-xs border border-border-subtle border-l-4 border-l-primary'
+                          : 'text-text-secondary hover:bg-surface-muted hover:text-text-primary'
+                      }`}
+                    >
+                      {IconComponent && <IconComponent size={17} className={active ? 'text-primary' : 'text-text-muted'} />}
+                      <span className="truncate">{item.label}</span>
+                      {active && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-chart-accent-emerald" />}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </nav>
       </div>
 
@@ -140,7 +132,7 @@ export function Sidebar() {
           size="sm"
           className="w-full justify-center"
         >
-          Contact / Inquire
+          Let&apos;s work together
         </LinkButton>
 
         {/* Availability status line */}

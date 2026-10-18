@@ -28,7 +28,7 @@ export function WritingHeroBanner() {
 
         <div className="shrink-0 flex flex-col sm:flex-row lg:flex-col gap-2.5">
           <LinkButton
-            href="https://medium.com/@mirzahammad"
+            href="https://medium.com/@mirzahammadbaig147"
             variant="primary"
             isExternal
             showArrow

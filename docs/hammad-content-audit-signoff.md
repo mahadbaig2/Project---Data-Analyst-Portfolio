@@ -26,9 +26,9 @@ This checklist contains all biographical facts, career appointments, performance
 
 | Platform | Target URL | Status | Notes / Correction |
 | :--- | :--- | :--- | :--- |
-| **LinkedIn** | `https://www.linkedin.com/in/mirzahammad/` | [ ] | |
-| **GitHub** | `https://github.com/hammadbaig` | [ ] | |
-| **Medium** | `https://medium.com/@mirzahammadbaig` | [ ] | |
+| **LinkedIn** | `https://www.linkedin.com/in/mirzahammadbaig1/` | [ ] | |
+| **GitHub** | `https://github.com/mirzahammad1` | [ ] | |
+| **Medium** | `https://medium.com/@mirzahammadbaig147` | [ ] | |
 | **Direct Email** | `mailto:mirzahammadbaig147@gmail.com` | [ ] | |
 
 ---

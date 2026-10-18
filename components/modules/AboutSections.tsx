@@ -286,7 +286,7 @@ export function ContactPanel({ email }: { email?: string }) {
               Professional Network
             </span>
             <a
-              href="https://linkedin.com/in/mirzahammadbaig"
+              href="https://www.linkedin.com/in/mirzahammadbaig1/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-bold text-primary hover:underline flex items-center gap-1"
@@ -301,7 +301,7 @@ export function ContactPanel({ email }: { email?: string }) {
             </span>
             <div className="flex items-center gap-3 text-xs font-bold text-primary">
               <a
-                href="https://github.com/mirzahammadbaig"
+                href="https://github.com/mirzahammad1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
@@ -310,7 +310,7 @@ export function ContactPanel({ email }: { email?: string }) {
               </a>
               <span>·</span>
               <a
-                href="https://medium.com/@mirzahammad"
+                href="https://medium.com/@mirzahammadbaig147"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"

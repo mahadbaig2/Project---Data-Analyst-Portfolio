@@ -73,3 +73,15 @@ body{background:var(--paper)}
   .home-article h3{font-size:24px}
   .home-teaching{grid-template-columns:1fr;gap:55px;padding-top:85px;padding-bottom:90px}
 }
+
+/* Edge-to-edge sections and persistent navigation */
+html{scroll-padding-top:77px}
+.site-paper{width:100%;max-width:none;margin:0;overflow:visible}
+.site-header{position:sticky;top:0;z-index:50;width:100%;margin:0;border-radius:0}
+.hero{overflow:hidden}
+.home-work{scroll-margin-top:77px}
+@media(max-width:700px){
+  html{scroll-padding-top:64px}
+  .site-header{margin:0;border-radius:0}
+  .home-work{scroll-margin-top:64px}
+}

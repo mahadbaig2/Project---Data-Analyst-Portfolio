@@ -1,62 +1,6 @@
+import { Arrow } from '@/components/portfolio/Arrow';
 import type { Metadata } from 'next';
-import { PageHeader } from '@/components/ui/PageHeader';
-import { SectionHeading } from '@/components/ui/SectionHeading';
-import { LinkButton } from '@/components/ui/LinkButton';
-import { getTeachingPageData } from '@/lib/adapters/sanity-adapter';
-import {
-  AtomcampLecturerHero,
-  LearningFlowSection,
-  TeachingTopicCards,
-  MentorshipAndEditorial,
-} from '@/components/modules/TeachingModules';
-
-export const metadata: Metadata = {
-  title: 'Teaching & Mentorship | Mirza Hammad Baig',
-  description:
-    'Applied data analytics education, Power BI lecturing at Atomcamp, corporate workshops, and technical mentorship in Kimball modeling and DAX.',
-};
-
-export default async function TeachingPage() {
-  const data = await getTeachingPageData();
-
-  return (
-    <div className="space-y-12">
-      {/* 1. Page Header */}
-      <PageHeader
-        badgeText={data.badgeText}
-        title={data.title}
-        description={data.description}
-        actions={
-          <>
-            <LinkButton href="/about#contact" variant="primary" showArrow>
-              Inquire About Workshops
-            </LinkButton>
-            <LinkButton href="/writing" variant="secondary">
-              Read Technical Articles
-            </LinkButton>
-          </>
-        }
-      />
-
-      {/* 2. Atomcamp Lecturer Hero & Corporate Enablement */}
-      <AtomcampLecturerHero />
-
-      {/* 3. 6-Phase Applied Learning Flow */}
-      <LearningFlowSection flow={data.flow} />
-
-      {/* 4. Core Curriculum Modules */}
-      <div className="space-y-6">
-        <SectionHeading
-          overline="Curriculum"
-          title="Instructional Focus Areas"
-          description="Modular technical tracks delivered across cohort-based bootcamps and enterprise upskilling sessions."
-        />
-
-        <TeachingTopicCards topics={data.topics} />
-      </div>
-
-      {/* 5. Mentorship Themes & Editorial Statement */}
-      <MentorshipAndEditorial themes={data.mentorship} />
-    </div>
-  );
-}
+import Link from 'next/link';
+import { TEACHING_TOPICS } from '@/lib/fixtures/portfolio';
+export const metadata: Metadata = { title: 'Teaching', description: 'Data and business intelligence teaching by Mirza Hammad Baig.' };
+export default function TeachingPage() { return <div className="inner-page section-pad"><div className="page-hero" data-reveal><h1>Knowledge grows<br /><span>when shared.</span></h1><p>Making useful data skills approachable, practical, and memorable.</p></div><div className="teaching-feature" data-reveal><div><h2>Teach the thinking.<br />Then the tools.</h2><p>Good teaching starts with the why. I help learners connect the concepts to real business questions and build confidence through hands-on practice.</p></div><div className="teaching-symbol" aria-hidden="true">✳</div></div><div className="teaching-list">{TEACHING_TOPICS.map((topic, index) => <div className="teaching-item" key={topic.id} data-reveal><span>0{index + 1}</span><h2>{topic.title}</h2><p>{topic.description}</p></div>)}</div><div className="contact-band" data-reveal><h2>Learning starts with a conversation.</h2><Link href="/about#contact">Get in touch <Arrow /></Link></div></div>; }

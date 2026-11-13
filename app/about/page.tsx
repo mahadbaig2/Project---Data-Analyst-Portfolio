@@ -1,58 +1,7 @@
+import { Arrow } from '@/components/portfolio/Arrow';
 import type { Metadata } from 'next';
-import { PageHeader } from '@/components/ui/PageHeader';
-import { LinkButton } from '@/components/ui/LinkButton';
-import { getAboutPageData, getSiteSettings } from '@/lib/adapters/sanity-adapter';
-import {
-  AboutHeroSection,
-  IdentityPillarsGrid,
-  CareerPrinciplesSection,
-  EducationAndCertifications,
-  ContactPanel,
-} from '@/components/modules/AboutSections';
-
-export const metadata: Metadata = {
-  title: 'About & Direct Inquiries | Mirza Hammad Baig',
-  description:
-    'Professional profile, 4 identity pillars, verified education at KIET & Aligarh, career principles, and direct contact channels for Mirza Hammad Baig.',
-};
-
-export default async function AboutPage() {
-  const [data, siteSettings] = await Promise.all([
-    getAboutPageData(),
-    getSiteSettings(),
-  ]);
-
-  return (
-    <div className="space-y-12">
-      {/* 1. Header */}
-      <PageHeader
-        badgeText={data.badgeText}
-        title={data.title}
-        description={data.description}
-        actions={
-          <LinkButton href="#contact" variant="primary" showArrow>
-            Direct Contact Channels
-          </LinkButton>
-        }
-      />
-
-      {/* 2. Hero Profile with Monogram Fallback */}
-      <AboutHeroSection />
-
-      {/* 3. Four Identity Pillars */}
-      <IdentityPillarsGrid pillars={data.pillars} />
-
-      {/* 4. Career Principles & Axioms */}
-      <CareerPrinciplesSection principles={data.principles} />
-
-      {/* 5. Education & Certifications (Verified Only) */}
-      <EducationAndCertifications
-        education={data.education}
-        certifications={data.certifications}
-      />
-
-      {/* 6. Contact Panel (with #contact anchor target) */}
-      <ContactPanel email={siteSettings.email} />
-    </div>
-  );
-}
+import Image from 'next/image';
+import Link from 'next/link';
+import { PROFILE_IDENTITY } from '@/lib/fixtures/portfolio';
+export const metadata: Metadata = { title: 'About', description: 'Get to know Mirza Hammad Baig, data analyst and BI architect.' };
+export default function AboutPage() { return <div className="inner-page section-pad"><div className="page-hero" data-reveal><h1>Curious by nature.<br /><span>Clear by design.</span></h1><p>I&apos;m Hammad, a data analyst and BI architect based in Pakistan.</p></div><div className="about-grid"><div className="about-image" data-reveal><Image src="/placeholders/portrait.jpg" alt="Placeholder portrait, to be replaced with Hammad's photo" fill sizes="(max-width: 760px) 100vw, 50vw" /></div><div className="about-copy" data-reveal><h2>I connect the dots between data and people.</h2><p>I work across analytics, engineering, and design to create systems that teams can trust and actually enjoy using. From untangling a data model to shaping a clearer report, I care about the details that make the whole thing work.</p><p>Outside delivery, I teach and write about the ideas behind better data work. Making complex ideas understandable is part of the job, not an afterthought.</p><Link className="button button-dark" href="/experience">My experience <span><Arrow /></span></Link></div></div><div className="about-values" data-reveal><h2>What I believe</h2><div><p>Ask the useful question.</p><p>Build for the people using it.</p><p>Make clarity a habit.</p></div></div><div className="contact-band" id="contact" data-reveal><h2>Have something in mind?</h2><a href={`mailto:${PROFILE_IDENTITY.email}`}>{PROFILE_IDENTITY.email} <Arrow /></a></div></div>; }

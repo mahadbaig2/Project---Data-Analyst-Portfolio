@@ -11,6 +11,8 @@ export const article = defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title' } }),
+    defineField({ name: 'body', title: 'Article body', type: 'blockContent' }),
     defineField({
       name: 'series',
       title: 'Publication Series',

@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NODE_USE_ENV_PROXY=1 next dev",
+    "build": "NODE_USE_ENV_PROXY=1 next build",
+    "start": "NODE_USE_ENV_PROXY=1 next start",
     "lint": "eslint",
-    "test": "tsx --test tests/**/*.test.ts"
+    "test": "SANITY_API_WRITE_TOKEN='' tsx --test tests/**/*.test.ts"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",

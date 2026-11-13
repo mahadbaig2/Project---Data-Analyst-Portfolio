@@ -73,3 +73,13 @@ body{background:var(--paper)}
   .home-article h3{font-size:24px}
   .home-teaching{grid-template-columns:1fr;gap:55px;padding-top:85px;padding-bottom:90px}
 }
+
+/* Keep the content centered while section colors span the viewport. */
+html{scroll-padding-top:77px}
+.site-paper{overflow:visible}
+.site-header{position:sticky;top:0;z-index:50}
+.hero{overflow:hidden}
+.home-work{scroll-margin-top:77px}
+.work-section,.home-expertise,.home-writing,.home-teaching,.statement,.site-footer{position:relative;isolation:isolate}
+.work-section::before,.home-expertise::before,.home-writing::before,.home-teaching::before,.statement::before,.site-footer::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:inherit;pointer-events:none}
+@media(max-width:700px){html{scroll-padding-top:64px}.home-work{scroll-margin-top:64px}}

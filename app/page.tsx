@@ -71,6 +71,6 @@ export default async function HomePage() {
       <div className="home-teaching-topics" data-reveal><div><strong>Power BI & DAX</strong><span>Models, measures, and useful reports</span></div><div><strong>SQL & Python</strong><span>Working with real datasets</span></div><div><strong>Project mentoring</strong><span>From rough idea to clear case study</span></div></div>
     </section>
 
-    <section className="statement section-pad" data-reveal><h2>Thanks for exploring<br /><em>my work.</em></h2><Link className="button button-yellow" href={`mailto:${PROFILE_IDENTITY.email}`}>Get in touch <span><Arrow /></span></Link></section>
+    <section className="statement section-pad"><h2>Thanks for exploring<br /><em>my work.</em></h2><Link className="button button-yellow" href={`mailto:${PROFILE_IDENTITY.email}`}>Get in touch <span><Arrow /></span></Link></section>
   </>;
 }

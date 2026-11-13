@@ -9,7 +9,7 @@ const inter = Inter({ variable: '--font-inter', subsets: ['latin'], display: 'sw
 export const viewport: Viewport = { themeColor: '#efb72f', width: 'device-width', initialScale: 1 };
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_METADATA.siteUrl),
-  title: { default: 'Mirza Hammad Baig — Data, made clear', template: '%s | Mirza Hammad Baig' },
+  title: { default: 'Mirza Hammad Baig — Data analyst & BI architect', template: '%s | Mirza Hammad Baig' },
   description: 'Data analysis, business intelligence and thoughtful systems by Mirza Hammad Baig.',
 };
 

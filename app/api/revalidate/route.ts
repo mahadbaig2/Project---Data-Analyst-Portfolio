@@ -9,6 +9,7 @@ export async function POST(req: NextRequest) {
   if (body?._type !== 'article') return NextResponse.json({ message: 'Only blog articles can be revalidated' }, { status: 400 });
   revalidateTag('article', 'max');
   revalidatePath('/blog');
+  revalidatePath('/');
   if (body?.slug?.current) revalidatePath(`/blog/${body.slug.current}`);
   return NextResponse.json({ revalidated: true });
 }

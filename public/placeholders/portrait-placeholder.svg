@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-label="Portrait placeholder">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#d5d0c5"/><stop offset="1" stop-color="#aaa89e"/></linearGradient><linearGradient id="figure" x2="1" y2="1"><stop stop-color="#77766f"/><stop offset="1" stop-color="#4b4b48"/></linearGradient></defs>
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <circle cx="450" cy="315" r="275" fill="#e9e4da" opacity=".5"/>
+  <path d="M0 900 Q120 705 300 670 Q450 640 600 670 Q780 705 900 900 L900 1100 H0Z" fill="url(#figure)"/>
+  <ellipse cx="450" cy="410" rx="165" ry="205" fill="#88877f"/>
+  <path d="M335 565 Q450 640 565 565 L590 690 Q450 760 310 690Z" fill="#73736c"/>
+  <circle cx="450" cy="410" r="295" fill="none" stroke="#f7f3e9" opacity=".35" stroke-width="2"/>
+  <text x="450" y="965" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="22" letter-spacing="4">PORTRAIT PLACEHOLDER</text>
+</svg>

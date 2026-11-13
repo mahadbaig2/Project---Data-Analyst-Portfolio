@@ -7,3 +7,69 @@
 
 .header-cta span,.button span,.text-link span,.sticker-arrow,.project-image-arrow,.expertise-arrow,.next-project b,.site-footer a span{font-family:Arial,sans-serif}
 .arrow-icon{display:inline-block;width:.9em;height:.9em;vertical-align:-.08em;flex:none}.hero-arrow .arrow-icon{width:.7em;height:.7em}.principle-icon .arrow-icon{width:1em;height:1em}
+
+/* Portfolio home and full-bleed canvas */
+body{background:var(--paper)}
+.site-frame{padding:0;background:var(--paper)}
+.site-paper{background:var(--paper)}
+.hero{min-height:590px;padding-top:90px;padding-bottom:82px}
+.hero h1{font-size:clamp(56px,6.7vw,104px)}
+.hero p{max-width:610px}
+.home-work{scroll-margin-top:20px;padding-top:100px}
+.home-work .section-heading p,.home-expertise .section-heading p,.home-writing .section-heading p{font-size:14px;line-height:1.6;color:#686868;margin:17px 0 0}
+.home-work .project-tile:first-child{grid-column:span 2}
+.home-work .project-tile:first-child .project-image{height:clamp(390px,43vw,610px)}
+.home-work .project-tile:first-child .project-caption h3{font-size:24px;max-width:none}
+.home-intro{padding-top:115px;padding-bottom:125px}
+.home-intro .intro-card,.home-intro .portrait-card{min-height:540px}
+.intro-note{border-top:1px solid #676767;padding-top:17px;color:#c5c5c5;font-size:13px;line-height:1.6;max-width:330px}
+.portrait-sticker small{font-size:12px;font-weight:500;color:#777;letter-spacing:0}
+.home-expertise{background:#fff;padding-top:105px;padding-bottom:125px}
+.home-expertise-list{border-top:1px solid var(--line)}
+.home-expertise-item{display:grid;grid-template-columns:55px 1fr 1fr;align-items:baseline;gap:25px;padding:30px 4px;border-bottom:1px solid var(--line)}
+.home-expertise-item>span{font-size:12px;color:#999}
+.home-expertise-item h3{font-size:clamp(25px,3.1vw,43px);letter-spacing:-.055em;line-height:1.1;margin:0}
+.home-expertise-item p{font-size:14px;line-height:1.5;color:#777;margin:0;max-width:350px}
+.home-experience{display:grid;grid-template-columns:1fr 1fr;gap:10%;padding-top:105px;padding-bottom:115px}
+.home-experience h2{font-size:clamp(38px,4vw,58px);line-height:1.08;letter-spacing:-.065em;margin:0}
+.home-experience p{font-size:14px;color:#777;margin:17px 0 0}
+.home-roles{border-top:1px solid var(--line)}
+.home-roles>div{border-bottom:1px solid var(--line);padding:20px 0;display:flex;flex-direction:column;gap:5px}
+.home-roles strong{font-size:20px;letter-spacing:-.04em}
+.home-roles span{font-size:13px;color:#777}
+.home-roles>.text-link{margin-top:24px}
+.home-writing{background:#fff;padding-top:105px;padding-bottom:120px}
+.home-article-list{border-top:1px solid var(--line)}
+.home-article{display:grid;grid-template-columns:55px 1fr 30px;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding:29px 4px}
+.home-article>span{font-size:12px;color:#999}
+.home-article h3{font-size:clamp(24px,2.7vw,39px);line-height:1.14;letter-spacing:-.055em;margin:0;max-width:850px}
+.home-article>.arrow-icon{font-size:25px;transition:transform .3s var(--ease)}
+.home-article:hover>.arrow-icon{transform:translate(4px,-4px)}
+.home-writing-empty{padding:35px 0;color:#777}.home-writing-empty a{font-weight:700;color:var(--ink)}
+.home-teaching{background:#252525;color:#fff;display:grid;grid-template-columns:1.2fr 1fr;gap:10%;padding-top:120px;padding-bottom:125px}
+.home-teaching-lead h2{font-size:clamp(45px,5.4vw,78px);letter-spacing:-.075em;line-height:1.04;margin:0}
+.home-teaching-lead h2 span{color:#aaa}
+.home-teaching-lead p{font-size:15px;line-height:1.75;color:#ccc;max-width:550px;margin:25px 0 30px}
+.home-teaching-topics{align-self:center;border-top:1px solid #666}
+.home-teaching-topics>div{padding:24px 0;border-bottom:1px solid #666;display:flex;flex-direction:column;gap:8px}
+.home-teaching-topics strong{font-size:25px;letter-spacing:-.05em}
+.home-teaching-topics span{font-size:13px;color:#aaa}
+@media(max-width:700px){
+  .site-frame{padding:0}.site-header{margin:0 12px}
+  .wordmark{font-size:18px;letter-spacing:-1.2px}
+  .hero{min-height:520px;padding:68px 18px 73px}
+  .hero h1{font-size:clamp(45px,10vw,70px)}
+  .hero p{font-size:13px}
+  .home-work{padding-top:73px}
+  .home-work .project-tile:first-child{grid-column:auto}
+  .home-work .project-tile:first-child .project-image{height:310px}
+  .home-intro{padding-top:80px;padding-bottom:85px}
+  .home-intro .intro-card,.home-intro .portrait-card{min-height:470px}
+  .home-expertise,.home-writing{padding-top:80px;padding-bottom:90px}
+  .home-expertise-item{grid-template-columns:32px 1fr;gap:9px 12px;padding:23px 0}
+  .home-expertise-item p{grid-column:2;font-size:13px}
+  .home-experience{grid-template-columns:1fr;gap:35px;padding-top:85px;padding-bottom:90px}
+  .home-article{grid-template-columns:28px 1fr 22px;gap:12px;padding:24px 0}
+  .home-article h3{font-size:24px}
+  .home-teaching{grid-template-columns:1fr;gap:55px;padding-top:85px;padding-bottom:90px}
+}

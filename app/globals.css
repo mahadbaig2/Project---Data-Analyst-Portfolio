@@ -83,3 +83,43 @@ html{scroll-padding-top:77px}
 .work-section,.home-expertise,.home-writing,.home-teaching,.statement,.site-footer{position:relative;isolation:isolate}
 .work-section::before,.home-expertise::before,.home-writing::before,.home-teaching::before,.statement::before,.site-footer::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:inherit;pointer-events:none}
 @media(max-width:700px){html{scroll-padding-top:64px}.home-work{scroll-margin-top:64px}}
+
+/* Source-backed content additions */
+.proof-section{padding-top:80px;padding-bottom:80px;border-bottom:1px solid var(--line)}
+.proof-section h2{font-size:clamp(32px,3.4vw,50px);line-height:1.1;letter-spacing:-.06em;margin:0 0 32px}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.proof-grid>div{padding:30px 25px 10px 0;border-right:1px solid var(--line);margin-right:25px}
+.proof-grid>div:last-child{border:0;margin:0}
+.proof-grid strong{display:block;font-size:clamp(54px,5vw,78px);line-height:1;letter-spacing:-.08em}
+.proof-grid p{font-size:13px;line-height:1.5;color:#6b6b6b;max-width:185px;margin:15px 0 0}
+.home-intro{padding-top:105px}
+.work-subheading{margin-top:30px}.work-subheading h2{font-size:clamp(31px,3.8vw,52px)}
+.more-work{margin-top:110px}
+.work-github-link{border-top:1px solid var(--line);margin-top:105px;padding-top:28px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.work-github-link p{color:#666;font-size:14px;margin:0}
+.case-source-link{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:700;margin-top:18px}
+.experience-highlights{margin:18px 0 0;padding-left:19px;max-width:720px;color:#666;font-size:13px;line-height:1.7}
+.experience-highlights li{margin:7px 0}
+.about-education,.about-links{display:grid;grid-template-columns:1fr 1fr;gap:8%;margin-top:120px}
+.about-education h2,.about-links h2{font-size:clamp(33px,3.5vw,49px);letter-spacing:-.06em;margin:0}
+.about-education>div>div{border-top:1px solid var(--line);padding:20px 0}
+.about-education h3{font-size:22px;letter-spacing:-.045em;margin:0 0 6px}
+.about-education p{font-size:14px;color:#666;margin:0 0 5px}
+.about-education span{font-size:12px;color:#999}
+.about-links>div{border-top:1px solid var(--line)}
+.about-links a{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:19px 0;font-size:22px;letter-spacing:-.04em}
+.blog-medium-link{margin-top:35px}
+.blog-item{grid-template-columns:90px 1fr 45px}
+@media(max-width:700px){
+  .proof-section{padding-top:70px;padding-bottom:70px}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  .proof-grid>div{margin:0;padding:23px 15px 23px 0;border-bottom:1px solid var(--line)}
+  .proof-grid>div:nth-child(2){border-right:0;padding-left:12px}
+  .proof-grid>div:nth-child(4){padding-left:12px;border:0}
+  .more-work{margin-top:85px}
+  .work-github-link{display:block;margin-top:80px}
+  .work-github-link .text-link{margin-top:20px}
+  .about-education,.about-links{grid-template-columns:1fr;gap:25px;margin-top:90px}
+  .blog-item{grid-template-columns:64px 1fr 25px}
+  .blog-item>span{line-height:1.3}
+}

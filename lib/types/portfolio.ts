@@ -57,7 +57,7 @@ export interface CaseStudy {
   organization?: string;
   role: string;
   period: string;
-  status: 'Production Deployed' | 'Operational' | 'Architecture Blueprint';
+  status: string;
   confidentiality?: string;
   isFeatured?: boolean;
   problem: string;
@@ -77,6 +77,8 @@ export interface CaseStudy {
   learnings?: string[];
   futureRoadmap?: string[];
   githubUrl?: string;
+  image?: string;
+  sourceNote?: string;
   previewImage?: {
     alt: string;
     caption?: string;
@@ -145,6 +147,7 @@ export interface ArticleItem {
   category: string;
   summary: string;
   mediumUrl: string;
+  publishedAt?: string;
   isFeatured?: boolean;
 }
 

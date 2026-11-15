@@ -3,9 +3,7 @@ import Link from 'next/link';
 import { Arrow } from '@/components/portfolio/Arrow';
 import { ProjectTile } from '@/components/portfolio/ProjectTile';
 import { CASE_STUDIES, EXPERIENCE_ITEMS, PROFILE_IDENTITY } from '@/lib/fixtures/portfolio';
-import { sanityFetch } from '@/sanity/lib/fetch';
-
-type Article = { _id: string; title: string; summary?: string; mediumUrl?: string; slug?: string };
+import { getBlogArticles } from '@/lib/content/articles';
 
 const expertise = [
   { title: 'Business intelligence', detail: 'Power BI reports, DAX, and reporting people can use.' },
@@ -16,11 +14,7 @@ const expertise = [
 ];
 
 export default async function HomePage() {
-  const articles = await sanityFetch<Article[]>({
-    query: `*[_type == "article"] | order(displayOrder asc, _createdAt desc)[0...3] { _id, title, summary, mediumUrl, "slug": slug.current }`,
-    tags: ['article'],
-    fallbackData: [],
-  });
+  const articles = (await getBlogArticles()).slice(0, 3);
   const currentRoles = EXPERIENCE_ITEMS.filter((item) => item.isCurrent).slice(0, 2);
 
   return <>
@@ -36,8 +30,18 @@ export default async function HomePage() {
     </section>
 
     <section className="work-section section-pad home-work" id="selected-work">
-      <div className="section-heading" data-reveal><div><h2>Projects I&apos;ve built<span className="yellow-dot">.</span></h2><p>Selected work across retail, hospitality, and AI.</p></div><Link className="text-link" href="/work">View all work <span><Arrow /></span></Link></div>
-      <div className="project-grid">{CASE_STUDIES.map((project, index) => <ProjectTile key={project.slug} project={project} index={index} />)}</div>
+      <div className="section-heading" data-reveal><div><h2>Projects I&apos;ve built<span className="yellow-dot">.</span></h2><p>Selected professional and public work across BI, data engineering, and AI.</p></div><Link className="text-link" href="/work">View all work <span><Arrow /></span></Link></div>
+      <div className="project-grid">{CASE_STUDIES.slice(0, 7).map((project, index) => <ProjectTile key={project.slug} project={project} index={index} />)}</div>
+    </section>
+
+    <section className="proof-section section-pad" aria-labelledby="proof-title">
+      <h2 id="proof-title" data-reveal>Some of the work, in numbers<span className="yellow-dot">.</span></h2>
+      <div className="proof-grid">
+        <div data-reveal><strong>17</strong><p>BI initiatives documented across logistics</p></div>
+        <div data-reveal><strong>88</strong><p>Stores covered by the fragrance stock analysis</p></div>
+        <div data-reveal><strong>24</strong><p>Public GitHub repositories</p></div>
+        <div data-reveal><strong>8</strong><p>Published essays on Medium</p></div>
+      </div>
     </section>
 
     <section className="intro-grid section-pad home-intro" aria-label="About Hammad">
@@ -59,7 +63,7 @@ export default async function HomePage() {
     </section>
 
     <section className="home-writing section-pad" aria-labelledby="writing-title">
-      <div className="section-heading" data-reveal><div><h2 id="writing-title">What I&apos;m writing<span className="yellow-dot">.</span></h2><p>Ideas and explanations from my work with data.</p></div><Link className="text-link" href="/blog">All writing <span><Arrow /></span></Link></div>
+      <div className="section-heading" data-reveal><div><h2 id="writing-title">What I&apos;m writing<span className="yellow-dot">.</span></h2><p>Published essays from my series on the wider world of data.</p></div><Link className="text-link" href="/blog">All writing <span><Arrow /></span></Link></div>
       <div className="home-article-list">{articles?.length ? articles.map((article, index) => {
         const href = article.slug ? `/blog/${article.slug}` : article.mediumUrl || '/blog';
         return <a href={href} key={article._id} target={!article.slug && article.mediumUrl ? '_blank' : undefined} rel={!article.slug && article.mediumUrl ? 'noreferrer' : undefined} className="home-article" data-reveal><span>0{index + 1}</span><h3>{article.title}</h3><Arrow /></a>;

@@ -191,6 +191,7 @@ async function runSeed() {
       category: art.category,
       summary: art.summary,
       mediumUrl: art.mediumUrl,
+      publishedAt: art.publishedAt,
       isFeatured: art.isFeatured || false,
       displayOrder: idx,
     });

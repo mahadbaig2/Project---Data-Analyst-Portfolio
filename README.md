@@ -6,7 +6,7 @@ A Next.js portfolio with static content and a Sanity-powered blog.
 
 - Portfolio pages and case studies are hard coded in `app/` and `lib/fixtures/portfolio.ts`.
 - Temporary local imagery lives in `public/placeholders/`. Replace those files with final photos and project visuals when available.
-- Blog articles are the only editable Sanity document type. Use `/studio` to edit them. Articles with a slug and body have a page at `/blog/[slug]`; existing articles without a body link to their external publication URL.
+- Blog articles are the only editable Sanity document type. Use `/studio` to edit them. The eight verified Medium posts in `lib/content/articles.ts` provide a static baseline until they can be imported into Sanity. Articles with a slug and body have a page at `/blog/[slug]`; external articles link to Medium.
 - `/writing` redirects to `/blog` for existing links.
 
 ## Run

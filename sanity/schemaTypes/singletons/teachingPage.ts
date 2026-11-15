@@ -32,7 +32,7 @@ export const teachingPage = defineType({
       type: 'object',
       fields: [
         defineField({ name: 'badge', title: 'Badge', type: 'string', initialValue: 'Academic Faculty Role' }),
-        defineField({ name: 'role', title: 'Role Title', type: 'string', initialValue: 'Power BI Lecturer & Technical Mentor' }),
+        defineField({ name: 'role', title: 'Role Title', type: 'string', initialValue: 'Data Analytics Instructor & Mentor' }),
         defineField({ name: 'institution', title: 'Institution', type: 'string', initialValue: 'Atomcamp' }),
         defineField({ name: 'summary', title: 'Summary Description', type: 'text', rows: 3 }),
         defineField({

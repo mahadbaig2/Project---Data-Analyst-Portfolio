@@ -21,12 +21,12 @@ export const CANONICAL_NAVIGATION: NavigationItem[] = [
   { label: 'Writing', href: '/writing', icon: 'article' },
   { label: 'Teaching', href: '/teaching', icon: 'school' },
   { label: 'About', href: '/about', icon: 'person' },
-  { label: 'Contact', href: '/about#contact', icon: 'alternate_email' },
+  { label: 'Contact', href: '/contact', icon: 'alternate_email' },
 ];
 
 export const PROFILE_IDENTITY: ProfileIdentity = {
   name: 'Mirza Hammad Baig',
-  role: 'Data Analyst · BI Solutions Architect',
+  role: 'Senior Data Analyst · BI Architect',
   descriptor: 'Data • BI • Architecture • AI',
   valueChain: 'DATA → SYSTEM → INSIGHT → DECISION → IMPACT',
   summary:
@@ -70,7 +70,7 @@ export const PROFILE_IDENTITY: ProfileIdentity = {
 };
 
 export const SITE_METADATA = {
-  title: 'Mirza Hammad Baig | Data Analyst & BI Solutions Architect',
+  title: 'Mirza Hammad Baig | Senior Data Analyst & BI Architect',
   titleTemplate: '%s | Mirza Hammad Baig',
   description:
     'The portfolio of Mirza Hammad Baig: business intelligence, data analysis, automation, teaching, and writing.',
@@ -270,7 +270,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
   },
   {
     id: 'atomcamp-lecturer',
-    role: 'Power BI Lecturer (Part-Time)',
+    role: 'Data Analytics Instructor & Mentor',
     company: 'Atomcamp',
     period: 'Apr 2026 – Present',
     isCurrent: true,
@@ -324,7 +324,7 @@ export const CAPABILITIES: CapabilityItem[] = [
     title: 'Data Analytics',
     category: 'Exploratory & Diagnostic Analysis',
     description:
-      'Translating multi-table transactional schemas into coherent business narratives, diagnosing historical variance, and identifying operational leakages.',
+      'Cleaning inconsistent data, defining comparable measures, and finding the drivers behind a result.',
     skills: ['Exploratory Data Analysis (EDA)', 'Cohort Analysis', 'Variance Diagnosis', 'Statistical Profiling'],
     icon: 'analytics',
   },
@@ -333,7 +333,7 @@ export const CAPABILITIES: CapabilityItem[] = [
     title: 'Business Intelligence',
     category: 'Executive Delivery & UX',
     description:
-      'Designing highly polished, executive-ready Power BI reporting environments with advanced DAX calculation logic, row-level security (RLS), and dynamic reporting flows.',
+      'Building Power BI reports, DAX measures, and access rules around the questions managers need to answer.',
     skills: ['Power BI Desktop & Service', 'Advanced DAX', 'Row-Level Security (RLS)', 'Interactive Report UX'],
     icon: 'dashboard',
   },
@@ -342,7 +342,7 @@ export const CAPABILITIES: CapabilityItem[] = [
     title: 'Data Architecture',
     category: 'Modeling Foundations',
     description:
-      'Building resilient dimensional data models using Kimball methodology, conformed dimensions, surrogate keys, and governed semantic layers.',
+      'Defining the grain, relationships, and shared measures behind reliable reporting.',
     skills: ['Kimball Star Schema', 'Dimensional Modeling', 'Conformed Dimensions', 'Semantic Layer Design'],
     icon: 'schema',
   },
@@ -351,7 +351,7 @@ export const CAPABILITIES: CapabilityItem[] = [
     title: 'Data Engineering',
     category: 'Pipelines & Warehousing',
     description:
-      'Developing automated ETL/ELT pipelines, orchestrating Lakehouse structures with Microsoft Fabric, and writing high-performance SQL scripts.',
+      'Using SQL, Power Query, and validated Python pipelines to turn changing inputs into dependable outputs.',
     skills: ['Microsoft Fabric', 'SQL Server / T-SQL', 'Power Query (M)', 'Automated Scheduled Pipelines'],
     icon: 'pipeline',
   },
@@ -360,17 +360,17 @@ export const CAPABILITIES: CapabilityItem[] = [
     title: 'AI & Automation',
     category: 'Modern Intelligent Systems',
     description:
-      'Building Retrieval-Augmented Generation (RAG) workflows, multi-agent query routing, and analytical automation that simplify executive data discovery.',
-    skills: ['LangChain / LangGraph', 'Vector Embeddings', 'RAG Architectures', 'Workflow Automation'],
+      'Building retrieval assistants and reviewable recommendations with clear source and approval paths.',
+    skills: ['LangChain', 'Vector Embeddings', 'RAG Architectures', 'Workflow Automation'],
     icon: 'ai',
   },
   {
     id: 'teaching-mentoring',
-    title: 'Training & Mentoring',
+    title: 'Teaching & Mentoring',
     category: 'Knowledge Transfer',
     description:
-      'Empowering professionals and corporate teams to master modern BI. Delivering hands-on workshops on DAX, modeling, and practical analytical storytelling.',
-    skills: ['Power BI Faculty @ Atomcamp', 'Applied Curriculum Design', 'Corporate Upskilling', 'Case-Study Mentorship'],
+      'Teaching Power BI, SQL, Python, and analytical thinking through hands-on work and project feedback.',
+    skills: ['Data Analytics Instructor @ Atomcamp', 'Applied Curriculum Design', 'Corporate Upskilling', 'Case-Study Mentorship'],
     icon: 'school',
   },
 ];

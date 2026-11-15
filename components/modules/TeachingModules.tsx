@@ -17,7 +17,7 @@ export function AtomcampLecturerHero() {
           </div>
 
           <h3 className="text-xl sm:text-2xl font-bold text-text-primary tracking-tight">
-            Power BI Lecturer & Technical Mentor
+            Data Analytics Instructor & Mentor
           </h3>
 
           <p className="text-sm text-text-secondary leading-relaxed">
@@ -214,7 +214,7 @@ export function MentorshipAndEditorial({
             Available for enterprise data modeling training, Power BI curriculum design, and guest lectures.
           </p>
         </div>
-        <LinkButton href="/about#contact" variant="primary" size="sm" showArrow className="shrink-0">
+        <LinkButton href="/contact" variant="primary" size="sm" showArrow className="shrink-0">
           Inquire About Training
         </LinkButton>
       </Card>

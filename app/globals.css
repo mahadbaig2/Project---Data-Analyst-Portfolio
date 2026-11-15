@@ -123,3 +123,57 @@ html{scroll-padding-top:77px}
   .blog-item{grid-template-columns:64px 1fr 25px}
   .blog-item>span{line-height:1.3}
 }
+
+/* Portrait, skill pages, teaching, and contact */
+.portrait-card img,.about-image img{object-position:center top}
+.expertise-item:focus-visible,.expertise-project:focus-visible,.contact-page a:focus-visible{outline:3px solid var(--yellow);outline-offset:5px}
+.expertise-detail .page-hero p{max-width:780px}
+.expertise-detail-grid{display:grid;grid-template-columns:1fr 2fr;gap:8%;border-top:1px solid var(--line);padding-top:34px}
+.expertise-detail-grid h2{font-size:clamp(32px,3.6vw,50px);letter-spacing:-.06em;margin:0}
+.expertise-detail-grid p{font-size:17px;line-height:1.75;color:#666;max-width:760px;margin:0 0 22px}
+.expertise-projects{margin-top:115px}
+.expertise-project-list{border-top:1px solid var(--line)}
+.expertise-project{display:flex;justify-content:space-between;align-items:center;gap:30px;border-bottom:1px solid var(--line);padding:29px 2px;transition:padding .3s var(--ease)}
+.expertise-project:hover{padding-left:12px}
+.expertise-project span{font-size:12px;color:#888}
+.expertise-project h3{font-size:clamp(24px,2.8vw,38px);letter-spacing:-.055em;margin:6px 0 9px}
+.expertise-project p{font-size:14px;line-height:1.6;color:#666;max-width:710px;margin:0}
+.expertise-project b{font-size:26px;font-weight:400}
+.expertise-teaching-link{font-size:15px;line-height:1.6;margin:32px 0 0;color:#666}
+.expertise-teaching-link a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.case-expertise-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}
+.case-expertise-links a{border-bottom:1px solid var(--line);padding:12px 0;text-transform:capitalize;font-size:14px;font-weight:650;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.case-expertise-links a:hover{border-color:var(--yellow)}
+.teaching-method,.teaching-topics,.teaching-students{margin-top:105px}
+.teaching-method>div:last-child{border-top:1px solid var(--line)}
+.teaching-method-item{display:grid;grid-template-columns:48px minmax(170px,1fr) 1.2fr;gap:25px;padding:27px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.teaching-method-item span{font-size:12px;color:#999}
+.teaching-method-item h3{font-size:clamp(24px,2.8vw,36px);letter-spacing:-.055em;margin:0}
+.teaching-method-item p{font-size:14px;line-height:1.65;color:#666;max-width:560px;margin:0}
+.teaching-page .teaching-item h3{font-size:27px;letter-spacing:-.06em;line-height:1.12;margin:50px 0 12px}
+.teaching-students .section-heading p{font-size:14px;line-height:1.5;color:#777;margin:16px 0 0}
+.student-note-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.student-note{background:#fff;border:1px solid var(--line);border-radius:16px;min-height:210px;padding:27px;display:flex;flex-direction:column;justify-content:space-between}
+.student-note p{font-size:16px;line-height:1.6;color:#555;margin:0 0 28px}
+.student-note strong{font-size:13px}
+.contact-page{min-height:75vh}
+.contact-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:9%;border-top:1px solid var(--line);padding-top:34px}
+.contact-grid h2{font-size:14px;font-weight:650;color:#888;margin:0 0 22px}
+.contact-primary>a{font-size:clamp(27px,3.7vw,54px);font-weight:750;letter-spacing:-.06em;line-height:1.15;overflow-wrap:anywhere;display:block;max-width:100%}
+.contact-primary>a:hover,.contact-details a:hover{color:#9b7100}
+.contact-details section{padding-bottom:35px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.contact-details p{font-size:20px;line-height:1.45;margin:0;letter-spacing:-.035em}
+.contact-details section>div{display:grid;gap:0}
+.contact-details a{display:flex;justify-content:space-between;gap:20px;font-size:19px;letter-spacing:-.035em;padding:13px 0;border-bottom:1px solid var(--line)}
+.contact-details a:last-child{border:0}
+@media(max-width:700px){
+  .expertise-detail-grid,.contact-grid{grid-template-columns:1fr;gap:20px}
+  .expertise-detail-grid p{font-size:15px}
+  .expertise-projects,.teaching-method,.teaching-topics,.teaching-students{margin-top:80px}
+  .teaching-method-item{grid-template-columns:30px 1fr;gap:8px 13px}
+  .teaching-method-item p{grid-column:2;font-size:13px}
+  .student-note-grid{grid-template-columns:1fr}
+  .student-note{min-height:160px}
+  .case-expertise-links{grid-template-columns:1fr}
+  .contact-primary{padding-bottom:35px}
+}

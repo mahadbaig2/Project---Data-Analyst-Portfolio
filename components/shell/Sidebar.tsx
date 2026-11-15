@@ -127,7 +127,7 @@ export function Sidebar() {
 
         {/* Action Button */}
         <LinkButton
-          href="/about#contact"
+          href="/contact"
           variant="primary"
           size="sm"
           className="w-full justify-center"

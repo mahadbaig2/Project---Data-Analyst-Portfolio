@@ -67,7 +67,7 @@ export function TopUtilityBar() {
               </LinkButton>
             ) : (
               <LinkButton
-                href="/about#contact"
+                href="/contact"
                 variant="secondary"
                 size="sm"
               >

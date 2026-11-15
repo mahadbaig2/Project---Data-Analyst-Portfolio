@@ -185,7 +185,7 @@ export function MobileNav() {
                 </LinkButton>
               ) : (
                 <LinkButton
-                  href="/about#contact"
+                  href="/contact"
                   variant="secondary"
                   size="sm"
                   className="w-full justify-center"
@@ -196,7 +196,7 @@ export function MobileNav() {
               )}
 
               <LinkButton
-                href="/about#contact"
+                href="/contact"
                 variant="primary"
                 size="sm"
                 className="w-full justify-center"

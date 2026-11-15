@@ -49,7 +49,7 @@ export default async function HomePage() {
         <div><h2>The person<br /><span>behind the work.</span></h2><p>I&apos;m Mirza Hammad Baig. I work across analytics, engineering, and communication to help teams understand their data and use it well.</p><Link className="button button-yellow" href="/about">More about me <span><Arrow /></span></Link></div>
         <div className="intro-note">Based in Pakistan. Working with teams and learners across data and BI.</div>
       </div>
-      <div className="portrait-card" data-reveal><Image src="/placeholders/portrait-placeholder.svg" alt="Temporary portrait image" fill sizes="(max-width: 760px) 100vw, 50vw" /><div className="portrait-sticker"><span>Mirza Hammad Baig<br /><small>Data analyst & BI architect</small></span><span className="sticker-arrow"><Arrow /></span></div></div>
+      <div className="portrait-card" data-reveal><Image src="/images/hammad-portrait.jpg" alt="Portrait of Mirza Hammad Baig" fill sizes="(max-width: 760px) 100vw, 50vw" /><div className="portrait-sticker"><span>Mirza Hammad Baig<br /><small>Data analyst & BI architect</small></span><span className="sticker-arrow"><Arrow /></span></div></div>
     </section>
 
     <section className="home-expertise section-pad" aria-labelledby="expertise-title">

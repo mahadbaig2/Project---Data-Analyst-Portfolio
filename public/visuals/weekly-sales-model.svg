@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title description">
+  <title id="title">Weekly sales reporting star schema</title>
+  <desc id="description">Date, store and department dimensions connect to weekly sales facts, supporting year-over-year, year-to-date, ranking and commission measures.</desc>
+  <rect width="1200" height="650" fill="#f3f0e9"/>
+  <text x="70" y="92" fill="#8b6c22" font-size="17" font-family="Arial,sans-serif" letter-spacing="3">POWER BI MODEL</text>
+  <text x="70" y="156" fill="#242424" font-size="51" font-weight="700" font-family="Arial,sans-serif" letter-spacing="-2">One grain. Reusable measures.</text>
+  <text x="70" y="198" fill="#56534c" font-size="19" font-family="Arial,sans-serif">Weekly sales sit at the center of the reporting model.</text>
+  <g fill="#fff" stroke="#d9d3c6" stroke-width="2">
+    <rect x="90" y="280" width="225" height="155" rx="14"/>
+    <rect x="375" y="280" width="450" height="155" rx="14" fill="#242424" stroke="#242424"/>
+    <rect x="885" y="280" width="225" height="155" rx="14"/>
+    <rect x="490" y="485" width="220" height="92" rx="14"/>
+  </g>
+  <g font-family="Arial,sans-serif">
+    <text x="115" y="326" fill="#8b6c22" font-size="15">DIMENSION</text>
+    <text x="115" y="370" fill="#242424" font-size="28" font-weight="700">Date</text>
+    <text x="115" y="400" fill="#666158" font-size="17">Week · year</text>
+    <text x="405" y="326" fill="#f3bd35" font-size="15">FACT</text>
+    <text x="405" y="371" fill="#fff" font-size="31" font-weight="700">Weekly sales</text>
+    <text x="405" y="405" fill="#c4c2bc" font-size="17">One row per store, department and week</text>
+    <text x="910" y="326" fill="#8b6c22" font-size="15">DIMENSION</text>
+    <text x="910" y="370" fill="#242424" font-size="28" font-weight="700">Store</text>
+    <text x="910" y="400" fill="#666158" font-size="17">Location · manager</text>
+    <text x="515" y="520" fill="#8b6c22" font-size="15">DIMENSION</text>
+    <text x="515" y="555" fill="#242424" font-size="26" font-weight="700">Department</text>
+    <text x="329" y="375" fill="#a48432" font-size="35">→</text>
+    <text x="838" y="375" fill="#a48432" font-size="35">←</text>
+    <text x="591" y="472" fill="#a48432" font-size="31">↑</text>
+    <text x="70" y="622" fill="#77716a" font-size="15">Measures: year-over-year growth · YTD sales · rankings · manager commission</text>
+  </g>
+</svg>

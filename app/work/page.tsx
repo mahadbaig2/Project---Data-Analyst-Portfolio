@@ -1,17 +1,15 @@
 import type { Metadata } from 'next';
 import { Arrow } from '@/components/portfolio/Arrow';
-import { CASE_STUDIES } from '@/lib/fixtures/portfolio';
+import Link from 'next/link';
+import { FLAGSHIP_PROJECTS } from '@/lib/content/project-selection';
 import { ProjectTile } from '@/components/portfolio/ProjectTile';
 
-export const metadata: Metadata = { title: 'Work', description: 'Selected professional, public, and learning projects by Mirza Hammad Baig.' };
+export const metadata: Metadata = { title: 'Case studies | BI architect & data analyst', description: 'Retail and logistics BI case studies by Mirza Hammad Baig: secured Power BI reporting, a validated Python replenishment pipeline and weekly sales analytics.' };
 
 export default function WorkPage() {
   return <div className="inner-page section-pad">
-    <div className="page-hero" data-reveal><h1>My work<span className="yellow-dot">.</span></h1><p>Professional systems, public projects, prototypes, and course work. Each page names its status and links to code when it is public.</p></div>
-    <div className="section-heading work-subheading" data-reveal><h2>Featured projects<span className="yellow-dot">.</span></h2></div>
-    <div className="project-grid work-grid">{CASE_STUDIES.slice(0, 5).map((project, index) => <ProjectTile key={project.slug} project={project} index={index} />)}</div>
-    <div className="section-heading work-subheading more-work" data-reveal><h2>More to explore<span className="yellow-dot">.</span></h2></div>
-    <div className="project-grid">{CASE_STUDIES.slice(5).map((project, index) => <ProjectTile key={project.slug} project={project} index={index} />)}</div>
-    <div className="work-github-link" data-reveal><p>There are more learning projects and experiments in my public repositories.</p><a className="text-link" href="https://github.com/mirzahammad1" target="_blank" rel="noreferrer">Explore GitHub <Arrow /></a></div>
+    <div className="page-hero" data-reveal><h1>Case studies<span className="yellow-dot">.</span></h1><p>Reporting and data systems for retail and logistics, from shipment visibility to store-level stock decisions.</p></div>
+    <div className="project-grid work-grid">{FLAGSHIP_PROJECTS.map((project, index) => <ProjectTile key={project.slug} project={project} index={index} showSummary />)}</div>
+    <div className="work-github-link" data-reveal><p>AI prototypes, machine learning studies and other public projects live in my learning lab.</p><Link className="text-link" href="/lab">Explore the learning lab <Arrow /></Link></div>
   </div>;
 }

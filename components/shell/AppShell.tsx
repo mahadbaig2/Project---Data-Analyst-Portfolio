@@ -7,12 +7,10 @@ import { useState } from 'react';
 import { Reveal } from '@/components/portfolio/Reveal';
 
 const links = [
-  ['Work', '/work'],
-  ['About', '/about'],
+  ['Case studies', '/work'],
   ['Expertise', '/expertise'],
-  ['Experience', '/experience'],
-  ['Teaching', '/teaching'],
-  ['Blog', '/blog'],
+  ['About', '/about'],
+  ['Writing', '/blog'],
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -24,7 +22,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <a className="skip-link" href="#main-content">Skip to content</a>
     <div className="site-paper">
       <header className="site-header">
-        <Link className="wordmark" href="/" onClick={() => setOpen(false)}>Hammad Baig<span>.</span></Link>
+        <Link className="wordmark" href="/" onClick={() => setOpen(false)}>Mirza Hammad Baig<span>.</span></Link>
         <nav className={open ? 'site-nav is-open' : 'site-nav'} aria-label="Main navigation">
           {links.map(([label, href]) => <Link key={href} href={href} className={pathname === href || pathname?.startsWith(`${href}/`) ? 'active' : ''} onClick={() => setOpen(false)}>{label}</Link>)}
         </nav>
@@ -33,8 +31,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </header>
       <main id="main-content" tabIndex={-1}>{children}</main>
       <footer className="site-footer">
-        <div><p>Thanks for looking through my portfolio.</p><Link href="/contact">Let&apos;s talk <span aria-hidden="true"><Arrow /></span></Link></div>
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} Mirza Hammad Baig</span><div><a href="https://www.linkedin.com/in/mirzahammadbaig1/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a><a href="https://github.com/mirzahammad1" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="mailto:mirzahammadbaig147@gmail.com">Email <Arrow /></a></div></div>
+        <div><p>Clear models. Validated data. Better retail and logistics decisions.</p><Link href="/contact">Let&apos;s talk <span aria-hidden="true"><Arrow /></span></Link></div>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} Mirza Hammad Baig · Pakistan</span><div><Link href="/experience">Experience</Link><Link href="/teaching">Teaching</Link><Link href="/lab">Learning lab</Link><a href="https://www.linkedin.com/in/mirzahammadbaig1/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a><a href="https://github.com/mirzahammad1" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="mailto:mirzahammadbaig147@gmail.com">Email <Arrow /></a></div></div>
       </footer>
     </div>
     <Reveal />

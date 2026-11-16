@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
+  <title id="title">Fragrance replenishment pipeline</title>
+  <desc id="description">Sales and stock exports pass through validation, an 88-store by 76-SKU analysis grid, demand estimates, allocation and reports.</desc>
+  <rect width="1200" height="680" fill="#f3f0e9"/>
+  <circle cx="1150" cy="-40" r="260" fill="#e8dfc6"/>
+  <text x="70" y="90" fill="#8b6c22" font-size="17" font-family="Arial,sans-serif" letter-spacing="3">RETAIL INVENTORY</text>
+  <text x="70" y="157" fill="#242424" font-size="51" font-weight="700" font-family="Arial,sans-serif" letter-spacing="-2">Validate first. Allocate second.</text>
+  <text x="70" y="198" fill="#56534c" font-size="19" font-family="Arial,sans-serif">Sales and stock exports become a reviewable replenishment plan.</text>
+  <path d="M95 325 H1104" stroke="#c2b89f" stroke-width="4" stroke-linecap="round"/>
+  <g font-family="Arial,sans-serif">
+    <circle cx="112" cy="325" r="25" fill="#242424"/><text x="104" y="333" fill="#f3bd35" font-size="21" font-weight="700">1</text>
+    <circle cx="352" cy="325" r="25" fill="#242424"/><text x="344" y="333" fill="#f3bd35" font-size="21" font-weight="700">2</text>
+    <circle cx="592" cy="325" r="25" fill="#242424"/><text x="584" y="333" fill="#f3bd35" font-size="21" font-weight="700">3</text>
+    <circle cx="832" cy="325" r="25" fill="#242424"/><text x="824" y="333" fill="#f3bd35" font-size="21" font-weight="700">4</text>
+    <circle cx="1072" cy="325" r="25" fill="#242424"/><text x="1064" y="333" fill="#f3bd35" font-size="21" font-weight="700">5</text>
+    <text x="70" y="391" fill="#242424" font-size="23" font-weight="700">Ingest</text>
+    <text x="310" y="391" fill="#242424" font-size="23" font-weight="700">Validate</text>
+    <text x="550" y="391" fill="#242424" font-size="23" font-weight="700">Model</text>
+    <text x="790" y="391" fill="#242424" font-size="23" font-weight="700">Allocate</text>
+    <text x="1025" y="391" fill="#242424" font-size="23" font-weight="700">Publish</text>
+    <text x="70" y="425" fill="#666158" font-size="16">Sales + stock</text>
+    <text x="310" y="425" fill="#666158" font-size="16">Stop bad runs</text>
+    <text x="550" y="425" fill="#666158" font-size="16">88 × 76 grid</text>
+    <text x="790" y="425" fill="#666158" font-size="16">Stock by need</text>
+    <text x="1025" y="425" fill="#666158" font-size="16">Review packs</text>
+  </g>
+  <rect x="70" y="493" width="1060" height="112" rx="16" fill="#242424"/>
+  <text x="95" y="543" fill="#f3bd35" font-size="35" font-weight="700" font-family="Arial,sans-serif">6,688</text>
+  <text x="257" y="541" fill="#fff" font-size="21" font-weight="700" font-family="Arial,sans-serif">store-product positions</text>
+  <text x="257" y="575" fill="#bdbbb5" font-size="17" font-family="Arial,sans-serif">One complete grid keeps missing sales rows from hiding stock risk.</text>
+  <text x="70" y="648" fill="#77716a" font-size="14" font-family="Arial,sans-serif">Architecture diagram based on the project documentation</text>
+</svg>

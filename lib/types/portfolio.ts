@@ -78,6 +78,8 @@ export interface CaseStudy {
   futureRoadmap?: string[];
   githubUrl?: string;
   image?: string;
+  imageAlt?: string;
+  imageKind?: 'evidence' | 'illustration';
   sourceNote?: string;
   previewImage?: {
     alt: string;
@@ -89,6 +91,7 @@ export interface ExperienceItem {
   id: string;
   role: string;
   company: string;
+  context?: string;
   period: string;
   isCurrent?: boolean;
   appointmentType?: string;

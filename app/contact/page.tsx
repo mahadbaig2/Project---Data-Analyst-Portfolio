@@ -3,8 +3,8 @@ import { Arrow } from '@/components/portfolio/Arrow';
 import { PROFILE_IDENTITY } from '@/lib/fixtures/portfolio';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Contact Mirza Hammad Baig about senior data analysis, business intelligence, and teaching.',
+  title: 'Contact | Data analyst & BI architect',
+  description: 'Contact Mirza Hammad Baig about retail and logistics BI, data architecture, analytics roles, or teaching.',
 };
 
 export default function ContactPage() {
@@ -12,8 +12,8 @@ export default function ContactPage() {
 
   return <div className="inner-page section-pad contact-page">
     <div className="page-hero" data-reveal>
-      <h1>Let&apos;s talk<span className="yellow-dot">.</span></h1>
-      <p>For data and BI roles, project conversations, or teaching, email me directly.</p>
+      <h1>Start a conversation<span className="yellow-dot">.</span></h1>
+      <p>For analytics roles, BI or reporting projects, and teaching or mentoring, email me directly.</p>
     </div>
     <div className="contact-grid">
       <section className="contact-primary" data-reveal>

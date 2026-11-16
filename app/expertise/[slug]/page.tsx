@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const story = EXPERTISE_STORIES[slug];
   if (!capability || !story) return { title: 'Expertise' };
   return {
-    title: `${capability.title} — Projects and approach`,
+    title: `${capability.title} | Data analyst & BI architect`,
     description: `${story.introduction} See how Mirza Hammad Baig applied this skill in selected projects.`,
     alternates: { canonical: `/expertise/${slug}` },
   };

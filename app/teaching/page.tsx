@@ -11,15 +11,14 @@ const teachingMethod = [
 ];
 
 const studentNotes = [
-  { name: 'Adan Anjum', detail: 'Went from struggling to read a CSV to building a Python Retail Sales Mini Analyzer. She thanked Hammad for mentoring her throughout the project.' },
-  { name: 'Abdul Majid Memon', detail: 'Shared that he earned the Microsoft Power BI Data Analyst Associate certification and thanked Hammad for teaching Power BI from the basics at Atomcamp.' },
-  { name: 'Haider Ali Shah', detail: 'Celebrated Top Performer recognition in the Data Analytics Bootcamp and thanked Hammad alongside the Atomcamp trainer team for their guidance.' },
-  { name: 'Umar Farooq Khan', detail: 'Described how hands-on work with messy data connected classroom theory to real applications, and thanked Hammad and the Atomcamp team for feedback.' },
+  { quote: 'Today I built a Retail Sales Mini Analyzer with Python.', credit: 'Atomcamp learner · Python capstone' },
+  { quote: 'The bootcamp gave me that through hands-on assignments and projects.', credit: 'Atomcamp learner · Business Analytics' },
+  { quote: 'I’m incredibly proud to have been recognized as one of the Top Performers!', credit: 'Atomcamp learner · Data Analytics Bootcamp' },
 ];
 
 export const metadata: Metadata = {
-  title: 'Teaching & Mentoring',
-  description: 'How Mirza Hammad Baig teaches Power BI, SQL, Python, and data analysis at Atomcamp, with feedback from learners.',
+  title: 'Teaching & Mentoring | Data analyst & BI architect',
+  description: 'How Mirza Hammad Baig teaches Power BI, SQL, Python and applied data analysis at Atomcamp, with learner feedback.',
 };
 
 export default function TeachingPage() {
@@ -38,10 +37,10 @@ export default function TeachingPage() {
     </section>
 
     <section className="teaching-students" aria-labelledby="student-stories-title">
-      <div className="section-heading" data-reveal><div><h2 id="student-stories-title">From learners<span className="yellow-dot">.</span></h2><p>These outcomes come from student posts shared for this portfolio.</p></div></div>
-      <div className="student-note-grid">{studentNotes.map((note) => <div className="student-note" key={note.name} data-reveal><p>{note.detail}</p><strong>{note.name}</strong></div>)}</div>
+      <div className="section-heading" data-reveal><div><h2 id="student-stories-title">From learners<span className="yellow-dot">.</span></h2><p>Short excerpts from student posts shared for this portfolio. Learners credited Hammad, often alongside the wider Atomcamp teaching team.</p></div></div>
+      <div className="student-note-grid">{studentNotes.map((note) => <blockquote className="student-note" key={note.quote} data-reveal><p>“{note.quote}”</p><cite>{note.credit}</cite></blockquote>)}</div>
     </section>
 
-    <div className="contact-band" data-reveal><h2>Learning starts with a conversation.</h2><Link href="/contact">Get in touch <Arrow /></Link></div>
+    <div className="contact-band" data-reveal><h2>Learning starts with a conversation.</h2><Link href="/contact">Let&apos;s talk <Arrow /></Link></div>
   </div>;
 }

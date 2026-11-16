@@ -2,12 +2,12 @@ import { Arrow } from '@/components/portfolio/Arrow';
 import type { Metadata } from 'next';
 import { getBlogArticles } from '@/lib/content/articles';
 
-export const metadata: Metadata = { title: 'Blog', description: 'Published essays by Mirza Hammad Baig on data, analytics, and the wider data field.' };
+export const metadata: Metadata = { title: 'Writing | Data analyst & BI architect', description: 'Mirza Hammad Baig writes introductory essays about data, analytics roles and the foundations behind modern BI work.' };
 
 export default async function BlogPage() {
-  const articles = await getBlogArticles();
+  const articles = (await getBlogArticles()).sort((a, b) => (a.publishedAt || '').localeCompare(b.publishedAt || ''));
   return <div className="inner-page section-pad">
-    <div className="page-hero" data-reveal><h1>My writing<span className="yellow-dot">.</span></h1><p>Published essays on the ideas, roles, and foundations behind modern data work.</p></div>
+    <div className="page-hero" data-reveal><h1>Writing<span className="yellow-dot">.</span></h1><p>An introductory series on data, its roles and its foundations. Start at the beginning, or follow a topic that interests you.</p></div>
     <div className="blog-list">{articles.map((article, index) => {
       const external = !article.slug && Boolean(article.mediumUrl);
       return <a className="blog-item" href={article.slug ? `/blog/${article.slug}` : article.mediumUrl || '/blog'} key={article._id} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined} data-reveal>

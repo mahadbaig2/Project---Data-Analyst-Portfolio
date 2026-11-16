@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EXPERIENCE_ITEMS } from '@/lib/fixtures/portfolio';
 
-export const metadata: Metadata = { title: 'Experience | Retail and logistics BI', description: 'Mirza Hammad Baig owns retail analytics at Ideas by Gul Ahmed, built BI reporting at Muller & Phipps Logistics, and teaches data analytics at Atomcamp.' };
+export const metadata: Metadata = { title: 'Experience | Data analyst in retail and logistics', description: 'Mirza Hammad Baig owns retail analytics at Ideas by Gul Ahmed, built BI reporting at Muller & Phipps Logistics, and teaches data analytics at Atomcamp.' };
 
 export default function ExperiencePage() {
   return <div className="inner-page section-pad">

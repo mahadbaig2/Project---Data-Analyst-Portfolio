@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 const pillars = [
   {
-    title: 'BI & semantic modelling',
-    detail: 'I define the grain, measures and access rules behind Power BI reporting for retail and logistics teams.',
+    title: 'Data analysis & BI systems',
+    detail: 'I turn business questions into comparable measures, Power BI reporting and reliable models for retail and logistics teams.',
     links: [
+      { label: 'Data analytics', href: '/expertise/data-analytics' },
       { label: 'Business intelligence', href: '/expertise/business-intelligence' },
       { label: 'Data architecture', href: '/expertise/data-architecture' },
-      { label: 'Data analytics', href: '/expertise/data-analytics' },
     ],
   },
   {
@@ -25,7 +25,7 @@ const pillars = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Expertise | BI architect & data analyst',
+  title: 'Expertise | Data analyst & BI architect',
   description: 'Mirza Hammad Baig builds Power BI models, SQL and Python reporting pipelines, and applied AI for retail and logistics decisions.',
 };
 

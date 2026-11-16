@@ -12,7 +12,7 @@ const principles = [
 ];
 
 const pillars = [
-  { title: 'BI & semantic modelling', href: '/expertise/business-intelligence', detail: 'Power BI, DAX, star schemas, KPI definitions and access rules.' },
+  { title: 'Data analysis & BI', href: '/expertise/data-analytics', detail: 'Business questions, clear measures and reporting people can act on.' },
   { title: 'Data engineering for reporting', href: '/expertise/data-engineering', detail: 'SQL, Power Query and validated Python pipelines.' },
   { title: 'Applied AI & decision automation', href: '/expertise/ai-automation', detail: 'Grounded answers and reviewable recommendations.' },
 ];
@@ -27,8 +27,8 @@ export default async function HomePage() {
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-orbit orbit-one" aria-hidden="true" />
       <div className="hero-orbit orbit-two" aria-hidden="true" />
-      <h1 id="hero-title">BI systems for<br />retail & logistics<span className="yellow-dot">.</span><br /><span className="muted">Built to be trusted.</span></h1>
-      <p>I&apos;m Mirza Hammad Baig, a data analyst and BI architect. I build the models, reporting and validated pipelines behind decisions at Ideas by Gul Ahmed and, earlier, Muller & Phipps Logistics.</p>
+      <h1 id="hero-title">Data Analyst building<br />trusted reporting for<br /><span className="muted">retail & logistics<span className="yellow-dot">.</span></span></h1>
+      <p>I&apos;m Mirza Hammad Baig, a data analyst. I turn sales, inventory and delivery data into clear analysis, reliable reporting and validated pipelines at Ideas by Gul Ahmed and, earlier, Muller & Phipps Logistics.</p>
       <div className="hero-actions">
         <Link className="button button-dark" href="#selected-work">View case studies <span><Arrow /></span></Link>
         <Link className="text-link" href="/contact">Let&apos;s talk <span><Arrow /></span></Link>
@@ -60,7 +60,7 @@ export default async function HomePage() {
         <div><h2>About<span className="yellow-dot">.</span></h2><p>I own sales and inventory analytics at Ideas by Gul Ahmed, a Pakistani retail brand. Before that, I built BI reporting for delivery, finance and commercial teams at Muller & Phipps Logistics.</p><Link className="button button-yellow" href="/about">More about me <span><Arrow /></span></Link></div>
         <div className="intro-note">The model underneath a dashboard matters as much as the chart on top.</div>
       </div>
-      <div className="portrait-card" data-reveal><Image src="/images/hammad-portrait.jpg" alt="Portrait of Mirza Hammad Baig" fill sizes="(max-width: 760px) 100vw, 50vw" /><div className="portrait-sticker"><span>Mirza Hammad Baig<br /><small>Data analyst & BI architect</small></span><span className="sticker-arrow"><Arrow /></span></div></div>
+      <div className="portrait-card" data-reveal><Image src="/images/hammad-portrait.jpg" alt="Portrait of Mirza Hammad Baig" fill sizes="(max-width: 760px) 100vw, 50vw" /><div className="portrait-sticker"><span>Mirza Hammad Baig<br /><small>Data analyst · Retail & logistics</small></span><span className="sticker-arrow"><Arrow /></span></div></div>
     </section>
 
     <section className="home-expertise section-pad" aria-labelledby="expertise-title">

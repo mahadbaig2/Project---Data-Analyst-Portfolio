@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { EDUCATION_ITEMS } from '@/lib/fixtures/portfolio';
 
 export const metadata: Metadata = {
-  title: 'About | BI architect and data analyst',
+  title: 'About | Data analyst and BI architect',
   description: 'Mirza Hammad Baig builds data models, Power BI reporting and validated pipelines for retail and logistics teams in Pakistan.',
 };
 

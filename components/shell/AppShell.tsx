@@ -8,8 +8,10 @@ import { Reveal } from '@/components/portfolio/Reveal';
 
 const links = [
   ['Case studies', '/work'],
+  ['Learning lab', '/lab'],
   ['Expertise', '/expertise'],
   ['About', '/about'],
+  ['Teaching', '/teaching'],
   ['Writing', '/blog'],
 ];
 
@@ -31,7 +33,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </header>
       <main id="main-content" tabIndex={-1}>{children}</main>
       <footer className="site-footer">
-        <div><p>Clear models. Validated data. Better retail and logistics decisions.</p><Link href="/contact">Let&apos;s talk <span aria-hidden="true"><Arrow /></span></Link></div>
+        <div><p>Clear analysis. Validated data. Better retail and logistics decisions.</p><Link href="/contact">Let&apos;s talk <span aria-hidden="true"><Arrow /></span></Link></div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} Mirza Hammad Baig · Pakistan</span><div><Link href="/experience">Experience</Link><Link href="/teaching">Teaching</Link><Link href="/lab">Learning lab</Link><a href="https://www.linkedin.com/in/mirzahammadbaig1/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a><a href="https://github.com/mirzahammad1" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="mailto:mirzahammadbaig147@gmail.com">Email <Arrow /></a></div></div>
       </footer>
     </div>
